@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300&display=swap');
+
+:root {
+  // COLORS
+  --first-color: #334b47;
+  --first-color-light: #5d786f;
+  --second-color: #d6803f;
+  --second-color-light: #dbb396;
+  --third-color: #e9e1db;
+  --fourth-color: #fff;
+
+  // Font Family
+  --title-font: 'Open Sans', sans-serif;
+  --text-font:  'Roboto', sans-serif;
+  
+  // Font Size
+  --big-font-size: 2.5rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  // Font Weigth
+  --font-light: 300;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  // Margenes
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: 0;
+}
+
+h1, h2, h3, ul, p {
+  margin: 0;
+}
+
+h2, h3 {
+  font-weight: var(--font-semibold);
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+@media screen and (min-width: 1024px) {
+
+}
+
+
+@media screen and (min-width: 768px) {
+  :root {
+    // Font Size
+    --big-font-size: 4.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}

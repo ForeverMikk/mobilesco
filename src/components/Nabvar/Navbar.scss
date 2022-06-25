@@ -1,0 +1,26 @@
+.navbar {
+    background-color: var(--third-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+.navbar img {
+    margin-left: 2rem;
+    padding: 1rem;
+    width: 10rem;
+    height: auto;
+}
+
+.nav-list{
+    display: flex;
+    padding:2rem;
+}
+
+.nav-list li {
+    margin: 0 1rem;
+    font-family: var(--text-font);
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+    color: var(--first-color-light);
+}
