@@ -1,0 +1,27 @@
+.search-box {
+    width: 15rem;
+    padding: 1.5rem;
+    background: #fff;
+    font-family: var(--text-font);
+    border-top-right-radius: 1.25rem;
+    border-bottom-left-radius: 1.25rem;
+
+    position: absolute;
+    left: 7rem;
+    bottom: -2rem;
+}
+.search-box p, .search-box input {
+    margin-bottom: 1rem;
+}
+
+.search-box p {
+    color: var(--second-color);
+}
+
+.search-box input {
+    border: none;
+    border-radius: 3rem;
+    background: var(--third-color);
+    color: #000;
+    padding: 0.5rem;
+}

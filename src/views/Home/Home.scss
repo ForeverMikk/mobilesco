@@ -1,0 +1,30 @@
+header {
+    height: 100vh;
+    padding: 2.5rem 5rem;
+    background: var(--third-color);
+
+}
+.background {
+    height: 90%;
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    background: url(./../../asstes/img/background.jpg) no-repeat center;
+}
+.title {
+    padding: 1rem 2rem;
+    font-family: var(--title-font);
+    font-weight: var(--font-medium);
+    font-size: 2.5rem;
+    color: var(--first-color);
+}
+.description {
+    width: 40%;
+    text-align: right;
+    font-family: var(--text-font);
+    font-size: var(--small-font-size);
+    color: var(--first-color);
+    position: absolute;
+    right: 5rem;
+    bottom: -2rem;
+}
+
