@@ -9,6 +9,7 @@ import ProductItem from '../../components/ProductItem/ProductItem';
 import SearchBox from '../../components/SearchBox/SearchBox';
 import ProductList from './ProductList/ProductList';
 import OurServices from './OurServices/OurServices';
+import Categories from './Categories/Categories';
 
 
 const Home = () => {
@@ -26,6 +27,7 @@ const Home = () => {
 
             <ProductList />
             <OurServices />
+            <Categories />
         </>
     )
 }
