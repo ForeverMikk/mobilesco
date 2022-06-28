@@ -11,7 +11,6 @@ const SearchBox = () => {
             <input type="text" placeholder='Premium'/>
             <p>Mueble</p>
             <input type="text" placeholder='Nombre'/>
-
         </div>
     )
 }

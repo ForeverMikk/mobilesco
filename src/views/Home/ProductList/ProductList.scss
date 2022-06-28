@@ -1,0 +1,17 @@
+.product-list {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.product-list .text {
+    font-family: var(--text-font);
+    color: var(--first-color);
+    width: 40%;
+    margin: 3rem 6rem;
+}
+
+.product-list .text .title {
+    font-size: var(--h2-font-size);
+    margin: 2rem 0;
+}

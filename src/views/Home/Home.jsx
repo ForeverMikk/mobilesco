@@ -7,6 +7,8 @@ import sillaNueva from './../../asstes/img/silla-nueva.png';
 import Navbar from '../../components/Nabvar/Navbar';
 import ProductItem from '../../components/ProductItem/ProductItem';
 import SearchBox from '../../components/SearchBox/SearchBox';
+import ProductList from './ProductList/ProductList';
+import OurServices from './OurServices/OurServices';
 
 
 const Home = () => {
@@ -21,6 +23,9 @@ const Home = () => {
                     <p className='description'>Si estás en busca de mobiliario de calidad entonces eres bienvenido. Tenemos diferentes tipos de muebles esperando a ser repartidos.</p>
                 </div>
             </header>
+
+            <ProductList />
+            <OurServices />
         </>
     )
 }
