@@ -11,6 +11,7 @@ import ProductList from './ProductList/ProductList';
 import OurServices from './OurServices/OurServices';
 import Categories from './Categories/Categories';
 import MonthProduct from './MonthProduct/MonthProduct';
+import Suscribe from './Suscribe/Suscribe';
 
 
 const Home = () => {
@@ -30,6 +31,7 @@ const Home = () => {
             <OurServices />
             <Categories />
             <MonthProduct />
+            <Suscribe />
         </>
     )
 }

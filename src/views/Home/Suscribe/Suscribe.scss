@@ -1,0 +1,73 @@
+.suscribe {
+    height: 80vh;
+    margin: 5rem;
+    background: var(--first-color);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+}
+
+.suscribe .title, .suscribe .subtitle {
+    font-family: var(--title-font);
+    // padding: 0.5rem 1rem;
+}
+.suscribe .title, .suscribe .complement {
+    color: #fff;
+}
+.suscribe .title {
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-normal);
+}
+.suscribe .subtitle {
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-normal);
+    color: var(--second-color);
+    margin: 0.5rem 0 1rem 0;
+}
+.suscribe .complement {
+    font-family: var(--text-font);
+    font-weight: var(--font-normal);
+    font-size: var(--small-font-size);
+    margin-bottom: 2.5rem;
+}
+
+.suscribe .mail-form {
+    position: relative;
+    width: 300px;
+    font-family: var(--text-font);
+    // display: inline-block;
+}
+.suscribe .custom-search-input {
+    position: relative;
+    width: 100%;
+    border: 1px solid var(--first-color-light);
+    border-radius: 100px;
+    padding: 10px 100px 10px 20px; 
+    line-height: 1;
+    box-sizing: border-box;
+    outline: none;
+    color: #fff;
+    background: var(--first-color-light);
+}
+.suscribe .custom-search-input::placeholder {
+    color: #fff;
+}
+
+.suscribe .custom-search-botton {
+    position: absolute;
+    right: 3px; 
+    top: 3px;
+    bottom: 3px;
+    border: 0;
+    background: var(--second-color);
+    color: #fff;
+    outline: none;
+    margin: 0;
+    padding: 0 10px;
+    border-radius: 100px;
+    z-index: 2;
+}
