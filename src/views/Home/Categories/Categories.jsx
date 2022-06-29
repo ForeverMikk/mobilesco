@@ -22,7 +22,7 @@ const Categories = () => {
             pagination={{ clickable: true }}
             // scrollbar={{ draggable: true }}
 
-            spaceBetween={100}
+            spaceBetween={30}
             slidesPerView={4}
             onSlideChange={() => console.log('Sliding')}
             onSwiper={(swiper)=> console.log(swiper)} 

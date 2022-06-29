@@ -1,0 +1,55 @@
+.month-product {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.month-product .data {
+    margin: 0 0 0 10rem;
+    padding: 2rem;
+}
+
+.month-product .subtitle {
+    font-family: var(--text-font);
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+    text-transform: uppercase;
+    color: var(--first-color-light);
+}
+.month-product .title {
+    font-family: var(--title-font);
+    color: var(--first-color);
+    // margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.month-product .description {
+    font-family: var(--text-font);
+    color: var(--first-color);
+}
+
+.month-product .buttons {
+    margin: 2rem 0;
+}
+.month-product .buttons button {
+    border: none;
+    background: #fff;
+}
+.month-product .buttons .buy {
+    margin-right: 2rem;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    border-radius: 3rem;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semibold);
+    background: var(--second-color);
+}
+.month-product .buttons .cart {
+    font-size: var(--h3-font-size);
+    color: var(--second-color);
+} 
+
+.month-product .img img{
+    width: 30rem;
+    margin: 0 10rem;
+}

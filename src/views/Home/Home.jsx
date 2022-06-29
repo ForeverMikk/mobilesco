@@ -10,6 +10,7 @@ import SearchBox from '../../components/SearchBox/SearchBox';
 import ProductList from './ProductList/ProductList';
 import OurServices from './OurServices/OurServices';
 import Categories from './Categories/Categories';
+import MonthProduct from './MonthProduct/MonthProduct';
 
 
 const Home = () => {
@@ -28,6 +29,7 @@ const Home = () => {
             <ProductList />
             <OurServices />
             <Categories />
+            <MonthProduct />
         </>
     )
 }
