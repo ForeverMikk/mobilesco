@@ -1,0 +1,17 @@
+.top-products {
+    margin: 5rem 0;
+}
+
+.top-products .swiper {
+    margin: 5rem;
+}
+
+.top-products .swiper .card-item {
+    background: var(--first-color);
+}
+.top-products .swiper .card-item .card-title {
+    color: #fff;
+}
+.top-products .swiper .card-item .heart {
+    color: var(--second-color-light);
+}
