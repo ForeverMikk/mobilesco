@@ -1,12 +1,8 @@
 import React from 'react';
-import silla from '../../../asstes/img/silla-nueva.png';
+import silla from '../../../asstes/img/sillas/silla-nueva.png';
 import ProductItem from '../../../components/ProductItem/ProductItem';
 import {Navigation, Pagination, Scrollbar, A11y} from 'swiper';
 import {Swiper, SwiperSlide} from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-
 
 import './ProductList.scss';
 

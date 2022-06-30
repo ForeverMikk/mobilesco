@@ -5,6 +5,8 @@ import sillas from '../../asstes/img/sillas.png';
 import mesas from '../../asstes/img/mesas.png';
 import escritorios from '../../asstes/img/escritorios.png';
 import libreros from '../../asstes/img/libreros.png';
+import CategoriesPopular from './CategoriesPopular/CategoriesPopular';
+import TopProducts from './TopProducts/TopProducts';
 
 
 const CaregorieCircle = ({img, name}) => {
@@ -39,6 +41,8 @@ const Catalog = () => {
                 </div>
             </div>
 
+            <CategoriesPopular />
+            <TopProducts />
 
         </section>
     )

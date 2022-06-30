@@ -73,7 +73,7 @@ button {
 }
 
 .swiper-button-next, .swiper-button-prev {
-  color: var(--second-color,var(--swiper-theme-color)) !important;
+  color: var(--first-color,var(--swiper-theme-color)) !important;
 }
 
 @media screen and (min-width: 1024px) {

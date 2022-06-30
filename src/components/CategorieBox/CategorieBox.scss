@@ -1,0 +1,38 @@
+.box {
+    background: var(--second-color);
+    width: 20rem;
+    text-align: center;
+    padding: 2rem;
+}
+.box .img-grid {
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    flex-wrap: wrap;
+}
+.box .img-grid img {
+    padding: 0.5rem;
+    height: 8rem;
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.box .data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0 0 0;
+}
+
+.box .data p, .box .data button {
+    font-family: var(--text-font);
+    font-weight: var(--font-bold);
+    font-size: var(--small-font-size);
+    color: #fff;
+}
+
+.box .data button {
+    padding: 0.5rem 1rem;
+    background: var(--second-color-light);
+    border-radius: 2rem;
+}
