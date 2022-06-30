@@ -27,6 +27,8 @@ const escritorios = [escritorio1, escritorio2, escritorio3, escritorio4];
 const CategoriesPopular = () => {
     return (
         <section className='categories-box'>
+            {/* <h2>Categorias populares</h2>
+            <button>Ver todas</button> */}
             <Swiper 
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 navigation
