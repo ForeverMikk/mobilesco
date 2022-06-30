@@ -1,10 +1,8 @@
 import React from 'react';
 
-
 import './Home.scss';
 import sillaNueva from './../../asstes/img/silla-nueva.png';
 
-import Navbar from '../../components/Nabvar/Navbar';
 import ProductItem from '../../components/ProductItem/ProductItem';
 import SearchBox from '../../components/SearchBox/SearchBox';
 import ProductList from './ProductList/ProductList';
@@ -17,7 +15,7 @@ import Suscribe from './Suscribe/Suscribe';
 const Home = () => {
     return (
         <>
-            <Navbar />
+            {/* <Navbar /> */}
             <header>
                 <div className="background">
                     <h1 className='title'>Make your interior <br /> look better</h1>

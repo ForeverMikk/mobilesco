@@ -1,4 +1,4 @@
-.categories {
+.home-categories {
     height: 100vh;   
     display: flex;
     flex-direction: column;
@@ -6,16 +6,16 @@
     justify-content: center;
 }
 
-.categories h2 {
+.home-categories h2 {
     font-family: var(--title-font);
     margin-bottom: 1rem;
 }
 
-.categories .subtitle, .categories .title {
+.home-categories .subtitle, .home-categories .title {
     color: var(--first-color);
 }
 
-.categories .subtitle {
+.home-categories .subtitle {
     font-family: var(--text-font);
     font-size: var(--small-font-size);
     width: 40%;

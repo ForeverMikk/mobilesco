@@ -24,6 +24,9 @@ footer .logo img {
     width: 10rem;
 }
 
+footer .social-media h4 {
+    margin-bottom: 1rem;
+}
 footer .social-media .icons {
     display: flex;
     flex-direction: column;
@@ -35,11 +38,10 @@ footer .social-media .icons a {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    height: 3rem;
-    width: 3rem;
-    padding: 0.5rem;
+    height: 2.5rem;
+    width: 2.5rem;
     color: var(--second-color);
     background: var(--third-color);
-    font-size: 2rem;
-    margin: 0.3rem;
+    font-size: 1.75rem;
+    margin-bottom: 0.3rem;
 }

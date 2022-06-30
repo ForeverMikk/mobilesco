@@ -11,7 +11,7 @@ import category from '../../../asstes/img/category.jpg';
 
 const Categories = () => {
     return (
-        <section className='categories'>
+        <section className='home-categories'>
             <h2 className='title'>Categorías que podrían interesarte</h2>
             <p className='subtitle'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit ipsum dolor sit amet, consectetuer adipiscing elit</p>
 

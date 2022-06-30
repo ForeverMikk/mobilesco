@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
@@ -9,11 +10,19 @@ const Navbar = () => {
     return (
         <>
             <nav className='navbar'>
-                <img src={logo} alt="Logo de Mobilesco" />
+                <Link to="/">
+                    <img src={logo} alt="Logo de Mobilesco" />
+                </Link>
                 <ul className='nav-list'>
-                    <li>Sobre Nosotros</li>
-                    <li>Contacto</li>
-                    <li>Catalogo</li>
+                    <li>
+                        <Link to="/about-us">Sobre Nosotros</Link>
+                    </li>
+                    <li>
+                        <Link to="/contact">Contacto</Link>
+                    </li>
+                    <li>
+                        <Link to="/catalog">Catálogo</Link>
+                    </li>
                     <li>
                         <FontAwesomeIcon icon={faHeart} />
                     </li>
