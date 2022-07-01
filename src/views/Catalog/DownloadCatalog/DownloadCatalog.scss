@@ -1,0 +1,27 @@
+.download-catalog {
+    margin: 0 5rem 5rem;
+    background: var(--third-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.download-catalog .card-item {
+    background: #fff;
+}
+.download-catalog .card-item img {
+    background: var(--third-color);
+}
+
+.download-catalog .data .title {
+    font-family: var(--title-font);
+}
+
+.download-catalog .data button {
+    color: #fff;
+    font-weight: var(--font-bold);
+    font-size: var(--normal-font-size);
+    width: 10rem;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    background: var(--second-color);
+}
