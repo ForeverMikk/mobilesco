@@ -15,7 +15,8 @@ const Footer = () => {
                 <img src={logo} alt="" />
                 <h4>Métodos de pago</h4>
                 <p>Paypal</p>
-                <p>En efectivo</p>
+                <p>Atrato</p>
+                <p>Santander, Bancomer</p>
             </div>
 
             <div className="menu">

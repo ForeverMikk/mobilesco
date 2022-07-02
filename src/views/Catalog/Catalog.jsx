@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './Catalog.scss';
 import sillas from '../../asstes/img/sillas.png';
@@ -31,7 +32,9 @@ const Catalog = () => {
 
                 <form action="" className="search-bar">
                     <input type="text" placeholder='Búsqueda por nombre'/>
-                    <button>Buscar</button>
+                    <Link to="/catalog-search">
+                        <button>Buscar</button>
+                    </Link>
                 </form>
 
                 <div className='categories'>

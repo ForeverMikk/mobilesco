@@ -1,0 +1,35 @@
+.catalog-search {
+    text-align: center;
+}
+
+.catalog-search .search-bar {
+    margin: 5rem 0;
+}
+
+.catalog-search .search-bar input, 
+.catalog-search .search-bar .search-button, 
+.catalog-search .search-bar .categories{
+    padding: 0.5rem;
+    border-radius: 2rem;
+}
+
+.catalog-search .search-bar .search-button, .catalog-search .search-bar .categories {
+    cursor: pointer;
+    color: white;
+}
+
+.catalog-search .search-bar input {
+    border: none;
+    width: 50rem;
+    background: var(--third-color);
+}
+.catalog-search .search-bar .search-button {
+    margin-left: -2rem;
+    background: var(--second-color);
+}
+.catalog-search .search-bar .categories {
+    background: var(--first-color);
+    margin-left: 2rem;
+}
+
+

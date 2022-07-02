@@ -47,7 +47,7 @@ const TopProducts = ({img, title}) => {
             <Swiper
                 className='swiper'
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
-                // navigation
+                navigation
                 pagination={{ clickable: true }}
                 spaceBetween={50}
                 slidesPerView={4}
