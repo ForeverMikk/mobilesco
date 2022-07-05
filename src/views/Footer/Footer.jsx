@@ -21,8 +21,12 @@ const Footer = () => {
 
             <div className="menu">
                 <h4>Mobilesco</h4>
-                <p>Sobre nosotros</p>
-                <p>Catálogo</p>
+                <Link to="/about-us">
+                    <p>Sobre nosotros</p>
+                </Link>
+                <Link to="/catalog">
+                    <p>Catálogo</p>
+                </Link>
                 <p>Sucursales</p>
                 <p>Trabaja con nosotros</p>
             </div>

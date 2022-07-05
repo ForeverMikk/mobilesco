@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import './Suscribe.scss';
 
-
 const Suscribe = () => {
     
     const [selectedButton, setSelectedButton] = useState(true);

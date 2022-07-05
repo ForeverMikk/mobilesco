@@ -11,6 +11,8 @@ footer h4, footer p {
 
 footer h4 {
     font-family: var(--title-font);
+    font-size: var(--h3-font-size);
+    // font-weight: var(--font-bold);
     margin-bottom: 1.5rem;
 }
 
@@ -48,5 +50,6 @@ footer .social-media .icons a {
 }
 
 footer .social-media .icons a:hover {
+    color: var(--first-color);
     transform: translateX(5px);
 }
