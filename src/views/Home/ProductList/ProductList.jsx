@@ -12,8 +12,7 @@ const sillas = [
         description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
         img: silla,
         className: "catalog"
-    },
-    {
+    },{
         name: "Silla Chida 2",
         description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
         img: silla,
