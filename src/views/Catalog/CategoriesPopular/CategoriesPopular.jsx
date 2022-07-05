@@ -27,12 +27,15 @@ const escritorios = [escritorio1, escritorio2, escritorio3, escritorio4];
 const CategoriesPopular = () => {
     return (
         <section className='categories-box'>
-            {/* <h2>Categorias populares</h2>
-            <button>Ver todas</button> */}
+            <div className="info">
+                <h2>Categorias populares</h2>
+                <button>Ver todas</button>
+            </div>
+            
             <Swiper 
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 navigation
-                pagination={{ clickable: true }}
+                // pagination={{ clickable: true }}
                 spaceBetween={50}
                 slidesPerView={3}
                 onSlideChange={() => console.log('Sliding')}

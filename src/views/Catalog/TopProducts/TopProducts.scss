@@ -1,11 +1,35 @@
 .top-products {
-    margin: 5rem 0;
-}
-
-.top-products .swiper {
     margin: 5rem;
 }
 
+.top-products .info {
+    display: flex;
+    margin-bottom: 2rem;
+}
+.top-products .info h2 {
+    font-family: var(--title-font);
+    color: var(--first-color);
+    margin-right: 2rem;
+}
+.top-products .info button {
+    font-family: var(--text-font);
+    color: #fff;
+    background: var(--first-color);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    
+    transition: all 0.3s ease-out;
+}
+
+.top-products .info button:hover {
+    cursor: pointer;
+    background: var(--first-color-light);
+}
+
+// CARD Swiper Styles
+// .top-products .swiper {
+//     margin: 5rem;
+// }
 .top-products .swiper .card-item {
     background: var(--first-color);
 }

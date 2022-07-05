@@ -39,8 +39,8 @@ const sillasTop = [
 const TopProducts = ({img, title}) => {
     return(
         <section className='top-products'>
-            <div>
-                <h2 className="title">Top Sillas</h2>
+            <div className='info'>
+                <h2>Top Sillas</h2>
                 <button> Ver todos</button>
             </div>
 
@@ -48,7 +48,7 @@ const TopProducts = ({img, title}) => {
                 className='swiper'
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 navigation
-                pagination={{ clickable: true }}
+                // pagination={{ clickable: true }}
                 spaceBetween={50}
                 slidesPerView={4}
                 onSlideChange={() => console.log('Sliding')}

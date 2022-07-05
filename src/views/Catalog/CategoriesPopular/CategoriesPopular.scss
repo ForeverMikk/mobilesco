@@ -1,8 +1,27 @@
 
 .categories-box {
     margin: 5rem;
+}
+
+.categories-box .info {
     display: flex;
-    // flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: 2rem;
+}
+.categories-box .info h2 {
+    font-family: var(--title-font);
+    color: var(--first-color);
+    margin-right: 2rem;
+}
+.categories-box .info button {
+    font-family: var(--text-font);
+    color: #fff;
+    background: var(--first-color);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    transition: all 0.3s ease-out;
+}
+
+.categories-box .info button:hover {
+    cursor: pointer;
+    background: var(--first-color-light);
 }
