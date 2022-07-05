@@ -13,7 +13,7 @@ import DownloadCatalog from './DownloadCatalog/DownloadCatalog';
 
 const CaregorieCircle = ({img, name}) => {
     return (
-        <button>
+        <button className='categorie-circle'>
             <img src={img} alt={name} />
             <h3>{name}</h3>
         </button>

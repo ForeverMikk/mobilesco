@@ -6,6 +6,41 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 
 import './ProductList.scss';
 
+const sillas = [
+    {
+        name: "Silla Chida 1",
+        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+        img: silla,
+        className: "catalog"
+    },
+    {
+        name: "Silla Chida 2",
+        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+        img: silla,
+        className: "catalog"
+    },{
+        name: "Silla Chida 3",
+        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+        img: silla,
+        className: "catalog"
+    },{
+        name: "Silla Chida 4",
+        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+        img: silla,
+        className: "catalog"
+    },{
+        name: "Silla Chida 5",
+        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+        img: silla,
+        className: "catalog"
+    },{
+        name: "Silla Chida 6",
+        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+        img: silla,
+        className: "catalog"
+    }
+]
+
 const ProductList = () => {
     return(
         <section className="product-list">
@@ -25,54 +60,16 @@ const ProductList = () => {
                 onSlideChange={() => console.log('Sliding')}
                 onSwiper={(swiper)=> console.log(swiper)}
             >
-                <SwiperSlide>
-                    <ProductItem 
-                        name="Silla Chida 1" 
-                        description="Lorem ipsum dolor sit amet consectetur, adipisicing elit."
-                        img={silla}
-                        className="catalog"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <ProductItem 
-                        name="Silla Chida 2" 
-                        description="Lorem ipsum dolor sit amet consectetur, adipisicing elit."
-                        img={silla}
-                        className="catalog"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <ProductItem 
-                        name="Silla Chida 3" 
-                        description="Lorem ipsum dolor sit amet consectetur, adipisicing elit."
-                        img={silla}
-                        className="catalog"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <ProductItem 
-                        name="Silla Chida 4" 
-                        description="Lorem ipsum dolor sit amet consectetur, adipisicing elit."
-                        img={silla}
-                        className="catalog"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <ProductItem 
-                        name="Silla Chida 5" 
-                        description="Lorem ipsum dolor sit amet consectetur, adipisicing elit."
-                        img={silla}
-                        className="catalog"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <ProductItem 
-                        name="Silla Chida 6" 
-                        description="Lorem ipsum dolor sit amet consectetur, adipisicing elit."
-                        img={silla}
-                        className="catalog"
-                    />
-                </SwiperSlide>
+                {sillas.map((item, index) => (
+                    <SwiperSlide key={index}>
+                        <ProductItem 
+                            name={item.name} 
+                            description={item.description}
+                            img={item.img}
+                            className={item.className}
+                        />
+                    </SwiperSlide>
+                ))}
             </Swiper>
            
         </section>

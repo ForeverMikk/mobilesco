@@ -50,3 +50,12 @@
 .catalog .categories button img {
     height: 7rem;
 }
+
+
+.categorie-circle img {
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease-out;
+}
+.categorie-circle img:hover {
+    transform: translateY(-10px) scale(1.007)
+}

@@ -70,4 +70,10 @@
     padding: 0 10px;
     border-radius: 100px;
     z-index: 2;
+    transition: all 0.3s ease-out;
+}
+.suscribe .custom-search-botton:hover {
+    cursor: pointer;
+    color: var(--first-color);
+    background: #fff;
 }

@@ -11,7 +11,8 @@
     margin-bottom: 1rem;
 }
 
-.home-categories .subtitle, .home-categories .title {
+.home-categories .title {
+    padding: 0 1rem 0.5rem;
     color: var(--first-color);
 }
 
@@ -39,6 +40,10 @@
     justify-content: center;
     font-family: var(--text-font);
     background: var(--first-color);
+    transition: all 0.3s ease-out;
+}
+.category-card:hover {
+    transform: translateY(-10px) scale(1.007)
 }
 .category-card .title {
     color: var(--second-color);
@@ -46,6 +51,7 @@
 .category-card .description {
     color: #fff;
     font-size: var(--smaller-font-size);
+    padding: 0.3rem 0.5rem;
 }
 
 .category-card img {

@@ -5,6 +5,10 @@
     padding: 2rem;
     border-top-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
+    transition: all 0.3s ease-out;
+}
+.box:hover {
+    transform: translateY(-10px) scale(1.007)
 }
 .box .img-grid {
     display: flex;
@@ -17,6 +21,10 @@
     height: 8rem;
     border-top-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
+    transition: all 0.3s ease-out;
+}
+.box .img-grid img:hover{
+    transform: translateY(-5px) scale(1.007)
 }
 
 .box .data {
@@ -37,4 +45,10 @@
     padding: 0.5rem 1rem;
     background: var(--second-color-light);
     border-radius: 2rem;
+    transition: all 0.3s ease-out;
+}
+
+.box .data button:hover {
+    cursor: pointer;
+    background: var(--first-color-light);
 }

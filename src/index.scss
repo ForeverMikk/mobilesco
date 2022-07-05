@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300&display=swap');
 
+@font-face {
+  font-family: "Elegance";
+  src: url(./asstes/fonts/Rounded-Elegance.woff);
+}
+
+@font-face {
+  font-family: "Metropolis";
+  src: url(./asstes/fonts/Metropolis-Regular.woff);
+}
+
 :root {
   // COLORS
   --first-color: #334b47;
@@ -10,8 +20,8 @@
   --fourth-color: #fff;
 
   // Font Family
-  --title-font: 'Open Sans', sans-serif;
-  --text-font:  'Roboto', sans-serif;
+  --title-font: 'Elegance','Open Sans', sans-serif;
+  --text-font:  'Metropolis','Roboto', sans-serif;
   
   // Font Size
   --big-font-size: 2.5rem;

@@ -31,6 +31,7 @@ const Categories = () => {
                     <p className="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
                 </div>
             </SwiperSlide>
+
             <SwiperSlide>
                 <div className='category-card'>
                     <h3 className='title'>Escolares</h3>
@@ -38,6 +39,7 @@ const Categories = () => {
                     <p className="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
                 </div>
             </SwiperSlide>
+
             <SwiperSlide>
                 <div className='category-card'>
                     <h3 className='title'>Escolares</h3>
@@ -45,6 +47,7 @@ const Categories = () => {
                     <p className="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
                 </div>
             </SwiperSlide>
+
             <SwiperSlide>
                 <div className='category-card'>
                     <h3 className='title'>Escolares</h3>
@@ -52,6 +55,7 @@ const Categories = () => {
                     <p className="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
                 </div>
             </SwiperSlide>
+
             <SwiperSlide>
                 <div className='category-card'>
                     <h3 className='title'>Escolares</h3>
@@ -59,6 +63,7 @@ const Categories = () => {
                     <p className="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
                 </div>
             </SwiperSlide>
+
             <SwiperSlide>
                 <div className='category-card'>
                     <h3 className='title'>Escolares</h3>
@@ -66,6 +71,7 @@ const Categories = () => {
                     <p className="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
                 </div>
             </SwiperSlide>
+            
         </Swiper>
             
         </section>

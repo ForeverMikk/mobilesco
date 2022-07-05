@@ -44,10 +44,21 @@
     font-weight: var(--font-semibold);
     background: var(--second-color);
 }
+.month-product .buttons .buy, .month-product .buttons .cart {
+    transition: all 0.3s ease-out;
+}
+.month-product .buttons .buy:hover {
+    cursor: pointer;
+    background: var(--first-color-light)
+}
 .month-product .buttons .cart {
     font-size: var(--h3-font-size);
     color: var(--second-color);
 } 
+.month-product .buttons .cart:hover {
+    cursor: pointer;
+    color: var(--first-color-light);
+}
 
 .month-product .img img{
     width: 30rem;

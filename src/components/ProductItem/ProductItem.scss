@@ -9,6 +9,10 @@
     justify-content: center;
     font-family: var(--text-font);
     color: var(--first-color);
+    transition: all 0.3s ease-out;
+}
+.card-item:hover {
+    transform: translateY(-10px) scale(1.007)
 }
 .card-item img {
     padding: 1.5rem;
@@ -16,7 +20,6 @@
     border-bottom-right-radius: 1.25rem;
     margin-bottom: 1rem;
 }
-
 .card-item.home {
    background: #fff;
    position: absolute;
@@ -55,6 +58,7 @@
     text-decoration: none;
     background: none;
     border: none;
+    transition: all 0.3s ease-in-out;
 }
 .card-item .card-buttons button:hover {
     cursor: pointer;
@@ -68,6 +72,20 @@
     font-weight: var(--font-semibold);
     background: var(--second-color);
 }
-.card-item .card-buttons .heart {
+.card-item .card-buttons .more:hover {
+    background: var(--first-color);
+}
+.card-item .card-buttons .heart {  
     font-size: larger;
+}
+
+.card-item .card-buttons .heart:hover {
+    color: var(--second-color);
+}
+
+.card-item.catalog .card-buttons .more:hover {
+    background: var(--first-color-light);
+}
+.card-item.catalog .card-buttons .heart:hover {
+    color: var(--second-color);
 }
