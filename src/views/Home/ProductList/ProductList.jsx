@@ -52,7 +52,7 @@ const ProductList = () => {
             <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 navigation
-                pagination={{ clickable: true }}
+                // pagination={{ clickable: true }}
                 // scrollbar={{ draggable: true }}
 
                 spaceBetween={0}
