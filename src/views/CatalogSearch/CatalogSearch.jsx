@@ -2,24 +2,19 @@ import React, { useState } from 'react';
 
 import './CatalogSearch.scss';
 import { products } from '../../variables/items';
-import ProductList from './ProductsList/ProductList';
-
-
 
 
 const CatalogSearch = () => {
 
-    const [value, setValue] = useState('');
-    const [productosArray, setProductosArray] = useState(products);
-    const [categories, setCategories] = useState();
+    const [value, setvalue] = useState('');
 
     const onChange = (event) => {
-        setValue(event.target.value);
+        setvalue(event.target.value);
     }
 
     const onSearch = (event, searchTerm) => {
         event.preventDefault();
-        setValue(searchTerm)
+        setvalue(searchTerm)
         console.log("Search", searchTerm)
     }
 
@@ -28,12 +23,14 @@ const CatalogSearch = () => {
 
             <form onSubmit={(e) => onSearch(e, value)} className='search-bar'>
                 <input type="text" value={value} placeholder='Encuentra un mueble a tu medida' onChange={onChange}/>
+                <button className='search-button'>Buscar</button>
+                <button className='categories'>Categorias</button>
                 <div className="dropdown">
                     {products.filter(item => {
                         const searchTerm = value.toLocaleLowerCase();
                         const fullName = item.name.toLocaleLowerCase();
 
-                        return searchTerm && fullName.startsWith(searchTerm) && fullName !== searchTerm;
+                        return searchTerm && fullName.match(searchTerm) && fullName !== searchTerm;
                     })
                     .slice(0,5)
                     .map((item) => (
@@ -42,12 +39,9 @@ const CatalogSearch = () => {
                         </div>
                     ))}
                 </div>
-                <button className='search-button'>Buscar</button>
-                <button className='categories'>Categorias</button>
 
             </form>
 
-            {/* <ProductList /> */}
 
         </section>
     )

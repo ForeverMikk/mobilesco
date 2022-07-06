@@ -23,6 +23,15 @@
     width: 50rem;
     background: var(--third-color);
 }
+
+.catalog-search .search-bar .dropdown {
+    // display: inline-block;
+    margin-left: 13rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    background: var(--third-color);
+    width: 50rem;
+}
 .catalog-search .search-bar .search-button {
     margin-left: -2rem;
     background: var(--second-color);

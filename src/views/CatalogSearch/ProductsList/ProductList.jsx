@@ -1,7 +1,21 @@
 import React from 'react';
+import ProductItem from '../../../components/ProductItem/ProductItem';
 
-const ProductList = () => {
-    return <h1>Hola</h1>
+const ProductList = (products) => {
+    return (
+
+        <section className='product-list'>
+        {products.map((item, index)=> (
+            <ProductItem 
+                key={index}
+                name={item.name}
+                img={item.img}
+                description={item.description}
+            />
+        ))}
+
+        </section>
+    )
 }
 
 export default ProductList

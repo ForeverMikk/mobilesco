@@ -27,15 +27,15 @@ const Footer = () => {
                 <Link to="/catalog">
                     <p>Catálogo</p>
                 </Link>
-                <p>Sucursales</p>
+                <p>Visítanos</p>
                 <p>Trabaja con nosotros</p>
             </div>
 
             <div className="help">
                 <h4>Ayuda</h4>
                 <p>Preguntas frecuentes</p>
-                <p>Llámanos<br />+52 771 792 7151</p>
-                <p>Cotizaciones por whatsapp<br />5523436209</p>
+                <p>Llámanos<br />771 792 7151<br />771 792 7152</p>
+                <p>Cotizaciones por whatsapp<br />771 163 5991</p>
             </div>
 
             <div className="other">
@@ -46,7 +46,7 @@ const Footer = () => {
             </div>
 
             <div className="social-media">
-                <h4>Siguenos</h4>
+                <h4>Síguenos</h4>
                 <div className="icons">
                     <a href="#" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faWhatsapp} />
