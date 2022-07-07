@@ -2,46 +2,54 @@ import React, { useState } from 'react';
 
 import './CatalogSearch.scss';
 import { products } from '../../variables/items';
-
+import ProductsList from './ProductsList/ProductList';
 
 const CatalogSearch = () => {
 
-    const [value, setvalue] = useState('');
-
+    const [product, setProduct] = useState();
+    const [productsFiltered, setProductsFiltered] = useState(null);    
+    
     const onChange = (event) => {
-        setvalue(event.target.value);
+        const value = event.target.value;
+        if(value.length > 2) {
+             const filtered = products.filter(item => {
+                return item.name.toLowerCase().indexOf(value.toLowerCase()) >= 0;
+            })
+            setProductsFiltered(filtered)
+        }
+
+        if(value.trim() === ''){
+            setProductsFiltered(null);
+        }
     }
 
     const onSearch = (event, searchTerm) => {
         event.preventDefault();
-        setvalue(searchTerm)
-        console.log("Search", searchTerm)
+        setProduct(searchTerm);
+        console.log("Search", searchTerm);
     }
 
     return(
         <section className='catalog-search'>
 
-            <form onSubmit={(e) => onSearch(e, value)} className='search-bar'>
-                <input type="text" value={value} placeholder='Encuentra un mueble a tu medida' onChange={onChange}/>
-                <button className='search-button'>Buscar</button>
-                <button className='categories'>Categorias</button>
-                <div className="dropdown">
-                    {products.filter(item => {
-                        const searchTerm = value.toLocaleLowerCase();
-                        const fullName = item.name.toLocaleLowerCase();
+            <form onSubmit={(e) => onSearch(e, product)} className='search-bar'>
+                <div>
+                    <input type="text" value={product} placeholder='Encuentra un mueble a tu medida' onChange={onChange}/>
+                    <button className='search-button'>Buscar</button>
+                    <button className='categories'>Categorias</button>
+                </div>
 
-                        return searchTerm && fullName.match(searchTerm) && fullName !== searchTerm;
-                    })
-                    .slice(0,5)
-                    .map((item) => (
+                {productsFiltered && <div className="dropdown">
+                    {productsFiltered.map((item) => (
                         <div key={item.name} onClick={(e) => onSearch(e, item.name)} className="dropdown-row">
-                            {item.name}
+                            <p className='item-name'>{item.name}</p>
                         </div>
                     ))}
-                </div>
+                </div>}
 
             </form>
 
+           {productsFiltered && <ProductsList products={productsFiltered}/> }
 
         </section>
     )
