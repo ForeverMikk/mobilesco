@@ -32,8 +32,8 @@ const CatalogSearch = () => {
     return(
         <section className='catalog-search'>
 
-            <form onSubmit={(e) => onSearch(e, product)} className='search-bar'>
-                <div>
+            <form className='search-bar'>
+                <div className='input-box'>
                     <input type="text" value={product} placeholder='Encuentra un mueble a tu medida' onChange={onChange}/>
                     <button className='search-button'>Buscar</button>
                     <button className='categories'>Categorias</button>

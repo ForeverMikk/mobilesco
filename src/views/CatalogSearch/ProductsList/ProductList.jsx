@@ -1,10 +1,12 @@
 import React from 'react';
+
+import './ProductList.scss';
 import ProductItem from '../../../components/ProductItem/ProductItem';
 
 const ProductList = ({products}) => {
     return (
 
-        <section className='product-list'>
+        <section className='grid'>
             {products && products.map((item, index) => (
                 <ProductItem 
                     key={index}
