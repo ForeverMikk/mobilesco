@@ -10,9 +10,9 @@ const ProductList = ({products}) => {
             {products && products.map((item, index) => (
                 <ProductItem 
                     key={index}
-                    name={item.name}
-                    img={item.img}
-                    description={item.description}
+                    name={item.NOMBRE}
+                    img={item.IMAGEN}
+                    description={item.DESCRIPCION}
                 />
             ))}
         </section>
