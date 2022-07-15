@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'reactjs-popup/dist/index.css';
 
 import './index.scss';
 import App from './App';

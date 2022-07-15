@@ -25,7 +25,7 @@ const CatalogSearch = () => {
         const value = event.target.value;
         const productsAPI = await getProducts();
         
-        console.log(productsAPI);
+        // console.log(productsAPI);
 
         if(value.length > 2) {
              const filtered = productsAPI.filter(item => {
