@@ -1,0 +1,33 @@
+.product-card {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+.popup-content {
+    padding: 0;
+    border-radius: 2rem;
+}
+.product-card .img {
+    height: 50vh;
+    width: 50vw;
+    background: url('../../asstes/img/sillas/silla-nueva.png') no-repeat center;
+    background-size: contain;
+}
+
+.product-card h1, .product-card h3{
+        font-family: var(--title-font);
+        color: var(--fourth-color);
+}
+
+.product-card button, .product-card p, .product-card label {
+    font-family: var(--text-font);
+}
+
+.product-card .product-info {
+    background: var(--third-color);
+    margin: 0;
+    padding: 2rem 5rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    border-top-right-radius: 2rem;
+}

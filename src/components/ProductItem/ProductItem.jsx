@@ -5,6 +5,7 @@ import Popup from 'reactjs-popup';
 
 import './ProductItem.scss'
 import Loader from '../Loader/Loader';
+import ProductCard from '../ProductCard/ProductCard';
 
 const ProductItem = ({name, description, img, link, className}) => {
     
@@ -32,7 +33,7 @@ const ProductItem = ({name, description, img, link, className}) => {
                     nested
                     trigger={<button className='more'>Ver Mas</button>}
                 >
-                    <div><Loader /></div>
+                    <ProductCard />
                 </Popup>
                 <button className='heart'>
                     <FontAwesomeIcon icon={faHeart} />
