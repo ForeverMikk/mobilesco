@@ -31,9 +31,9 @@ const CatalogSearch = () => {
                 const fullName = item.NOMBRE.toLowerCase();
 
                 // return fullName && fullName.match(productInput) && fullName !== productInput
+                // setProduct(fullName);
                 return fullName.indexOf(productInput) >= 0;
             })
-            setProduct(productInput);
             setProductsFiltered(filtered);
         }
 
@@ -54,16 +54,16 @@ const CatalogSearch = () => {
         <section className='catalog-search'>
 
 
-            <form className='search-bar' onSubmit={(e) => onSearch(e,product)}>
+            <form className='search-bar'>
                 <div className='input-box'>
                     <input type="text" value={product} placeholder='Encuentra un mueble a tu medida' onChange={onChange}/>
-                    <button className='search-button' onClick={(e) => onSearch(e,product)}>Buscar</button>
+                    <button className='search-button'>Buscar</button>
                     <button className='categories'>Categorias</button>
                 </div>
 
                 {productsFiltered && <div className="dropdown">
                     {productsFiltered.map((item) => (
-                        <div key={item.CLAVE} onClick={(e) => onSearch(e, item.NOMBRE)} className="dropdown-row">
+                        <div key={item.CLAVE} className="dropdown-row">
                             <p className='item-name'>{item.NOMBRE}</p>
                         </div>
                     ))}

@@ -16,9 +16,9 @@ const ProductCard = () => {
                 <div className="colors">
                     <h3 className='colors-title'>Colores: </h3>
                     <div className="buttons">
-                        <button></button>
-                        <button></button>
-                        <button></button>
+                        <button>.</button>
+                        <button>.</button>
+                        <button>.</button>
                     </div>
                     <label htmlFor="">Azul Rey</label>
                 </div>
