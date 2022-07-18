@@ -1,7 +1,8 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 import './ProductCard.scss';
-
 
 const ProductCard = () => {
     return (
@@ -12,15 +13,16 @@ const ProductCard = () => {
             <div className="product-info">
                 <h3 className="category">Categoria Sillas</h3>
                 <h1>Silla ISO</h1>
-                <p>Silla acojinada en vinil o pliana con estructura tubular ovalada y coderas. <br /> Variedad de colores. Pregunte por los disponibles.</p>
+                <p className='description'>Silla acojinada en vinil o pliana con estructura tubular ovalada y coderas. <br /> Variedad de colores. Pregunte por los disponibles.</p>
+                
                 <div className="colors">
                     <h3 className='colors-title'>Colores: </h3>
                     <div className="buttons">
-                        <button>.</button>
-                        <button>.</button>
-                        <button>.</button>
+                        <button></button>
+                        <button></button>
+                        <button></button>
                     </div>
-                    <label htmlFor="">Azul Rey</label>
+                    <label htmlFor="" className='label'>Azul Rey</label>
                 </div>
 
                 <div className="sizes">
@@ -32,15 +34,20 @@ const ProductCard = () => {
                     </div>
                 </div>
 
-                <div className="cuantity">
-                    <button>-</button>
-                    <p>1</p>
-                    <button>+</button>
+                <div className="quantity">
+                    <h3 className="quantity-title">Cantidad</h3>
+                    <div className="buttons">
+                        <button className='less'>-</button>
+                        <p>1</p>
+                        <button className='more'>+</button>
+                    </div>
                 </div>
 
                 <div className="bottom-buttons">  
-                    <button>Cotizar Ahora</button>
-                    <button>💖</button>
+                    <button className='quote'>Cotizar Ahora</button>
+                    <button className='heart'>
+                        <FontAwesomeIcon icon={faHeart} />
+                    </button>
                 </div>
 
                 <div className="card-footer">
