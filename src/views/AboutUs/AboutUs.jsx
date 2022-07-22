@@ -10,6 +10,8 @@ import truck from '../../asstes/img/truck.png';
 import aboutBackground from '../../asstes/img/about-us-background.png';
 import politicImg from '../../asstes/img/hand-shake.png';
 import ServiceCard from './ServiceCard/ServiceCard';
+import Gallery from './Gallery/Gallery';
+
 
 
 const Politic = ({icon, title, description}) => {
@@ -67,10 +69,8 @@ const AboutUs = () => {
                 />
             </div>
             
+            <Gallery />
 
-            <div className="galery">
-                
-            </div>
         </section>
     )
 }

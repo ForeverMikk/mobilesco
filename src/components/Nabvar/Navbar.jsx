@@ -24,9 +24,9 @@ const Navbar = () => {
                         <Link to="/catalog">Catálogo</Link>
                     </li>
                     <li>
-                        <a href="http://" target="_blank" rel="noopener noreferrer">
+                        <Link to="/wishlist">
                             <FontAwesomeIcon icon={faHeart} />
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </nav>

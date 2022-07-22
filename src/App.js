@@ -9,6 +9,7 @@ import Catalog from './views/Catalog/Catalog';
 import CatalogSearch from "./views/CatalogSearch/CatalogSearch";
 import AboutUs from "./views/AboutUs/AboutUs";
 import Contact from "./views/Contact/Contact";
+import Wishlist from "./views/WishList/Wishlist";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/catalog-search" element={<CatalogSearch />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/wishlist" element={<Wishlist />} />
       </Routes>
 
       <Footer />
