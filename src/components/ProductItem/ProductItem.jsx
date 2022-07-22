@@ -7,7 +7,7 @@ import './ProductItem.scss'
 import Loader from '../Loader/Loader';
 import ProductCard from '../ProductCard/ProductCard';
 
-const ProductItem = ({name, description, img, link, className}) => {
+const ProductItem = ({id, name, description, img, link, className}) => {
     
     const getProduct = () => {
         return(
