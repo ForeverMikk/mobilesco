@@ -1,20 +1,26 @@
 import React from 'react';
+import Popup from 'reactjs-popup';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import Popup from 'reactjs-popup';
+import {useDispatch} from 'react-redux';
 
 import './ProductItem.scss'
-import Loader from '../Loader/Loader';
+// import Loader from '../Loader/Loader';
 import ProductCard from '../ProductCard/ProductCard';
+import cartSlice from '../../store/cart-slice';
 
-const ProductItem = ({id, name, description, img, link, className}) => {
+
+const ProductItem = ({id, name, description, img, className, price, }) => {
     
-    const getProduct = () => {
-        return(
-            <>
-                
-            </>
-        )
+    const dispatch = useDispatch();
+
+    const addToCart = () => {
+        dispatch(cartSlice.addToCart({
+            name,
+            id,
+            price,
+            description,
+        }))
     }
 
     return (
@@ -35,7 +41,7 @@ const ProductItem = ({id, name, description, img, link, className}) => {
                 >
                     <ProductCard />
                 </Popup>
-                <button className='heart'>
+                <button className='heart' onClick={addToCart}>
                     <FontAwesomeIcon icon={faHeart} />
                 </button>
             </div>
