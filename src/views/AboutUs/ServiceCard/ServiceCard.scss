@@ -1,0 +1,45 @@
+.service-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 0;
+}
+
+.service-card .img {
+    // height: 25rem;
+    width: 40%;
+}
+
+.service-card .img img {
+    width: auto;
+    height: 25rem;
+}
+.service-card .service-info {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 2rem;
+}
+
+.service-card .service-info .title {
+    font-family: var(--title-font);
+    font-size: var(--h3-font-size);
+    margin: 2rem 0;
+}
+
+.service-card .service-info .description {
+    text-align: left;
+    width: 50%;
+    font-family: var(--text-font);
+    font-size: var(--small-font-size);
+
+}
+
+.service-card.reverse {
+    flex-direction: row-reverse;
+}
+
+.service-card.reverse .service-info {
+    align-items: flex-end;
+}
