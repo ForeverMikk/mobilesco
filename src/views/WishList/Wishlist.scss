@@ -1,0 +1,93 @@
+.wishlist {
+    padding: 5rem;
+}
+.wishlist .title {
+    text-align: center;
+    font-family: var(--title-font);
+    font-size: var(--h1-font-size);
+    color: var(--first-color);
+}
+
+.status-bar {
+    border-radius: 2rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    background: #40665C;
+    padding: 0.5rem 1rem;
+}
+
+.status-bar p {
+    display: flex;
+    align-items: center;
+    font-family: var(--text-font);
+}
+.status-bar p svg {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 2rem;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    background: var(--first-color);
+}
+
+.status-bar p:nth-child(1) {
+    color: var(--second-color);
+}
+.status-bar p:nth-child(1) svg {
+    background: var(--second-color);
+    color: #fff;
+}
+
+.preview {
+    display: flex;
+    align-items: center;
+    margin: 5rem 0 0;
+}
+.preview .basket {
+    width: 70%;
+}
+
+.preview .summary {
+    width: 30%;
+    background: #E9E1DB;
+    padding: 1rem;
+    border-bottom-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+}
+.summary .summary-resume, .summary .contact-info, .summary .shipping-info, .summary .user-info {
+    background: #f5f3f1;
+    border-bottom-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+    padding: 1.5rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.preview .summary h3 {
+    font-family: var(--title-font);
+    color: var(--first-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.preview .summary p, .preview .summary label, .preview .summary input::placeholder, .preview .summary button{
+    font-family: var(--text-font);
+    font-size: var(--small-font-size);
+    color: var(--first-color);
+}
+.preview .summary p, .preview .summary label {
+    margin: 1rem 0.5rem;
+}
+
+.preview .summary input[type="text"], .preview .summary button {
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    border: none;
+    margin: 0.5rem 0;
+    width: 100%;
+}
+
+.preview .summary button {
+    color: #fff;
+    background: var(--second-color);
+}
