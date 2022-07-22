@@ -1,0 +1,39 @@
+.preview-product {
+    display: flex;
+    align-items: center;
+    align-content: space-around;
+    width: 30rem;
+    height: 15rem;
+}
+
+.preview-product .img {
+    padding: 1rem;
+}
+
+.preview-product .img img {
+    width: 100%;
+    height: 100%;
+}
+
+.preview-info .title {
+    font-family: var(--title-font);
+    font-size: var(--h3-font-size);
+    color: var(--first-color);
+}
+
+.preview-info .description, .preview-info button {
+    font-family: var(--text-font);
+    margin: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.preview-info .more {
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background: var(--second-color);
+    border-radius: 2rem;
+}
+
+.preview-info .remove {
+    font-weight: var(--font-semibold);
+    color: var(--first-color);
+}

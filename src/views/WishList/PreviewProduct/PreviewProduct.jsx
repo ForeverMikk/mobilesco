@@ -1,5 +1,6 @@
 import React from 'react';
 
+import './PreviewProduct.scss';
 
 const PreviewProduct = ({ img, title, description }) => {
     return (
