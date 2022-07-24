@@ -24,14 +24,30 @@
 
 .nav-list li a {
     font-family: var(--text-font);
-    font-size: var(--small-font-size);
+    // font-size: var(--small-font-size);
     font-weight: var(--font-medium);
     color: var(--first-color-light);
     transition: all 0.3s ease-out;
+    z-index: 10;
 }
 
 .nav-list li a:hover {
     cursor: pointer;
     color: var(--second-color);
     transform: translateY(-3px);
+}
+.navbar svg {
+    font-size: var(--h3-font-size);
+}
+.navbar span {
+    position: absolute;
+    // text-align: center;
+    font-size: var(--smaller-font-size);
+    padding: 0.25rem 0.5rem ;
+    border-radius: 2rem;
+    background: var(--second-color);
+    color: #fff;
+    margin-left: 0.6rem;
+    margin-top: 0.6rem;
+    // z-index: 10;
 }

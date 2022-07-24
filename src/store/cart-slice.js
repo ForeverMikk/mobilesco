@@ -1,4 +1,4 @@
-import { configureStore, createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 const cartSlice = createSlice({
     name: 'cart',
@@ -19,7 +19,7 @@ const cartSlice = createSlice({
                 itemExists.quantity++;
                 itemExists.totalPrice += newItem.price;
             } else {
-                state.itemList.push(...newItem);
+                state.itemList.push({...newItem});
                 state.totalQuantity++;
             }
         },
@@ -31,13 +31,15 @@ const cartSlice = createSlice({
             // Si el item es solo uno lo borra, si es mayor a uno solo resta el total y el precio total
             if(itemExists.quantity === 1) {
                 state.itemList = state.itemList.filter(item => item.id !== id);
-                state.totalQuantity--;
+                state.totalQuantity -= 1;
             } else {
-                itemExists.quantity--;
+                itemExists.quantity -= 1;
                 itemExists.totalPrice -= itemExists.price;
             }
         }
     }
 })
+
+export const cartActions = cartSlice.actions;
 
 export default cartSlice;

@@ -1,8 +1,9 @@
 import React from 'react';
 import Popup from 'reactjs-popup';
+import { useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import {useDispatch} from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import './ProductItem.scss'
 // import Loader from '../Loader/Loader';
@@ -10,16 +11,17 @@ import ProductCard from '../ProductCard/ProductCard';
 import cartSlice from '../../store/cart-slice';
 
 
-const ProductItem = ({id, name, description, img, className, price, }) => {
+const ProductItem = ({id, name, description, img, className, price }) => {
     
     const dispatch = useDispatch();
 
     const addToCart = () => {
-        dispatch(cartSlice.addToCart({
+        dispatch(cartSlice.actions.addToCart({
             name,
             id,
             price,
             description,
+            img,
         }))
     }
 
