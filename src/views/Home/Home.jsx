@@ -19,7 +19,7 @@ const Home = () => {
             <header>
                 <div className="background">
                     <h1 className='title'>Make your interior <br /> look better</h1>
-                    <ProductItem name="Silla nueva" description="La mejor silla de la Historia" img={silla} className='home'/>
+                    <ProductItem name="Silla nueva" description="La mejor silla de la Historia" img={silla} className='home' id="1" price="150"/>
                     <SearchBox />
                     <p className='description'>Si estás en busca de mobiliario de calidad entonces eres bienvenido. Tenemos diferentes tipos de muebles esperando a ser repartidos.</p>
                 </div>

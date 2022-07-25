@@ -62,6 +62,8 @@ const ProductList = () => {
                 {sillas.map((item, index) => (
                     <SwiperSlide key={index}>
                         <ProductItem 
+                            id={index}
+                            price={item.price}
                             name={item.name} 
                             description={item.description}
                             img={item.img}

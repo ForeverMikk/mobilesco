@@ -48,13 +48,13 @@ const Footer = () => {
             <div className="social-media">
                 <h4>Síguenos</h4>
                 <div className="icons">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
+                    <a href="https://api.whatsapp.com/send?phone=527711635991" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faWhatsapp} />
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.facebook.com/Mobilesco" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faFacebook} />
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/mobilesco_oficial/" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faInstagram} />
                     </a>
                 </div>

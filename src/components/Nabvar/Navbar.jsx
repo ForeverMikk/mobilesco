@@ -1,18 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector} from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 import './Navbar.scss';
 import logo from './../../asstes/img/mobilesco-logo.png';
-import { cartActions } from '../../store/cart-slice';
+// import { cartActions } from '../../store/cart-slice';
 
 
 
 const Navbar = () => {
 
-        const productsQuantity = useSelector(state => state.cart.totalQuantity);
+        const productsQuantity = useSelector(state =>{
+            console.log(state)
+            return state.cart.totalQuantity
+        });
         // const dispatch = useDispatch();
 
 

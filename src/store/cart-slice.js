@@ -16,7 +16,7 @@ const cartSlice = createSlice({
             
             // Si el item esta creado agregar uno nuevo, si no agregarlo
             if(itemExists) {
-                itemExists.quantity++;
+                itemExists.quantity ++;
                 itemExists.totalPrice += newItem.price;
             } else {
                 state.itemList.push({...newItem});

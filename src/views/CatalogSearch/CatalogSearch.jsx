@@ -7,8 +7,8 @@ import ProductsList from './ProductsList/ProductList';
 
 const CatalogSearch = () => {
 
-    const [productArray,  setProductArray] = useState();
-    const [product, setProduct] = useState();
+    // const [productArray,  setProductArray] = useState();
+    // const [product, setProduct] = useState();
     const [productsFiltered, setProductsFiltered] = useState(null);    
     
     const getProducts = async(event) => {
@@ -42,13 +42,13 @@ const CatalogSearch = () => {
         }
     }
 
-    const onSearch = (event, searchTerm) => {
-        event.preventDefault();
+    // const onSearch = (event, searchTerm) => {
+    //     event.preventDefault();
 
-        setProduct(searchTerm);
+    //     setProduct(searchTerm);
         
-        console.log(searchTerm);
-    }
+    //     console.log(searchTerm);
+    // }
     
     return(
         <section className='catalog-search'>
@@ -56,14 +56,14 @@ const CatalogSearch = () => {
 
             <form className='search-bar'>
                 <div className='input-box'>
-                    <input type="text" value={product} placeholder='Encuentra un mueble a tu medida' onChange={onChange}/>
+                    <input type="text" placeholder='Encuentra un mueble a tu medida' onChange={onChange}/>
                     <button className='search-button'>Buscar</button>
                     <button className='categories'>Categorias</button>
                 </div>
 
                 {productsFiltered && <div className="dropdown">
-                    {productsFiltered.map((item) => (
-                        <div key={item.CLAVE} className="dropdown-row">
+                    {productsFiltered.map((item, index) => (
+                        <div key={index} className="dropdown-row">
                             <p className='item-name'>{item.NOMBRE}</p>
                         </div>
                     ))}
