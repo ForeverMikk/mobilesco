@@ -35,13 +35,12 @@ const Home = () => {
                         name={product.NOMBRE} 
                         description={product.DESCRIPCION}
                         img={product.IMAGEN} 
-                        className='home'
+                        className="home"
                         id={product.CLAVE}
                         price={product.COSTO}
                         />
                     }
                     <SearchBox />
-                    {/* <button onClick={handleClick}>Dale Click</button> */}
                     <p className='description'>Si estás en busca de mobiliario de calidad entonces eres bienvenido. Tenemos diferentes tipos de muebles esperando a ser repartidos.</p>
                 </div>
             </header>

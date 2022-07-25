@@ -1,46 +1,26 @@
-import React from 'react';
-import silla from '../../../asstes/img/sillas/silla-nueva.png';
+import React, { useState, useEffect } from 'react';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import ProductItem from '../../../components/ProductItem/ProductItem';
-import {Navigation, Pagination, Scrollbar, A11y} from 'swiper';
-import {Swiper, SwiperSlide} from 'swiper/react';
 
 import './ProductList.scss';
-
-const sillas = [
-    {
-        name: "Silla Chida 1",
-        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-        img: silla,
-        className: "catalog"
-    },{
-        name: "Silla Chida 2",
-        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-        img: silla,
-        className: "catalog"
-    },{
-        name: "Silla Chida 3",
-        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-        img: silla,
-        className: "catalog"
-    },{
-        name: "Silla Chida 4",
-        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-        img: silla,
-        className: "catalog"
-    },{
-        name: "Silla Chida 5",
-        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-        img: silla,
-        className: "catalog"
-    },{
-        name: "Silla Chida 6",
-        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-        img: silla,
-        className: "catalog"
-    }
-]
+import { getAllProducts } from '../../../services/produtcSercive';
 
 const ProductList = () => {
+
+    const [productsList, setProductsList] = useState();
+
+    useEffect(() => {
+      const fetchData = async()=> {
+        const data = await getAllProducts();
+        const list = data.slice(2,7)
+        
+        setProductsList(list);
+      }
+
+      fetchData()
+    }, [])
+    
     return(
         <section className="product-list">
             <div className='text'>
@@ -59,18 +39,19 @@ const ProductList = () => {
                 onSlideChange={() => console.log('Sliding')}
                 onSwiper={(swiper)=> console.log(swiper)}
             >
-                {sillas.map((item, index) => (
+                {productsList.map((item, index) => (
                     <SwiperSlide key={index}>
                         <ProductItem 
-                            id={index}
-                            price={item.price}
-                            name={item.name} 
-                            description={item.description}
-                            img={item.img}
-                            className={item.className}
+                            id={item.CLAVE}
+                            price={item.COSTO}
+                            name={item.NOMBRE} 
+                            description={item.DESCRIPCION}
+                            img={item.IMAGEN}
+                            className="catalog"
                         />
                     </SwiperSlide>
                 ))}
+
             </Swiper>
            
         </section>
