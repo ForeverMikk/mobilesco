@@ -20,7 +20,6 @@ const CaregorieCircle = ({img, name}) => {
     )
 }
 
-
 const Catalog = () => {
     return (
         <section className="catalog">

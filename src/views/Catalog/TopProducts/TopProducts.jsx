@@ -1,42 +1,25 @@
-import React from 'react'
-import {Swiper, SwiperSlide} from 'swiper/react';
-import {Navigation, Pagination, Scrollbar, A11y} from 'swiper';
+import React,{ useState, useEffect } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
 import './TopProducts.scss';
 import ProductItem from '../../../components/ProductItem/ProductItem';
+import { getAllProducts } from '../../../services/produtcSercive';
 
-import silla1 from '../../../asstes/img/sillas/silla-5.jpg';
-import silla2 from '../../../asstes/img/sillas/silla-6.jpg';
-import silla3 from '../../../asstes/img/sillas/silla-7.jpg';
+const TopProducts = () => {
 
-const sillasTop = [
-    {
-        title: "Silla 1",
-        img: silla1
-    },
-    {
-        title: "Silla 2",
-        img: silla2
-    },
-    {
-        title: "Silla 3",
-        img: silla3
-    },
-    {
-        title: "Silla 1",
-        img: silla1
-    },
-    {
-        title: "Silla 2",
-        img: silla2
-    },
-    {
-        title: "Silla 3",
-        img: silla3
-    },
-]
+    const [topProducts, setTopProducts] = useState();
 
-const TopProducts = ({img, title}) => {
+    useEffect(() => {
+        const fetchData = async() => {
+            const data = await getAllProducts();
+
+            setTopProducts(data.slice(2,9));
+        }
+
+        fetchData()
+    }, [])
+    
     return(
         <section className='top-products'>
             <div className='info'>
@@ -51,12 +34,18 @@ const TopProducts = ({img, title}) => {
                 // pagination={{ clickable: true }}
                 spaceBetween={50}
                 slidesPerView={4}
-                onSlideChange={() => console.log('Sliding')}
-                onSwiper={(swiper)=> console.log(swiper)}
+                // onSlideChange={() => console.log('Sliding')}
+                // onSwiper={(swiper)=> console.log(swiper)}
              >
-                {sillasTop.map(({img, title}) => (
-                    <SwiperSlide key={title}>
-                        <ProductItem img={img} name={title} className="catalog"/>
+                {topProducts && topProducts.map((item, index) => (
+                    <SwiperSlide key={index}>
+                        <ProductItem 
+                            id={item.CLAVE}
+                            price={item.COSTO}
+                            name={item.NOMBRE} 
+                            description={item.DESCRIPCION}
+                            img={item.IMAGEN}
+                            className="catalog"/>
                     </SwiperSlide>
                 ))}
 

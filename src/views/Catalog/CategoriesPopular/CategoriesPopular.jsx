@@ -38,8 +38,8 @@ const CategoriesPopular = () => {
                 // pagination={{ clickable: true }}
                 spaceBetween={50}
                 slidesPerView={3}
-                onSlideChange={() => console.log('Sliding')}
-                onSwiper={(swiper)=> console.log(swiper)} 
+                // onSlideChange={() => console.log('Sliding')}
+                // onSwiper={(swiper)=> console.log(swiper)} 
              >
                 <SwiperSlide>
                     <CategorieBox items={sillas} title="Sillas de Oficina"/>

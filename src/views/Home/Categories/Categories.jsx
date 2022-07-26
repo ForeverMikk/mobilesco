@@ -65,8 +65,8 @@ const Categories = () => {
 
                 spaceBetween={30}
                 slidesPerView={4}
-                onSlideChange={() => console.log('Sliding')}
-                onSwiper={(swiper)=> console.log(swiper)} 
+                // onSlideChange={() => console.log('Sliding')}
+                // onSwiper={(swiper)=> console.log(swiper)} 
             >
 
                 {categories.map((item, index) => (

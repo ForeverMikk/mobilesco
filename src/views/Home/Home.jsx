@@ -5,7 +5,7 @@ import './Home.scss';
 
 import ProductItem from '../../components/ProductItem/ProductItem';
 import SearchBox from '../../components/SearchBox/SearchBox';
-import ProductList from './ProductList/ProductList';
+import ProductCarousel from './ProductCarousel/ProductCarousel';
 import OurServices from './OurServices/OurServices';
 import Categories from './Categories/Categories';
 import MonthProduct from './MonthProduct/MonthProduct';
@@ -27,7 +27,6 @@ const Home = () => {
           
     return (
         <>
-            {/* <Navbar /> */}
             <header>
                 <div className="background">
                     <h1 className='title'>Make your interior <br /> look better</h1>
@@ -45,7 +44,7 @@ const Home = () => {
                 </div>
             </header>
 
-            <ProductList />
+            <ProductCarousel />
             <OurServices />
             <Categories />
             <MonthProduct />

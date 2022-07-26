@@ -1,20 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import './DownloadCatalog.scss';
-import banca from '../../../asstes/img/sillas/silla-nueva.png';
 import ProductItem from '../../../components/ProductItem/ProductItem';
-
-const item = {name: "Banca Escolar", img: banca, className: "catalog"}
+import { getProductById } from '../../../services/produtcSercive';
 
 const DownloadCatalog = () => {
+
+    const [product, setProduct] = useState();
+
+    useEffect(() => {
+        const fetchData = async() => {
+            const data = await getProductById(11);
+            // console.log('data', data[0])
+            setProduct(data[0])
+        }
+        fetchData()
+    }, [])
+
     return(
         <section className='download-catalog'>
-            <ProductItem name={item.name} img={item.img} />
+            {product && <ProductItem name={product.NOMBRE} img={product.IMAGEN} />}
             <div className='data'>
                 <h2 className='title'>Descarga el catálogo</h2>
                 <button>PDF</button>
             </div>
-            <ProductItem name={item.name} img={item.img} />
+            {product && <ProductItem name={product.NOMBRE} img={product.IMAGEN} />}
         </section>
     )
 }
