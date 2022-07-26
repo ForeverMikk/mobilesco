@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 
 import './Home.scss';
-
 import ProductItem from '../../components/ProductItem/ProductItem';
 import SearchBox from '../../components/SearchBox/SearchBox';
 import ProductCarousel from './ProductCarousel/ProductCarousel';
@@ -9,7 +8,7 @@ import OurServices from './OurServices/OurServices';
 import Categories from './Categories/Categories';
 import MonthProduct from './MonthProduct/MonthProduct';
 import Suscribe from './Suscribe/Suscribe';
-import { getProductById } from '../../services/produtcSercive';
+import { getProductById } from '../../services/productSercive';
 
 
 const Home = () => {

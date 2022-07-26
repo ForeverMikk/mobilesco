@@ -8,7 +8,7 @@ import libreros from '../../asstes/img/libreros.png';
 import CategoriesPopular from './CategoriesPopular/CategoriesPopular';
 import TopProducts from './TopProducts/TopProducts';
 import DownloadCatalog from './DownloadCatalog/DownloadCatalog';
-import { getAllProducts } from '../../services/produtcSercive';
+import { getAllProducts } from '../../services/productSercive';
 import SearchBar from '../../components/SearchBar/SearchBar';
 
 const CaregorieCircle = ({img, name}) => {
@@ -22,7 +22,12 @@ const CaregorieCircle = ({img, name}) => {
 
 const Catalog = () => {
 
+    // const [inputValue, setInputValue] = useState();
     const [productsFiltered, setProductsFiltered] = useState();
+
+    // const onChange = (event) => {
+    //     set
+    // }
 
     const onChange = async(event) => {
         const productInput = event.target.value.toLowerCase();

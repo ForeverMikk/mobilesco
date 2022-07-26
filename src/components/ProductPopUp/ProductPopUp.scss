@@ -112,13 +112,20 @@
     border: 0.125rem solid var(--second-color);
     color: var(--second-color);
 }
-.quantity .buttons  p {
+.quantity .buttons {
     color: var(--first-color);
 }
+
 .quantity .buttons .more {
     margin-left: 0.5rem;
     background: var(--second-color);
     color: var(--third-color);
+}
+
+.quantity .buttons button:hover {
+    background: var(--third-color);
+    color: var(--first-color);
+    border: 0.125rem solid var(--first-color);
 }
 
 // Boottom Buttons 
@@ -134,6 +141,14 @@
     padding: 0.5rem 1rem;
     border-radius: 2rem;
     color: #fff;
+    transition: all 0.3s ease-out;
+}
+.bottom-buttons a:hover {
+    background: var(--first-color);
+}
+.bottom-buttons button:hover {
+    color: var(--first-color);
+    border: 0.125rem solid var(--first-color);
 }
 
 .bottom-buttons .quote {

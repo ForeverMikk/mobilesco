@@ -7,14 +7,12 @@ export const getAllProducts = async() => {
     const data = response.data;
 
     return data;
-    
 }
 
 export const getProductById = async(id) => {
     const response = await axios.get(MOBILESCO_URL + `?idMueble=${id}`);
     const data = response.data;
 
-    // console.log('DATA',data)
     return data;
 }
 

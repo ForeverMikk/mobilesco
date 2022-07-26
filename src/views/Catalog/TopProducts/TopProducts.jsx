@@ -4,7 +4,7 @@ import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
 import './TopProducts.scss';
 import ProductItem from '../../../components/ProductItem/ProductItem';
-import { getAllProducts } from '../../../services/produtcSercive';
+import { getAllProducts } from '../../../services/productSercive';
 
 const TopProducts = () => {
 

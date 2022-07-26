@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import './DownloadCatalog.scss';
 import ProductItem from '../../../components/ProductItem/ProductItem';
-import { getProductById } from '../../../services/produtcSercive';
+import { getProductById } from '../../../services/productSercive';
 
 const DownloadCatalog = () => {
 
