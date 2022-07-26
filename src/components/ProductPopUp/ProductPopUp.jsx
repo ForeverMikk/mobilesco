@@ -68,7 +68,7 @@ const ProductPopUp = ({ name, id, category, description, color, material, img, p
                     <h3 className="quantity-title">Cantidad</h3>
                     <div className="buttons">
                         <button className='less' onClick={decrementHandler}>-</button>
-                        <p>{productSelected.quantity}</p>
+                        {/* <p>{productQuantity}</p> */}
                         <button className='more' onClick={incrementHandler}>+</button>
                     </div>
                 </div>
