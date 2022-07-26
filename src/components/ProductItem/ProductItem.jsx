@@ -11,7 +11,7 @@ import ProductCard from '../ProductCard/ProductCard';
 import cartSlice from '../../store/cart-slice';
 
 
-const ProductItem = ({id, name, description, img, className, price }) => {
+const ProductItem = ({id, name, description, img, className, price, quantity }) => {
     
     const dispatch = useDispatch();
 
@@ -22,6 +22,7 @@ const ProductItem = ({id, name, description, img, className, price }) => {
             price,
             description,
             img,
+            quantity,
         }))
     }
 

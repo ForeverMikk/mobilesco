@@ -37,6 +37,7 @@ const Home = () => {
                         className="home"
                         id={product.CLAVE}
                         price={product.COSTO}
+                        quantity={1}
                         />
                     }
                     <SearchBox />

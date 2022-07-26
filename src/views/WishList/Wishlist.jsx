@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 import './Wishlist.scss';
 import previewImg from '../../asstes/img/sillas/silla-1.jpg';
@@ -8,6 +9,9 @@ import PreviewProduct from './PreviewProduct/PreviewProduct';
 
 
 const Wishlist = () => {
+
+    const cartProducts = useSelector(state => state.cart.itemList);
+
     return(
         <section className="wishlist">
             <h1 className="title">Solicitud de cotización</h1>
@@ -21,7 +25,15 @@ const Wishlist = () => {
             <div className="preview">
 
                 <div className="basket">
-                    <PreviewProduct 
+                    {cartProducts && cartProducts.map((item, index) => (
+                        <PreviewProduct 
+                            key={index}
+                            title={item.name}
+                            description={item.description} 
+                            img={item.img}
+                        />
+                    ))}
+                    {/* <PreviewProduct 
                         title="Silla ISO" 
                         description="Silla acojinada en vinil o pliana con estructura tubular ovalada y coderas. Variedad de colores. Pregunte por los disponibles." 
                         img={previewImg}
@@ -30,21 +42,16 @@ const Wishlist = () => {
                         title="Silla ISO" 
                         description="Silla acojinada en vinil o pliana con estructura tubular ovalada y coderas. Variedad de colores. Pregunte por los disponibles." 
                         img={previewImg}
-                    />
-                    <PreviewProduct 
-                        title="Silla ISO" 
-                        description="Silla acojinada en vinil o pliana con estructura tubular ovalada y coderas. Variedad de colores. Pregunte por los disponibles." 
-                        img={previewImg}
-                    />
+                    /> */}
 
                 </div>
                 
                 <aside className='summary'>
                     <div className="summary-resume">
                         <h3>Resumen del pedido</h3>
-                        <p><span>2</span>Silla Chida</p>
-                        <p><span>3</span>Silla Chida</p>
-                        <p><span>5</span>Silla Chida</p>
+                        {cartProducts && cartProducts.map((item, index) => (
+                            <p key={index}><span>{item.quantity}</span>{item.name}</p>
+                        ))}
                     </div>
 
                     <div className="contact-info">

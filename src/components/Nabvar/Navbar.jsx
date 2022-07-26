@@ -6,14 +6,11 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 import './Navbar.scss';
 import logo from './../../asstes/img/mobilesco-logo.png';
-// import { cartActions } from '../../store/cart-slice';
-
-
 
 const Navbar = () => {
 
         const productsQuantity = useSelector(state =>{
-            console.log(state)
+            console.log("carrito", state)
             return state.cart.totalQuantity
         });
         // const dispatch = useDispatch();
