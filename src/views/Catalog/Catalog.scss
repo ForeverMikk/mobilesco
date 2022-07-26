@@ -18,22 +18,22 @@
     margin-bottom: 3rem;
 }
 
-.catalog .search-bar input, .catalog .search-bar button{
-    padding: 0.5rem 1rem;
-    border-radius: 2rem;
+.catalog .search-bar {
+    margin: 3rem;
+
 }
 
-.catalog .search-bar input {
-    border: none;
-    width: 15rem;
-    background: var(--third-color);
-}
-.catalog .search-bar button {
-    cursor: pointer;
-    color: white;
-    margin-left: -2rem;
-    background: var(--second-color);
-}
+// .catalog .search-bar input {
+//     border: none;
+//     width: 15rem;
+//     background: var(--third-color);
+// }
+// .catalog .search-bar button {
+//     cursor: pointer;
+//     color: white;
+//     margin-left: -2rem;
+//     background: var(--second-color);
+// }
 
 
 

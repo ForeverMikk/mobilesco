@@ -1,5 +1,4 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 
 import './Catalog.scss';
 import sillas from '../../asstes/img/sillas.png';
@@ -9,6 +8,8 @@ import libreros from '../../asstes/img/libreros.png';
 import CategoriesPopular from './CategoriesPopular/CategoriesPopular';
 import TopProducts from './TopProducts/TopProducts';
 import DownloadCatalog from './DownloadCatalog/DownloadCatalog';
+import { getAllProducts } from '../../services/produtcSercive';
+import SearchBar from '../../components/SearchBar/SearchBar';
 
 const CaregorieCircle = ({img, name}) => {
     return (
@@ -20,6 +21,28 @@ const CaregorieCircle = ({img, name}) => {
 }
 
 const Catalog = () => {
+
+    const [productsFiltered, setProductsFiltered] = useState();
+
+    const onChange = async(event) => {
+        const productInput = event.target.value.toLowerCase();
+        const productsList = await getAllProducts();
+
+        if(productInput.length > 2) {
+            const filtered = productsList.filter(item => {
+                const fullName = item.NOMBRE.toLowerCase();
+
+                return fullName.indexOf(productInput) >= 0;
+            })
+            console.log("filtrados",filtered)
+            setProductsFiltered(filtered);
+        } 
+
+        if(productInput.trim() === ''){
+            setProductsFiltered(null);
+        }
+    }
+
     return (
         <section className="catalog">
             <div className="header">
@@ -28,12 +51,7 @@ const Catalog = () => {
 
                 <p className='description'>Si estás en busca de mobiliario de calidad entonces eres bienvenido. Tenemos diferentes tipos de muebles esperando a ser repartidos.</p>
 
-                <form action="" className="search-bar">
-                    <input type="text" placeholder='Búsqueda por nombre'/>
-                    <Link to="/catalog-search">
-                        <button>Buscar</button>
-                    </Link>
-                </form>
+                <SearchBar onChange={onChange} productsFiltered={productsFiltered}/>
 
                 <div className='categories'>
                     <CaregorieCircle img={sillas} name="Sillas" />
