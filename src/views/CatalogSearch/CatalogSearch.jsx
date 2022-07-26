@@ -41,14 +41,6 @@ const CatalogSearch = () => {
             setProductsFiltered(null);
         }
     }
-
-    // const onSearch = (event, searchTerm) => {
-    //     event.preventDefault();
-
-    //     setProduct(searchTerm);
-        
-    //     console.log(searchTerm);
-    // }
     
     return(
         <section className='catalog-search'>

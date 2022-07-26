@@ -2,7 +2,7 @@
     background: var(--second-color);
     width: 20rem;
     text-align: center;
-    padding: 2rem;
+    padding: 2rem 1.5rem;
     border-top-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
     transition: all 0.3s ease-out;
@@ -18,8 +18,9 @@
     flex-wrap: wrap;
 }
 .box .img-grid img {
-    padding: 0.5rem;
-    height: 8rem;
+    // padding: 0.25rem;
+    margin: 0.25rem;
+    height: 7rem;
     border-top-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
     transition: all 0.3s ease-out;
