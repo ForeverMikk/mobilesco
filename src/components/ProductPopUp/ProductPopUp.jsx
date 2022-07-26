@@ -1,5 +1,5 @@
 import React from 'react'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
@@ -9,14 +9,17 @@ import { cartActions } from '../../store/cart-slice';
 
 const ProductPopUp = ({ name, id, category, description, color, material, img, price }) => {
 
-    // const productsQuantity = useSelector(state => state.cart.itemList[id].quantity);
+    const productList = useSelector(state => state.cart.itemList);
+    const productSelected = productList.find(item => item.id === id);
+
     const dispatch = useDispatch();
 
     const decrementHandler = () => {
         dispatch(cartActions.removeFromCart(id));
     }
-
+    
     const incrementHandler = () => {
+        console.log(productSelected)
         dispatch(cartActions.addToCart({
             name,
             id,
@@ -65,7 +68,7 @@ const ProductPopUp = ({ name, id, category, description, color, material, img, p
                     <h3 className="quantity-title">Cantidad</h3>
                     <div className="buttons">
                         <button className='less' onClick={decrementHandler}>-</button>
-                        {/* <p>{productsQuantity}</p> */}
+                        <p>{productSelected.quantity}</p>
                         <button className='more' onClick={incrementHandler}>+</button>
                     </div>
                 </div>
