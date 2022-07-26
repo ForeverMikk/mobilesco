@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react'
+
+import './SearchBox.scss';
 import { getAllCategories } from '../../services/categoryService';
 import { getAllTypes } from '../../services/typeService';
 
-import './SearchBox.scss';
 
 const DropdownCategories = ({itemList}) => {
     return(

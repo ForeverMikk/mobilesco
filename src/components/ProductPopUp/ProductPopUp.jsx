@@ -87,6 +87,18 @@ const ProductPopUp = ({ name, id, category, description, color, material, img, p
                     <p>Categorias: {category}</p>
                     <p>Tags: {category}</p>
                 </div>
+
+                <div id="higslide-div-atrato-info" 
+                    data-plataform="other"  
+                    data-type="info" 
+                    data-price="PRECIO DEL PRODUCTO" 
+                    data-version="2.0" 
+                    data-style="dark"  
+                    data-linkcolor="black" 
+                    data-urlhost="https://app.atratopago.com">
+                        Atrato v2
+                </div>
+
             </div>
 
         </div>

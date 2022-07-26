@@ -57,6 +57,7 @@ const ProductItem = ({id, name, description, img, className, price, category, co
                 <button className='heart' onClick={addToCart}>
                     <FontAwesomeIcon icon={faHeart} />
                 </button>
+                
             </div>
         </div>
     )

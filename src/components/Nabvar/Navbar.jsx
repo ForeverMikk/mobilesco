@@ -33,6 +33,18 @@ const Navbar = () => {
                             <FontAwesomeIcon icon={faHeart} />
                         </Link>
                     </li>
+                    <li>
+                    <div id="higslide-div-atrato-info" 
+                        data-plataform="other"  
+                        data-type="info" 
+                        data-price="PRECIO DEL PRODUCTO" 
+                        data-version="2.0" 
+                        data-style="dark"  
+                        data-linkcolor="black" 
+                        data-urlhost="https://app.atratopago.com">
+                            Atrato v2
+                    </div>
+                    </li>
                 </ul>
             </nav>
         </>
