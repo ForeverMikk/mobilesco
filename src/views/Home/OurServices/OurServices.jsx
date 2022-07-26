@@ -10,7 +10,7 @@ import truck from '../../../asstes/img/truck.png';
 
 const Service = ({icon, title, description}) => {
     return (
-        <div className='service-card'>
+        <div className='service'>
             <img src={icon} alt={title} />
             <h3 className='title'>{title}</h3>
             <p>{description}</p>
@@ -25,7 +25,7 @@ const OurServices = () => {
             <img src={services} alt="" />
         </div>
 
-        <div className="services">
+        <div className="services-home">
             <div className='services-top'>
                 <Service icon={hand} title="El precio que mejor se te acomoda" description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit" />
                 <Service icon={cart} title="Políticas de retorno accesibles" description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit" />

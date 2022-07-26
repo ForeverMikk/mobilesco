@@ -12,7 +12,7 @@ const categories = [
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod"
     },
     {
-        name: "DE Oficina",
+        name: "De Oficina",
         img: category,
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod"
     },

@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 
 import './Home.scss';
-// import silla from './../../asstes/img/sillas/silla-nueva.png';
 
 import ProductItem from '../../components/ProductItem/ProductItem';
 import SearchBox from '../../components/SearchBox/SearchBox';

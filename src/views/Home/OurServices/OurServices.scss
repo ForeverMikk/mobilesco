@@ -11,30 +11,30 @@
 .our-services .img img {
     height: 80%;
 }
-.our-services .services {
+.our-services .services-home {
     display: flex;
     flex-direction: column;
     width: 50%;
     // flex-wrap: wrap;
     // justify-content: space-around;
 }
-.our-services .services .services-top, .our-services .services .services-bottom {
+.our-services .services-home .services-top, .our-services .services-home .services-bottom {
     display: flex;
 }
-.our-services .service-card {
+.our-services .service {
     width: 15rem;
     color: var(--first-color);
     margin: 2rem 1rem;
 }
-.our-services .service-card img {
+.our-services .service img {
     width: 4rem;
 }
-.our-services .service-card .title {
+.our-services .service .title {
     margin: 1rem 0;
     font-family: var(--title-font);
     font-weight: var(--font-bold);
 }
-.our-services .service-card p {
+.our-services .service p {
     font-family: var(--text-font);
 }
 

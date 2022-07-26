@@ -2,7 +2,6 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 import './Wishlist.scss';
-import previewImg from '../../asstes/img/sillas/silla-1.jpg';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faUser, faHeart, faCheck, faLocationCrosshairs} from '@fortawesome/free-solid-svg-icons';
 import PreviewProduct from './PreviewProduct/PreviewProduct';
@@ -33,33 +32,26 @@ const Wishlist = () => {
                             img={item.img}
                         />
                     ))}
-                    {/* <PreviewProduct 
-                        title="Silla ISO" 
-                        description="Silla acojinada en vinil o pliana con estructura tubular ovalada y coderas. Variedad de colores. Pregunte por los disponibles." 
-                        img={previewImg}
-                    />
-                    <PreviewProduct 
-                        title="Silla ISO" 
-                        description="Silla acojinada en vinil o pliana con estructura tubular ovalada y coderas. Variedad de colores. Pregunte por los disponibles." 
-                        img={previewImg}
-                    /> */}
-
                 </div>
                 
                 <aside className='summary'>
                     <div className="summary-resume">
                         <h3>Resumen del pedido</h3>
                         {cartProducts && cartProducts.map((item, index) => (
-                            <p key={index}><span>{item.quantity}</span>{item.name}</p>
+                            <p key={index}>
+                               Cantidad: <span>{item.quantity}</span>
+                               <br />
+                               Nombre: <span>{item.name}</span>
+                            </p>
                         ))}
                     </div>
 
                     <div className="contact-info">
                         <h3>Tipo de Entrega</h3>
-                        <input type="radio" name="home-delivery" id="home-delivery" />
-                        <label htmlFor="home-delivery">Envio a domicilio</label>
-                        <input type="radio" name="pick-up" id="pick-up" />
-                        <label htmlFor="pick-up">Recoger en sucursal</label>
+                        <input type="radio" name="shipping" id="home-delivery" />
+                        <label htmlFor="shipping">Envio a domicilio</label>
+                        <input type="radio" name="shipping" id="pick-up" />
+                        <label htmlFor="shipping">Recoger en sucursal</label>
                     </div>
 
                     <div className="shipping-info">
