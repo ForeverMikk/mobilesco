@@ -10,7 +10,6 @@ import CategoriesPopular from './CategoriesPopular/CategoriesPopular';
 import TopProducts from './TopProducts/TopProducts';
 import DownloadCatalog from './DownloadCatalog/DownloadCatalog';
 
-
 const CaregorieCircle = ({img, name}) => {
     return (
         <button className='categorie-circle'>

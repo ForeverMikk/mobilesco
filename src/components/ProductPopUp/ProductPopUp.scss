@@ -1,5 +1,6 @@
-.product-card {
+.product-popup {
     display: flex;
+    align-items: center;
     padding: 0;
     margin: 0;
 }
@@ -7,23 +8,23 @@
     padding: 0;
     border-radius: 2rem;
 }
-.product-card .img {
+.product-popup .img {
     height: 50vh;
     width: 50vw;
-    background: url('../../asstes/img/sillas/silla-nueva.png') no-repeat center;
+    // background: url('../../asstes/img/sillas/silla-nueva.png') no-repeat center;
     background-size: contain;
 }
 
-.product-card h1, .product-card h3 {
+.product-popup h1, .product-popup h3 {
         font-family: var(--title-font);
         color: var(--fourth-color);
 }
 
-.product-card button, .product-card p, .product-card label {
+.product-popup button, .product-popup p, .product-popup label {
     font-family: var(--text-font);
 }
 
-.product-card .product-info {
+.product-popup .product-info {
     background: var(--third-color);
     margin: 0;
     padding: 2rem 5rem;
@@ -31,16 +32,19 @@
     border-bottom-right-radius: 2rem;
     border-top-right-radius: 2rem;
 }
+.product-popup button:hover {
+    cursor: pointer;
+}
 
-.product-card .category {
+.product-popup .category {
     color: var(--second-color-light);
 }
 
-.product-card h1 {
+.product-popup h1 {
     margin-bottom: 1rem;
 }
 
-.product-card .product-info .description {
+.product-popup .product-info .description {
     color: var(--first-color);
     font-size: var(--small-font-size);
     margin-bottom: 1rem;
@@ -65,7 +69,7 @@
     margin-left: 0.5rem;
 }
 
-.product-card label {
+.product-popup label {
     margin-left: 0.5rem;
     color: var(--first-color);
     font-size: var(--small-font-size);
@@ -73,13 +77,13 @@
 
 
 // PRODUCT SIZES SELECTION
-.product-card .sizes .sizes-title{
+.product-popup .sizes .sizes-title{
     margin-bottom: 0.5rem;
 }
-.product-card .sizes .buttons {
+.product-popup .sizes .buttons {
     display: flex;
 }
-.product-card .sizes .buttons button {
+.product-popup .sizes .buttons button {
     margin-right: 0.5rem;
     padding: 0.01rem 1rem;
     border-radius: 2rem;
@@ -124,8 +128,10 @@
     justify-content: left;
     margin: 1rem 0;
 }
-.bottom-buttons button {
-   padding: 0.5rem 1rem;
+.bottom-buttons button, .bottom-buttons a {
+    font-family: var(--text-font);
+    font-size: var(--small-font-size);
+    padding: 0.5rem 1rem;
     border-radius: 2rem;
     color: #fff;
 }

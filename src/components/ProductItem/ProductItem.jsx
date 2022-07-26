@@ -6,22 +6,24 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { useDispatch } from 'react-redux';
 
 import './ProductItem.scss'
-// import Loader from '../Loader/Loader';
-import ProductCard from '../ProductCard/ProductCard';
-import cartSlice from '../../store/cart-slice';
+import { cartActions } from '../../store/cart-slice';
+import ProductPopUp from '../ProductPopUp/ProductPopUp';
 
 
-const ProductItem = ({id, name, description, img, className, price }) => {
+const ProductItem = ({id, name, description, img, className, price, category, color, material }) => {
     
     const dispatch = useDispatch();
 
     const addToCart = () => {
-        dispatch(cartSlice.actions.addToCart({
+        dispatch(cartActions.addToCart({
             name,
             id,
             price,
             description,
             img,
+            category,
+            color,
+            material
         }))
     }
 
@@ -39,9 +41,18 @@ const ProductItem = ({id, name, description, img, className, price }) => {
                 <Popup 
                     modal
                     nested
-                    trigger={<button className='more'>Ver Mas</button>}
+                    trigger={<button className='more'>Ver más</button>}
                 >
-                    <ProductCard />
+                    <ProductPopUp 
+                        id={id} 
+                        name={name} 
+                        description={description} 
+                        category={category} 
+                        price={price}
+                        color={color}
+                        material={material}
+                        img={img}
+                    />
                 </Popup>
                 <button className='heart' onClick={addToCart}>
                     <FontAwesomeIcon icon={faHeart} />

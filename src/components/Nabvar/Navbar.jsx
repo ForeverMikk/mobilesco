@@ -9,12 +9,7 @@ import logo from './../../asstes/img/mobilesco-logo.png';
 
 const Navbar = () => {
 
-        const productsQuantity = useSelector(state =>{
-            console.log("carrito", state)
-            return state.cart.totalQuantity
-        });
-        // const dispatch = useDispatch();
-
+    const productsQuantity = useSelector(state => state.cart.totalQuantity);
 
     return (
         <>

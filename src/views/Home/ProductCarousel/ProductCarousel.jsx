@@ -47,6 +47,9 @@ const ProductCarousel = () => {
                             name={item.NOMBRE} 
                             description={item.DESCRIPCION}
                             img={item.IMAGEN}
+                            category={item.CATEGORIA}
+                            color={item.COLOR}
+                            material={item.MATERIAL}
                             className="catalog"
                         />
                     </SwiperSlide>

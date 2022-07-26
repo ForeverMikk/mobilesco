@@ -36,9 +36,10 @@ const Home = () => {
                         className="home"
                         id={product.CLAVE}
                         price={product.COSTO}
-                        quantity={1}
-                        />
-                    }
+                        category={product.CATEGORIA}
+                        color={product.COLOR}
+                        material={product.MATERIAL}
+                    />}
                     <SearchBox />
                     <p className='description'>Si estás en busca de mobiliario de calidad entonces eres bienvenido. Tenemos diferentes tipos de muebles esperando a ser repartidos.</p>
                 </div>
