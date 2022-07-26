@@ -13,7 +13,6 @@ import cartSlice from '../../store/cart-slice';
 
 const ProductItem = ({id, name, description, img, className, price }) => {
     
-    let quantity = 1;
     const dispatch = useDispatch();
 
     const addToCart = () => {
@@ -23,7 +22,6 @@ const ProductItem = ({id, name, description, img, className, price }) => {
             price,
             description,
             img,
-            quantity,
         }))
     }
 

@@ -6,7 +6,6 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faUser, faHeart, faCheck, faLocationCrosshairs} from '@fortawesome/free-solid-svg-icons';
 import PreviewProduct from './PreviewProduct/PreviewProduct';
 
-
 const Wishlist = () => {
 
     const cartProducts = useSelector(state => state.cart.itemList);
@@ -15,11 +14,11 @@ const Wishlist = () => {
         <section className="wishlist">
             <h1 className="title">Solicitud de cotización</h1>
 
-            <di className="status-bar">
+            <div className="status-bar">
                 <p><FontAwesomeIcon icon={faHeart} /> Lista de deseos   ·  ·  ·  </p>
                 <p><FontAwesomeIcon icon={faUser} /> Datos de contacto   ·  ·  ·  </p>
                 <p><FontAwesomeIcon icon={faCheck} /> Confirmación   ·  ·  · </p>
-            </di>
+            </div>
 
             <div className="preview">
 
@@ -27,9 +26,11 @@ const Wishlist = () => {
                     {cartProducts && cartProducts.map((item, index) => (
                         <PreviewProduct 
                             key={index}
+                            id={item.id}
                             title={item.name}
                             description={item.description} 
                             img={item.img}
+                            price={item.price}
                         />
                     ))}
                 </div>

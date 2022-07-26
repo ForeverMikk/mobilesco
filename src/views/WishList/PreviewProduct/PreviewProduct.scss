@@ -23,11 +23,12 @@
 }
 
 .preview-info .description, .preview-info button {
+    cursor: pointer;
     font-family: var(--text-font);
     margin: 0.5rem 0.5rem 0.5rem 0;
 }
 
-.preview-info .more {
+.preview-info .more, .preview-info .add {
     padding: 0.5rem 1rem;
     color: #fff;
     background: var(--second-color);
@@ -37,4 +38,9 @@
 .preview-info .remove {
     font-weight: var(--font-semibold);
     color: var(--first-color);
+}
+.preview-info .add {
+    margin-left: 0.5rem;
+    background: var(--first-color);
+    color: var(--third-color);
 }

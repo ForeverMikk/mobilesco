@@ -1,19 +1,37 @@
 import React from 'react';
-
+import { useDispatch } from 'react-redux';
 import './PreviewProduct.scss';
+import { cartActions } from '../../../store/cart-slice';
 
-const PreviewProduct = ({ img, title, description }) => {
+const PreviewProduct = ({ img, name, description, id, price }) => {
+
+    const dispatch = useDispatch();
+
+    const decrementHandler = () => {
+        dispatch(cartActions.removeFromCart(id));
+    }
+
+    const incrementHandler = () => {
+        dispatch(cartActions.addToCart({
+            name,
+            id,
+            price,
+            description,
+            img,
+        }))
+    }
     return (
         <div className='preview-product'>
             <div className="img">
-                <img src={img} alt={`${title} preview`} />
+                <img src={img} alt={`${name} preview`} />
             </div>
 
             <div className="preview-info">
-                <h3 className="title">{title}</h3>
+                <h3 className="title">{name}</h3>
                 <p className="description">{description}</p>
                 <button className='more'>Ver más</button>
-                <button className="remove">Eliminar</button>
+                <button className='add' onClick={incrementHandler}>+</button>
+                <button className="remove" onClick={decrementHandler}>Eliminar</button>
             </div>
         </div>
     )
