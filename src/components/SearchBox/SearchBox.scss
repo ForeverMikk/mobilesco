@@ -20,12 +20,13 @@
     color: var(--second-color);
 }
 
-.search-box input, .search-box select {
+.search-box input, .search-box select, .search-box option {
     width: 100%;
     border: none;
-    border-radius: 2rem;
+    border-radius: 5px;
     background: var(--third-color);
     color: var(--first-color);
     padding: 0.5rem 1rem;
+    text-transform: capitalize;
     // margin-right: 1rem;
 }

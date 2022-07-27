@@ -34,7 +34,7 @@ const Home = () => {
                         img={product.IMAGEN} 
                         className="home"
                         id={product.CLAVE}
-                        price={product.COSTO}
+                        price={parseInt(product.COSTO)}
                         category={product.CATEGORIA}
                         color={product.COLOR}
                         material={product.MATERIAL}

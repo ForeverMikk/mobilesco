@@ -28,6 +28,7 @@ const Wishlist = () => {
                             key={index}
                             id={item.id}
                             title={item.name}
+                            quantity={item.quantity}
                             description={item.description} 
                             img={item.img}
                             price={item.price}

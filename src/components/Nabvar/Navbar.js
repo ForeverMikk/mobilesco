@@ -42,7 +42,7 @@ const Navbar = () => {
                         data-style="dark"  
                         data-linkcolor="black" 
                         data-urlhost="https://app.atratopago.com">
-                            Atrato v2
+                            Atrato
                     </div>
                     </li>
                 </ul>

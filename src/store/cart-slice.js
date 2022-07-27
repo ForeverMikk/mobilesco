@@ -27,6 +27,7 @@ const cartSlice = createSlice({
                     name: newItem.name,
                     description: newItem.description,
                     img: newItem.img,
+                    productState: "active"
                 });
                 state.totalQuantity++;
             }
@@ -38,6 +39,7 @@ const cartSlice = createSlice({
 
             // Si el item es solo uno lo borra, si es mayor a uno solo resta el total y el precio total
             if(itemExists.quantity === 1) {
+                state.itemList.productState = "";
                 state.itemList = state.itemList.filter(item => item.id !== id);
                 state.totalQuantity--;
             } else {

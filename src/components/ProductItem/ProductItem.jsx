@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Popup from 'reactjs-popup';
 // import { useSelector } from 'react-redux';
@@ -13,6 +14,9 @@ import ProductPopUp from '../ProductPopUp/ProductPopUp';
 const ProductItem = ({id, name, description, img, className, price, category, color, material }) => {
     
     const dispatch = useDispatch();
+    // const productList = useSelector(state => state.cart.itemList);
+
+    // const productSelected = productList.find(item => item.id === id);
 
     const addToCart = () => {
         dispatch(cartActions.addToCart({
@@ -54,9 +58,11 @@ const ProductItem = ({id, name, description, img, className, price, category, co
                         img={img}
                     />
                 </Popup>
-                <button className='heart' onClick={addToCart}>
+                
+                <button className={`heart`} onClick={addToCart}>
                     <FontAwesomeIcon icon={faHeart} />
                 </button>
+                
                 
             </div>
         </div>
