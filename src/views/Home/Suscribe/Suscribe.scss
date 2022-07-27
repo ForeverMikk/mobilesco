@@ -93,3 +93,9 @@
     color: var(--first-color);
     background: #fff;
 }
+
+@media screen and (min-width: 768px) {
+    .suscribe {
+        height: 60vh;
+    }
+}
