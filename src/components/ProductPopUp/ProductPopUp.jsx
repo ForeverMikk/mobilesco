@@ -89,7 +89,6 @@ const ProductPopUp = ({ name, id, category, description, color, material, img, p
                 </div>
 
             </div>
-
         </div>
     )
 }

@@ -31,11 +31,23 @@ const ProductCarousel = () => {
             <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 navigation
-                // pagination={{ clickable: true }}
-                // scrollbar={{ draggable: true }}
-
                 spaceBetween={0}
                 slidesPerView={3}
+                breakpoints={{
+                     // when window width is >= 640px
+                    640: {
+                        width: 640,
+                        slidesPerView: 1,
+                    },
+                    // when window width is >= 768px
+                    768: {
+                        width: 768,
+                        slidesPerView: 2,
+                    },
+                }}  
+                // pagination={{ clickable: true }}
+                // scrollbar={{ draggable: true }}
+                
                 // onSlideChange={() => console.log('Sliding')}
                 // onSwiper={(swiper)=> console.log(swiper)}
             >
