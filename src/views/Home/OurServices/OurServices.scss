@@ -54,3 +54,40 @@
     cursor: pointer;
     background: var(--first-color);
 }
+
+
+@media screen and (min-width: 1024px) {
+    // .our-services {
+    //     flex-direction: column;
+    // }
+}
+
+
+@media screen and (min-width: 768px) {
+    .our-services {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .our-services .img {
+        display: flex;
+        align-items: center;
+        width: 50%;
+    }
+    
+    .our-services .img img {
+        height: 70%;
+    }
+    .our-services .services-home  {
+        width: 80%;
+        align-items: stretch;
+    }
+    .our-services .services-home .services-top, .our-services .services-home .services-bottom {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .our-services button {
+        margin-left: 2rem;
+    }
+}

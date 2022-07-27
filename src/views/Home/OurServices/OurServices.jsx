@@ -39,8 +39,6 @@ const OurServices = () => {
                 <button>Conócenos</button>
             </Link>
         </div>
-
-
      </section>   
     )   
 }

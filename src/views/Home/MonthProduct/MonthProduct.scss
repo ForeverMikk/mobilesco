@@ -3,13 +3,10 @@
     align-items: center;
     justify-content: center;
 }
-
-
 .month-product .data {
     margin: 0 0 0 10rem;
     padding: 2rem;
 }
-
 .month-product .subtitle {
     font-family: var(--text-font);
     font-size: var(--small-font-size);
@@ -63,4 +60,14 @@
 .month-product .img img{
     width: 30rem;
     margin: 0 10rem;
+}
+
+@media screen and (min-width: 768px) {
+    .month-product {
+        flex-direction: column;
+    }
+    .month-product .data {
+        margin: 0;
+        width: 80%;
+    }
 }

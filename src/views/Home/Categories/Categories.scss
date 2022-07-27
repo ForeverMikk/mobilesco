@@ -62,3 +62,22 @@
     border-bottom-right-radius: 1.25rem;
     margin-bottom: 1rem;
 }
+
+
+@media screen and (min-width: 768px) {
+    .home-categories h2 {
+        font-size: var(--h1-font-size);
+    }
+    .home-categories .subtitle {
+      
+        font-size: var(--normal-font-size);
+        width: 50%;
+    }
+    .swiper-main {
+        width: 80%;
+        margin: 0 5rem;
+    }
+    .home-categories .swiper-button-next, .home-categories .swiper-button-prev {
+        color: var(--second-color, var(--swiper-theme-color));
+    }
+}
