@@ -38,6 +38,18 @@ const CategoriesPopular = () => {
                 // pagination={{ clickable: true }}
                 spaceBetween={50}
                 slidesPerView={3}
+                breakpoints={{
+                    // when window width is >= 640px
+                   640: {
+                       width: 640,
+                       slidesPerView: 1,
+                   },
+                   // when window width is >= 768px
+                   768: {
+                       width: 768,
+                       slidesPerView: 2,
+                   },
+               }}
                 // onSlideChange={() => console.log('Sliding')}
                 // onSwiper={(swiper)=> console.log(swiper)} 
              >

@@ -1,5 +1,6 @@
 .catalog {
     text-align: center;
+    margin: 0 5rem;
 }
 .catalog .title {
     font-family: var(--title-font);
@@ -23,21 +24,6 @@
 
 }
 
-// .catalog .search-bar input {
-//     border: none;
-//     width: 15rem;
-//     background: var(--third-color);
-// }
-// .catalog .search-bar button {
-//     cursor: pointer;
-//     color: white;
-//     margin-left: -2rem;
-//     background: var(--second-color);
-// }
-
-
-
-
 .catalog .categories {
     display: flex;
     justify-content: center;
@@ -58,4 +44,10 @@
 }
 .categorie-circle img:hover {
     transform: translateY(-10px) scale(1.007)
+}
+
+@media screen and (max-width: 768px) {
+    .catalog .categories button {
+        margin: 1rem;
+    }
 }

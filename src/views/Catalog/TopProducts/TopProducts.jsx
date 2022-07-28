@@ -34,6 +34,20 @@ const TopProducts = () => {
                 // pagination={{ clickable: true }}
                 spaceBetween={50}
                 slidesPerView={4}
+                breakpoints={{
+                    // when window width is >= 640px
+                   640: {
+                       width: 640,
+                       spaceBetween: 0,
+                       slidesPerView: 1,
+                   },
+                   // when window width is >= 768px
+                   768: {
+                       width: 768,
+                       spaceBetween: 20,
+                       slidesPerView: 3,
+                   },
+               }}
                 // onSlideChange={() => console.log('Sliding')}
                 // onSwiper={(swiper)=> console.log(swiper)}
              >

@@ -26,10 +26,10 @@
     background: var(--first-color-light);
 }
 
-// CARD Swiper Styles
-// .top-products .swiper {
-//     margin: 5rem;
-// }
+.top-products .swiper-button-next, .top-products .swiper-button-prev {
+    color: var(--second-color, var(--swiper-theme-color));
+}
+
 .top-products .swiper .card-item {
     background: var(--first-color);
 }
@@ -38,4 +38,11 @@
 }
 .top-products .swiper .card-item .heart {
     color: var(--second-color-light);
+}
+
+@media screen and (max-width: 768px) {
+    .top-products {
+        margin: 4rem 2rem;
+    }
+    
 }
