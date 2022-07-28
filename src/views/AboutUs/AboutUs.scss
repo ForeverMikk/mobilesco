@@ -5,7 +5,7 @@
 
 .about-us .title {
     font-family: var(--title-font);
-    font-size: var(--h1-font-size);
+    font-size: var(--big-font-size);
     color: var(--first-color);
     margin: 5rem 0;
 }
@@ -49,9 +49,12 @@
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .about-us {
         margin: 3.5rem;
+    }
+    .about-us .title {
+        font-size: var(--h1-font-size);
     }
     .about-us .politic {
         margin: 2rem 0 0;
