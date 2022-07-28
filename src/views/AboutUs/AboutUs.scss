@@ -71,3 +71,19 @@
         font-size: var(--smaller-font-size);
     }
 }
+
+
+@media screen and (max-width: 640px) {
+    .about-us {
+        margin: 2rem;
+    }
+    .about-us .title {
+        margin: 4rem 0;
+    }
+    .about-us .politics {
+        flex-direction: column;
+    }
+    .about-us .politic {
+        padding: 0 1rem;
+    }
+}
