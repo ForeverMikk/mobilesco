@@ -36,3 +36,16 @@
         font-size: var(--h1-font-size);
     }
 }
+
+@media screen and (max-width: 768px) {
+    .product-list {
+        margin-left: 0;
+    }
+    .product-list .text {
+        width: 80%;
+        margin: 2rem 3rem;
+    }
+    .card-item.product-catalog {
+        margin: 2rem;
+    }
+}

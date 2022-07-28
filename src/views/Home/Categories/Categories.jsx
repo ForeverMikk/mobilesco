@@ -65,6 +65,11 @@ const Categories = () => {
                 spaceBetween={30}
                 slidesPerView={4}
                 breakpoints={{
+                    0: {
+                        width: 640,
+                        spaceBetween: 0,
+                        slidesPerView: 1,
+                    },
                     // when window width is >= 640px
                    640: {
                        width: 640,
@@ -77,9 +82,7 @@ const Categories = () => {
                        spaceBetween: 0,
                        slidesPerView: 3,
                    },
-               }}  
-                // onSlideChange={() => console.log('Sliding')}
-                // onSwiper={(swiper)=> console.log(swiper)} 
+               }}
             >
 
                 {categories.map((item, index) => (

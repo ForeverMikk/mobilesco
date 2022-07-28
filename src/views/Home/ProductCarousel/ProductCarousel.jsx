@@ -34,10 +34,14 @@ const ProductCarousel = () => {
                 spaceBetween={0}
                 slidesPerView={3}
                 breakpoints={{
+                    0: {
+                        width: 320,
+                        slidesPerView: 1,
+                    },
                      // when window width is >= 640px
                     640: {
                         width: 640,
-                        slidesPerView: 1,
+                        slidesPerView: 2,
                     },
                     // when window width is >= 768px
                     768: {
@@ -62,7 +66,7 @@ const ProductCarousel = () => {
                             category={item.CATEGORIA}
                             color={item.COLOR}
                             material={item.MATERIAL}
-                            className="catalog"
+                            className="product-catalog"
                         />
                     </SwiperSlide>
                 ))}

@@ -72,7 +72,6 @@
     .our-services .img {
         display: flex;
         align-items: center;
-        width: 50%;
     }
     
     .our-services .img img {
@@ -89,5 +88,31 @@
     }
     .our-services button {
         margin-left: 2rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .our-services {
+        height: auto;
+    }
+    .our-services .img {
+        justify-content: center;
+    }
+    .our-services .img img {
+        height: 20rem;
+    }
+    .our-services .services-home .services-top, .our-services .services-home .services-bottom {
+        flex-direction: column;
+    }
+    .our-services .service {
+        margin: 1.5rem 0;
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--first-color-light);
+    }
+    .our-services .service img {
+        width: 3rem;
+    }
+    .our-services button {
+        margin-left: 1rem;
     }
 }

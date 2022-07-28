@@ -28,3 +28,13 @@ header .description {
     bottom: -2rem;
 }
 
+@media screen and (max-width: 640px) {
+    header {
+        height: 100vh;
+        padding: 2.5rem;
+    }
+
+    header .card-item, header .description{
+        visibility: hidden;
+    }
+}

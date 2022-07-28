@@ -99,3 +99,16 @@
         height: 60vh;
     }
 }
+
+@media screen and (max-width:  640px) {
+    .suscribe {
+        margin: 2rem;
+    }
+    .suscribe .subtitle {
+        font-size: var(--h2-font-size);
+    }
+
+    .suscribe .mail-form, .suscribe .phone-form {
+        width: 15rem;
+    }
+}

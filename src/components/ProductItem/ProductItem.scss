@@ -34,10 +34,10 @@
     display: none;
 }
 
-.card-item.catalog {
+.card-item.product-catalog {
     background: var(--third-color);
 }
-.card-item.catalog img{
+.card-item.product-catalog img{
      background: #fff;
  }
 
@@ -86,9 +86,9 @@
     color: var(--second-color);
 }
 
-.card-item.catalog .card-buttons .more:hover {
+.card-item.product-catalog .card-buttons .more:hover {
     background: var(--first-color-light);
 }
-.card-item.catalog .card-buttons .heart:hover {
+.card-item.product-catalog .card-buttons .heart:hover {
     color: var(--second-color);
 }

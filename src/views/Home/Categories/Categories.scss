@@ -82,3 +82,24 @@
     }
     
 }
+
+
+@media screen and (max-width: 640px) {
+    .home-categories {
+        height: 80vh;
+        justify-content: end;
+    }
+    .home-categories .title {
+        font-size: var(--h2-font-size);
+        padding: 0 0 0 3rem;
+    }
+    .home-categories .subtitle {
+        padding: 0 3rem;
+        width: auto;
+        text-align: left;
+        margin-bottom: 4rem;
+    }
+    .home-categories .category-card {
+        margin-left: 1rem;
+    }
+}

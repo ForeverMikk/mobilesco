@@ -2,6 +2,7 @@
     text-align: center;
     margin: 0 5rem;
 }
+
 .catalog .title {
     font-family: var(--title-font);
     font-size: 3rem;
@@ -49,5 +50,8 @@
 @media screen and (max-width: 768px) {
     .catalog .categories button {
         margin: 1rem;
+    }
+    .catalog .swiper {
+        z-index: -1;
     }
 }
