@@ -63,7 +63,7 @@ const TopProducts = () => {
                             name={item.NOMBRE} 
                             description={item.DESCRIPCION}
                             img={item.IMAGEN}
-                            className="catalog"/>
+                            className="product-catalog"/>
                     </SwiperSlide>
                 ))}
             </Swiper>
