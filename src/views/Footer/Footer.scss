@@ -48,7 +48,7 @@ footer .social-media .icons a:hover {
     transform: translateX(5px);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
     footer {
         flex-wrap: wrap;
         justify-content: space-between;
@@ -63,5 +63,19 @@ footer .social-media .icons a:hover {
     footer .social-media .icons a:hover {
         color: var(--first-color);
         transform: translateY(-5px);
+    }
+}
+
+
+@media screen and (max-width:  640px) {
+    footer {
+        padding: 0 3rem 2rem;
+        flex-direction: column;
+    }
+    footer .social-media {
+        margin: 0;
+    }
+    footer .social-media .icons a {
+        margin: 0 1rem 0 0;
     }
 }
