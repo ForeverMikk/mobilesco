@@ -75,7 +75,7 @@ const Categories = () => {
                    768: {
                        width: 768,
                        spaceBetween: 0,
-                       slidesPerView: 2,
+                       slidesPerView: 3,
                    },
                }}  
                 // onSlideChange={() => console.log('Sliding')}

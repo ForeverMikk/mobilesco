@@ -27,32 +27,17 @@ const Navbar = () => {
             </button>
 
             <ul className={ buttonClicked ? 'nav-menu active' : 'nav-menu'}>
+                <li><Link to="/about-us" onClick={activeMenu}>Sobre Nosotros</Link></li>
+
+                <li><Link to="/contact" onClick={activeMenu}>Contacto</Link></li>
+
+                <li><Link to="/catalog" onClick={activeMenu}>Catálogo</Link></li>
+
                 <li>
-                    <Link to="/about-us">Sobre Nosotros</Link>
-                </li>
-                <li>
-                    <Link to="/contact">Contacto</Link>
-                </li>
-                <li>
-                    <Link to="/catalog">Catálogo</Link>
-                </li>
-                <li>
-                    <Link to="/wishlist">
+                    <Link to="/wishlist" onClick={activeMenu}>
                         <span>{productsQuantity}</span>
                         <FontAwesomeIcon icon={faHeart} />
                     </Link>
-                </li>
-                <li>
-                {/* <div id="higslide-div-atrato-info" 
-                    data-plataform="other"  
-                    data-type="info" 
-                    data-price="PRECIO DEL PRODUCTO" 
-                    data-version="2.0" 
-                    data-style="dark"  
-                    data-linkcolor="black" 
-                    data-urlhost="https://app.atratopago.com">
-                        Atrato
-                </div> */}
                 </li>
             </ul>
         </nav>

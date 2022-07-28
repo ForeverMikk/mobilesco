@@ -43,3 +43,22 @@
 .service-card.reverse .service-info {
     align-items: flex-end;
 }
+
+
+@media screen and (max-width: 768px) {
+    .service-card .img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .service-card .service-info .title{
+        margin: 1rem 0;
+    }
+    .service-card .service-info .description {
+        width: 100%;
+    }
+
+    .service-card.reverse .service-info {
+        margin: 0 2rem 0 0;
+    }
+}
