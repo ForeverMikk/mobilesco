@@ -44,5 +44,12 @@
     .top-products {
         margin: 4rem 2rem;
     }
-    
 }
+
+@media screen and (max-width: 640px) {
+    .top-products {
+        margin: 3rem 0 5rem 0;
+    }
+}
+
+

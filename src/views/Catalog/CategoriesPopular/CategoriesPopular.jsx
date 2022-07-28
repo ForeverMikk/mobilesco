@@ -39,6 +39,10 @@ const CategoriesPopular = () => {
                 spaceBetween={50}
                 slidesPerView={3}
                 breakpoints={{
+                    0: {
+                        width: 640,
+                        slidesPerView: 1,
+                    },
                     // when window width is >= 640px
                    640: {
                        width: 640,

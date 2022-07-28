@@ -99,3 +99,13 @@
         font-weight: 700;
     }
 }
+
+
+@media screen and (max-width: 640px) {
+    .navbar {
+        padding: 0;
+    }
+    .nav-menu li {
+        margin: 2rem 0;
+    }
+}

@@ -45,3 +45,18 @@
     }
     
 }
+
+
+@media screen and (max-width: 640px) {
+    
+    .download-catalog {
+        margin: 0 0 3rem 0;
+        padding: 2rem;
+        border-top-right-radius: 2rem;
+        border-bottom-left-radius: 2rem;
+    }
+    .download-catalog .card-item {
+        display: none;
+    }
+    
+}

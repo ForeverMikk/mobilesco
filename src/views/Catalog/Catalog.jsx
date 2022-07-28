@@ -22,12 +22,7 @@ const CaregorieCircle = ({img, name}) => {
 
 const Catalog = () => {
 
-    // const [inputValue, setInputValue] = useState();
     const [productsFiltered, setProductsFiltered] = useState();
-
-    // const onChange = (event) => {
-    //     set
-    // }
 
     const onChange = async(event) => {
         const productInput = event.target.value.toLowerCase();

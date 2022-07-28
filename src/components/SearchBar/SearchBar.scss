@@ -61,3 +61,20 @@
     background: var(--first-color);
     margin-left: 2rem;
 }
+
+
+
+@media screen and (max-width: 640px) {
+    .search-bar {
+        margin: 3rem 0;
+    }
+    .search-bar input {
+        width: 13rem;
+    }
+    .search-bar .categories {
+        margin-left: 1rem;
+    }
+    .search-bar .dropdown {
+        width: 12rem;
+    }
+}

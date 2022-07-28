@@ -35,6 +35,10 @@ const TopProducts = () => {
                 spaceBetween={50}
                 slidesPerView={4}
                 breakpoints={{
+                    0: {
+                        width: 640,
+                        slidesPerView: 1,
+                    },
                     // when window width is >= 640px
                    640: {
                        width: 640,
@@ -62,7 +66,6 @@ const TopProducts = () => {
                             className="catalog"/>
                     </SwiperSlide>
                 ))}
-
             </Swiper>
         </section>
     )
