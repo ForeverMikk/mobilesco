@@ -8,7 +8,7 @@ import OurServices from './OurServices/OurServices';
 import Categories from './Categories/Categories';
 import MonthProduct from './MonthProduct/MonthProduct';
 import Suscribe from './Suscribe/Suscribe';
-import { getProductById } from '../../services/productSercive';
+import { getProductById, getProductColor } from '../../services/productSercive';
 
 
 const Home = () => {
@@ -17,8 +17,11 @@ const Home = () => {
 
     useEffect(() => {
         const fetchData = async() => {
-            const data = await getProductById(3);
-            setProduct(data[0])
+            const data = await getProductById(1);
+            const colors = await getProductColor(1)
+            // console.log(data)
+            console.log(colors)
+            setProduct(data)
         }
         fetchData()
     }, [])

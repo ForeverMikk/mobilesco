@@ -26,10 +26,10 @@
     color: var(--first-color);
 }
 
-.preview-info .description, .preview-info button {
+.preview-info .description, .preview-info button, .preview-info span {
     cursor: pointer;
     font-family: var(--text-font);
-    margin: 0.5rem 0.5rem 0.5rem 0;
+    margin: 0.5rem;
 }
 
 .preview-info .more, .preview-info .add {

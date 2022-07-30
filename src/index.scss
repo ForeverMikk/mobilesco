@@ -91,13 +91,11 @@ button {
   color: var(--first-color, var(--swiper-theme-color));
 }
 
-
 @media screen and (max-width: 1024px) {
   .swiper-container {
     width: 1024px;
   }
 }
-
 
 @media screen and (max-width: 768px) {
   :root {
@@ -115,7 +113,6 @@ button {
     width: 768px;
   }
 }
-
 
 @media screen and (max-width: 640px) {
   .swiper-container {

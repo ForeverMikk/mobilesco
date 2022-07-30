@@ -2,8 +2,8 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 import './Wishlist.scss';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faUser, faHeart, faCheck, faLocationCrosshairs} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faHeart, faCheck, faLocationCrosshairs } from '@fortawesome/free-solid-svg-icons';
 import PreviewProduct from './PreviewProduct/PreviewProduct';
 
 const Wishlist = () => {
@@ -54,6 +54,11 @@ const Wishlist = () => {
                         <label htmlFor="shipping">Envio a domicilio</label>
                         <input type="radio" name="shipping" id="pick-up" />
                         <label htmlFor="shipping">Recoger en sucursal</label>
+                    </div>
+
+                    <div className="special-info">
+                            <h3>Especificaciones </h3>
+                            <p>Deja un comentario con las caracteristicas deseadas para tu mobiliario; </p>
                     </div>
 
                     <div className="shipping-info">
