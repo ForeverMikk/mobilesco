@@ -10,7 +10,7 @@ const DownloadCatalog = () => {
 
     useEffect(() => {
         const fetchData = async() => {
-            const data = await getProductById(11);
+            const data = await getProductById(1);
             // console.log('data', data[0])
             setProduct(data[0])
         }

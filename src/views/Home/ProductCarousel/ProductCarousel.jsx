@@ -13,7 +13,7 @@ const ProductCarousel = () => {
     useEffect(() => {
       const fetchData = async()=> {
         const data = await getAllProducts();
-        const list = data.slice(2,7);
+        const list = data.slice(1,7);
         
         setProductsList(list);
       }
