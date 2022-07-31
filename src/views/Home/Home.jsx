@@ -8,20 +8,23 @@ import OurServices from './OurServices/OurServices';
 import Categories from './Categories/Categories';
 import MonthProduct from './MonthProduct/MonthProduct';
 import Suscribe from './Suscribe/Suscribe';
-import { getProductById, getProductColor } from '../../services/productSercive';
+import { getProductById, getProductImages } from '../../services/productSercive';
 
 
 const Home = () => {
     
     const [product, setProduct] = useState();
+    const [productImages, setProductImages] = useState();
 
     useEffect(() => {
         const fetchData = async() => {
             const data = await getProductById(1);
-            const colors = await getProductColor(1)
-            // console.log(data)
-            console.log(colors)
-            setProduct(data)
+            const images = await getProductImages(1)
+            
+            console.log(images);
+
+            setProductImages(images);
+            setProduct(data);
         }
         fetchData()
     }, [])
@@ -34,7 +37,7 @@ const Home = () => {
                     {product && <ProductItem 
                         name={product.NOMBRE} 
                         description={product.DESCRIPCION}
-                        img={product.IMAGEN} 
+                        img={`https://mobilesco.mx/API/images/uploads/1/${productImages[2].NOMBRE}`} 
                         className="home"
                         id={product.CLAVE}
                         price={parseInt(product.COSTO)}

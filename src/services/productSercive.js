@@ -30,7 +30,7 @@ export const getProductsByType = async(type) => {
     return data;
 }
 
-export const getProductColor = async(id) => {
+export const getProductImages = async(id) => {
     const response = await axios.get(MOBILESCO_URL + `?idMuebleImagen=${id}`);
     const data = response.data;
 

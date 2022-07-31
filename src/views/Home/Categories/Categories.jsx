@@ -62,7 +62,7 @@ const Categories = () => {
                 navigation
                 // pagination={{ clickable: true }}
                 // scrollbar={{ draggable: true }}
-                spaceBetween={30}
+                spaceBetween={50}
                 slidesPerView={4}
                 breakpoints={{
                     0: {
@@ -79,7 +79,6 @@ const Categories = () => {
                    // when window width is >= 768px
                    768: {
                        width: 768,
-                       spaceBetween: 0,
                        slidesPerView: 3,
                    },
                }}

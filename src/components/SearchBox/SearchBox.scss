@@ -28,5 +28,20 @@
     color: var(--first-color);
     padding: 0.5rem 1rem;
     text-transform: capitalize;
-    // margin-right: 1rem;
+}
+
+.search-box input {
+    padding: 0.6rem 1rem;
+}
+
+.search-box select {
+    line-height: 1.5em;
+    background-image: 
+        linear-gradient(45deg, transparent 50%, var(--first-color) 50%), 
+        linear-gradient(135deg, var(--first-color) 50%, transparent 50%), 
+        linear-gradient(to right, var(--first-color-light), var(--first-color-light));
+    background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), 100% 0;
+    background-size: 5px 5px, 5px 5px, 3em 3em;
+    background-repeat: no-repeat;
+    -webkit-appearance: none;
 }
