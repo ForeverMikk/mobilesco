@@ -25,7 +25,7 @@ const ProductCarousel = () => {
         <section className="product-list">
             <div className='text'>
                 <h3 className="title">Nuestros Productos más vendidos</h3>
-                <p className="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci repudiandae necessitatibus autem eveniet quis ea iusto.</p>
+                <p className="description">Un catálogo de los muebles más populares para todo tipo de usos, encontrarás las mejores sillas, mesas, repisas, comedores, muebles de oficina y para escuelas.</p>
             </div>
 
             <Swiper
