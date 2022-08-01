@@ -13,6 +13,7 @@ const ProductCarousel = () => {
     useEffect(() => {
       const fetchData = async()=> {
         const data = await getAllProducts();
+        
         const list = data.slice(1,7);
         
         setProductsList(list);
@@ -22,9 +23,9 @@ const ProductCarousel = () => {
     }, [])
     
     return(
-        <section className="product-list">
+        <section className="product-carousel">
             <div className='text'>
-                <h3 className="title">Nuestros Productos más vendidos</h3>
+                <h3 className="title">Nuestros productos más vendidos: </h3>
                 <p className="description">Un catálogo de los muebles más populares para todo tipo de usos, encontrarás las mejores sillas, mesas, repisas, comedores, muebles de oficina y para escuelas.</p>
             </div>
 

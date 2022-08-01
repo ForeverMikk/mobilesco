@@ -81,6 +81,11 @@ const Categories = () => {
                        width: 768,
                        slidesPerView: 3,
                    },
+                   1980: {
+                    width: 1980,
+                    spaceBetween: 50,
+                    slidesPerView: 5,
+                    },
                }}
             >
 

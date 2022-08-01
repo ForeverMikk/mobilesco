@@ -19,11 +19,12 @@ const Home = () => {
     useEffect(() => {
         const fetchData = async() => {
             const data = await getProductById(1);
-            const images = await getProductImages(1)
+            const images = await getProductImages(1);
             
             console.log(images);
+            console.log(data);
 
-            setProductImages(images);
+            setProductImages(images[2]);
             setProduct(data);
         }
         fetchData()
@@ -37,7 +38,7 @@ const Home = () => {
                     {product && <ProductItem 
                         name={product.NOMBRE} 
                         description={product.DESCRIPCION}
-                        img={`https://mobilesco.mx/API/images/uploads/${product.CLAVE}/${productImages[2].NOMBRE}`} 
+                        img={`https://mobilesco.mx/API/images/uploads/${product.CLAVE}/${productImages.NOMBRE}`} 
                         className="home"
                         id={product.CLAVE}
                         price={parseInt(product.COSTO)}
@@ -53,7 +54,11 @@ const Home = () => {
             <ProductCarousel />
             <OurServices />
             <Categories />
-            <MonthProduct />
+            {product && <MonthProduct 
+                name={product.NOMBRE}
+                description={product.DESCRIPCION}
+                img={`https://mobilesco.mx/API/images/uploads/${product.CLAVE}/${productImages.NOMBRE}`}
+            />}
             <Suscribe />
         </>
     )

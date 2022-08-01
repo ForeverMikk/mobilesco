@@ -6,15 +6,18 @@
 }
 .our-services .img {
     width: 50%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .our-services .img img {
     height: 80%;
 }
 .our-services .services-home {
+    width: 50%;
     display: flex;
     flex-direction: column;
-    width: 50%;
+    justify-content: center;
     // flex-wrap: wrap;
     // justify-content: space-around;
 }
@@ -22,9 +25,9 @@
     display: flex;
 }
 .our-services .service {
-    width: 15rem;
+    width: 20rem;
     color: var(--first-color);
-    margin: 2rem 1rem;
+    margin: 2rem 5rem 2rem 1rem;
 }
 .our-services .service img {
     width: 4rem;

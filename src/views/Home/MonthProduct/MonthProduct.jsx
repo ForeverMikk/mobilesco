@@ -3,18 +3,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 import './MonthProduct.scss';
-import desk from '../../../asstes/img/desk.jpg';
 
-const MonthProduct = () => {
+const MonthProduct = ({ name, description, img }) => {
     return(
         <section className='month-product'>
 
             <div className="data">
                 <h3 className="subtitle">Muebles del Mes</h3>
-                <h2 className="title">Cubiculos fontana</h2>
+                <h2 className="title">{name}</h2>
                 
                 <p className="description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quas, libero dolore ipsam iure optio reprehenderit itaque delectus incidunt, aliquam sapiente? Facilis voluptates rem est placeat. Atque placeat sequi provident.
+                    {description}
                 </p>
 
                 <div className='buttons'>
@@ -26,7 +25,7 @@ const MonthProduct = () => {
             </div>
 
             <div className="img">
-                <img src={desk} alt="" />
+                <img src={img} alt={name} />
             </div>
 
         </section>

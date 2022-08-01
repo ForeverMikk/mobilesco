@@ -62,6 +62,27 @@
     margin: 0 10rem;
 }
 
+@media screen and (min-width: 1980px) {
+    .month-product {
+        margin: 0 15rem;
+    }
+    .month-product .data {
+       padding: auto;
+    }
+    .month-product .subtitle {
+        font-size: var(--h2-font-size); 
+    }
+    .month-product .title {
+        font-size: var(--big-font-size);
+    }
+    .month-product .description {
+        font-size: var(--h3-font-size);
+    }
+    .month-product .buttons .buy {
+        font-size: var(--normal-font-size);
+    }
+}
+
 @media screen and (max-width: 768px) {
     .month-product {
         flex-direction: column;

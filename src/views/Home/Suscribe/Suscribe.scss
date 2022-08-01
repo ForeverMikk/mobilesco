@@ -1,5 +1,5 @@
 .suscribe {
-    height: 80vh;
+    height: 60vh;
     margin: 5rem;
     background: var(--first-color);
     text-align: center;
@@ -19,11 +19,11 @@
     color: #fff;
 }
 .suscribe .title {
-    font-size: var(--h1-font-size);
+    font-size: var(--big-font-size);
     font-weight: var(--font-normal);
 }
 .suscribe .subtitle {
-    font-size: var(--h1-font-size);
+    font-size: var(--big-font-size);
     font-weight: var(--font-normal);
     color: var(--second-color);
     margin: 0.5rem 0 1rem 0;
@@ -94,9 +94,10 @@
     background: #fff;
 }
 
+
 @media screen and (max-width: 768px) {
-    .suscribe {
-        height: 60vh;
+    .suscribe .title, .suscribe .subtitle {
+        font-size: var(--h1-font-size);
     }
 }
 

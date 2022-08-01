@@ -1,55 +1,64 @@
-.product-list {
+.product-carousel {
     height: 100vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
     // box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
 }
-.product-list .text {
+.product-carousel .text {
     font-family: var(--text-font);
     color: var(--first-color);
     width: 40%;
     margin: 3rem 6rem;
 }
-.product-list .swiper {
+.product-carousel .swiper {
     overflow-y: visible;
     overflow: visible;
     overflow-x: hidden;
 }
-.product-list .text .title {
+.product-carousel .text .title {
     font-size: var(--h2-font-size);
     margin: 2rem 0;
 }
 
+@media screen and (min-width: 1980px) {
+    .product-carousel .text .title {
+        font-size: var(--big-font-size);
+        margin: 3rem 0;
+    }
+    .product-carousel .text .description {
+        font-size: var(--h3-font-size);
+    }
+}
 
 @media screen and (max-width: 768px) {
-    .product-list {
+    .product-carousel {
         flex-direction: column;
         justify-content: space-evenly;
         align-items: flex-start;
         margin-left: 3rem;
     }
-    .product-list .text {
+    .product-carousel .text {
         width: 60%;
         margin: 2rem 6rem;
     }
-    .product-list .swiper {
+    .product-carousel .swiper {
         width: 80%;
     }
-    .product-list .text .title {
+    .product-carousel .text .title {
         font-size: var(--h1-font-size);
     }
 }
 
 @media screen and (max-width: 640px) {
-    .product-list {
+    .product-carousel {
         margin-left: 0;
     }
-    .product-list .text {
+    .product-carousel .text {
         width: 80%;
         margin: 2rem 3rem;
     }
-    .product-list .swiper {
+    .product-carousel .swiper {
         overflow-y: visible;
     }
     .card-item.product-catalog {

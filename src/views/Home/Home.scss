@@ -14,18 +14,32 @@ header .title {
     padding: 1rem 2rem;
     font-family: var(--title-font);
     font-weight: var(--font-medium);
-    font-size: 2.5rem;
+    font-size: var(--big-font-size);
     color: var(--first-color);
 }
 header .description {
     width: 40%;
     text-align: right;
     font-family: var(--text-font);
-    font-size: var(--small-font-size);
+    font-size: var(--normal-font-size);
     color: var(--first-color);
     position: absolute;
     right: 5rem;
     bottom: -2rem;
+}
+
+@media screen and (min-width: 1980px) {
+    header .background {
+        background-size: cover;
+    }
+    header .title {
+        font-size: 3.5rem;
+        padding: 2rem 3rem;
+    }
+
+    header .description {
+        font-size: var(--h3-font-size);
+    }
 }
 
 @media screen and (max-width: 640px) {
