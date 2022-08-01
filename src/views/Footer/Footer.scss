@@ -1,36 +1,59 @@
 footer {
+    text-align: center;
+}
+
+footer .logo {
+    // display: block;
+    width: 10rem;
+    height: fit-content;
+}
+
+.sections {
+    text-align: left;
     display: flex;
     align-items: top;
     justify-content: space-around;
     padding: 2rem 5rem 5rem 5rem;
 }
-footer h4, footer p {
+.sections h4, .sections p {
     color: var(--first-color);
 }
-footer h4 {
+.sections h4 {
     font-family: var(--title-font);
     font-size: var(--h3-font-size);
     // font-weight: var(--font-bold);
     margin-bottom: 1.5rem;
 }
-footer p {
+.sections p {
     font-family: var(--text-font);
     font-size: var(--small-font-size);
     margin-bottom: 1rem;
-}
-footer .logo img {
-    width: 10rem;
+    transition: all 0.3s ease-out;
 }
 
-footer .social-media h4 {
+// Payment Methods
+.sections .pay-methods img {
+    height: 1rem;
+    width: fit-content;
+}
+
+// Mobilesco Links
+.sections a:hover p{
+    color: var(--second-color);
+}
+
+
+.sections .social-media h4 {
     margin-bottom: 1rem;
 }
-footer .social-media .icons {
+
+.sections .social-media .icons {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-footer .social-media .icons a {
+
+.sections .social-media .icons a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,24 +66,24 @@ footer .social-media .icons a {
     margin-bottom: 0.3rem;
     transition: all 0.3s ease-out;
 }
-footer .social-media .icons a:hover {
+.sections .social-media .icons a:hover {
     color: var(--first-color);
     transform: translateX(5px);
 }
 
 @media screen and (max-width: 768px) {
-    footer {
+    .sections {
         flex-wrap: wrap;
         justify-content: space-between;
     }
-    footer .social-media {
+    .sections .social-media {
         margin: 0 5rem;
         justify-self: flex-start;
     }
-    footer .social-media .icons {
+    .sections .social-media .icons {
         flex-direction: row;
     }
-    footer .social-media .icons a:hover {
+    .sections .social-media .icons a:hover {
         color: var(--first-color);
         transform: translateY(-5px);
     }
@@ -68,14 +91,14 @@ footer .social-media .icons a:hover {
 
 
 @media screen and (max-width:  640px) {
-    footer {
+    .sections {
         padding: 0 3rem 2rem;
         flex-direction: column;
     }
-    footer .social-media {
+    .sections .social-media {
         margin: 0;
     }
-    footer .social-media .icons a {
+    .sections .social-media .icons a {
         margin: 0 1rem 0 0;
     }
 }
