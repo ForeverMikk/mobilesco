@@ -8,7 +8,7 @@ import item4 from '../../../asstes/img/desk.jpg'
 import item5 from '../../../asstes/img/services.jpg'
 import item6 from '../../../asstes/img/repisas.jpg'
 import item7 from '../../../asstes/img/sofa.jpg';
-import item8 from '../../../asstes/img/silla-moderna.jpg';
+import item8 from '../../../asstes/img/galery/chair.jpg';
 
 const gridItems = [
     {
