@@ -68,7 +68,7 @@
     color: var(--second-color, var(--swiper-theme-color));
 }
 
-@media screen and (min-width: 1980px) {
+@media screen and (min-width: 1920px) {
     .home-categories h2 {
         font-size: var(--big-font-size);
     }
@@ -95,8 +95,8 @@
 
 @media screen and (max-width: 640px) {
     .home-categories {
-        height: 80vh;
-        justify-content: end;
+        height: 100vh;
+        justify-content: center;
     }
     .home-categories .title {
         font-size: var(--h2-font-size);
@@ -109,6 +109,6 @@
         margin-bottom: 4rem;
     }
     .home-categories .category-card {
-        margin-left: 1rem;
+        margin-left: 2rem;
     }
 }

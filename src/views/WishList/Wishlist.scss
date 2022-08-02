@@ -55,12 +55,19 @@
     border-bottom-right-radius: 2rem;
     border-top-left-radius: 2rem;
 }
-.summary .summary-resume, .summary .contact-info, .summary .shipping-info, .summary .user-info {
+.summary .summary-resume, .summary .special-info, .summary .contact-info, .summary .shipping-info, .summary .user-info {
     background: #f5f3f1;
     border-bottom-right-radius: 2rem;
     border-top-left-radius: 2rem;
     padding: 1.5rem 1rem;
     margin-bottom: 1rem;
+}
+
+.summary .special-info textarea {
+    width: 100%;
+    border-radius: 1rem;
+    resize: none;
+    border: 1px solid var(--third-color);
 }
 
 .preview .summary h3 {
@@ -78,6 +85,7 @@
 .preview .summary p, .preview .summary label {
     margin: 1rem 0.5rem;
 }
+
 
 .preview .summary input[type="text"], .preview .summary button {
     padding: 0.5rem 1rem;

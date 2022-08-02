@@ -1,13 +1,13 @@
 import React from 'react';
 
 import './Gallery.scss';
-import item1 from '../../../asstes/img/banco.jpg'
-import item2 from '../../../asstes/img/big-sofa.jpg'
-import item3 from '../../../asstes/img/desk-brown.jpg'
-import item4 from '../../../asstes/img/desk.jpg'
+import item1 from '../../../asstes/img/galery/banco.jpg'
+import item2 from '../../../asstes/img/galery/big-sofa.jpg'
+import item3 from '../../../asstes/img/galery/desk-brown.jpg'
+import item4 from '../../../asstes/img/galery/desk.jpg'
 import item5 from '../../../asstes/img/services.jpg'
-import item6 from '../../../asstes/img/repisas.jpg'
-import item7 from '../../../asstes/img/sofa.jpg';
+import item6 from '../../../asstes/img/galery/repisas.jpg'
+import item7 from '../../../asstes/img/galery/sofa.jpg';
 import item8 from '../../../asstes/img/galery/chair.jpg';
 
 const gridItems = [

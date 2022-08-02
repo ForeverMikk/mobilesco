@@ -57,8 +57,9 @@ const Wishlist = () => {
                     </div>
 
                     <div className="special-info">
-                            <h3>Especificaciones </h3>
-                            <p>Deja un comentario con las caracteristicas deseadas para tu mobiliario; </p>
+                            <h3>Especificaciones adicionales</h3>
+                            <p>Envía un comentario con las características deseadas para tu mobiliario; agrega medidas específicas, disponibilidad de colores, etc. </p>
+                            <textarea name="texarea" id="texarea" cols="30" rows="10"></textarea>
                     </div>
 
                     <div className="shipping-info">

@@ -28,7 +28,10 @@ header .description {
     bottom: -2rem;
 }
 
-@media screen and (min-width: 1980px) {
+@media screen and (min-width: 1920px) {
+    header {
+        height: 100vh;
+    }
     header .background {
         background-size: cover;
     }
@@ -39,6 +42,12 @@ header .description {
 
     header .description {
         font-size: var(--h3-font-size);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    header .title {
+        font-size: var(--h1-font-size);
     }
 }
 

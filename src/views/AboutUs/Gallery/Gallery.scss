@@ -91,13 +91,13 @@
 
 @media screen and (max-width: 1024px) {
     .gallery .grid {
-        grid-template-columns: repeat(6, 5rem);
+        grid-template-columns: repeat(6, 7rem);
         align-items: center;
         justify-content: center;
     }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
     .gallery .grid {
         display: flex;
         padding: 1rem;

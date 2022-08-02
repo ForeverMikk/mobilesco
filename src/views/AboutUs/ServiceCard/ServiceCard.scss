@@ -44,6 +44,19 @@
     align-items: flex-end;
 }
 
+@media screen and (max-width: 1024px) {
+
+    .service-card {
+        margin: 5rem 0;
+    }
+    .service-card .service-info .title{
+        margin: 2rem;
+    }
+    .service-card .service-info .description, .service-card .service-info img {
+        margin: 0 2rem;
+        width: auto;
+    }
+}
 
 @media screen and (max-width: 768px) {
     .service-card .img img {
