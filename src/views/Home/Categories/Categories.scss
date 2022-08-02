@@ -32,6 +32,8 @@
 
 .home-categories .swiper {
     height: 25rem;
+    display: flex;
+    align-items: center;
 }
 .home-categories .swiper-wrapper {
     height: auto;
@@ -61,6 +63,7 @@
 }
 .category-card .description {
     color: #fff;
+    font-family: var(--text-font-light);
     font-size: var(--smaller-font-size);
     padding: 0.3rem 0.5rem;
 }

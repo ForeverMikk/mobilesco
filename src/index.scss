@@ -10,6 +10,11 @@
   src: url(./asstes/fonts/Metropolis-Regular.woff);
 }
 
+@font-face {
+  font-family: "Metropolis-light";
+  src: url(./asstes/fonts/Metropolis-Thin.woff);
+}
+
 :root {
   // COLORS
   --first-color: #334b47;
@@ -23,6 +28,7 @@
   // Font Family
   --title-font: 'Elegance','Open Sans', sans-serif;
   --text-font:  'Metropolis','Roboto', sans-serif;
+  --text-font-light:  'Metropolis-light','Roboto', sans-serif;
   
   // Font Size
   --big-font-size: 2.5rem;

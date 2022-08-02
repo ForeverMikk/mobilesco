@@ -80,8 +80,6 @@ const Wishlist = () => {
                 </aside>
 
             </div>
-
-
              
         </section>
     )
