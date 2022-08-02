@@ -7,6 +7,10 @@ const PreviewProduct = ({ img, name, description, id, price, quantity }) => {
 
     const dispatch = useDispatch();
 
+    const deleteHandler = () => {
+        dispatch(cartActions.deleteFromCart(id))
+    }
+
     const decrementHandler = () => {
         dispatch(cartActions.removeFromCart(id));
     }
@@ -30,9 +34,10 @@ const PreviewProduct = ({ img, name, description, id, price, quantity }) => {
                 <h3 className="title">{name}</h3>
                 <p className="description">{description}</p>
                 <button className='more'>Ver más</button>
-                <span>{quantity}</span>
                 <button className='add' onClick={incrementHandler}>+</button>
-                <button className="remove" onClick={decrementHandler}>Eliminar</button>
+                <span>{quantity}</span>
+                <button className='add' onClick={decrementHandler}>-</button>
+                <button className="remove" onClick={deleteHandler}>Eliminar</button>
             </div>
         </div>
     )

@@ -12,10 +12,12 @@
     margin: 3rem 6rem;
 }
 .product-carousel .swiper {
-    overflow-y: visible;
-    overflow: visible;
-    overflow-x: hidden;
+    height: 27rem;
 }
+.product-carousel .swiper-wrapper {
+    height: auto;
+}
+
 .product-carousel .text .title {
     font-size: var(--h2-font-size);
     margin: 2rem 0;
@@ -58,9 +60,9 @@
         width: 80%;
         margin: 2rem 3rem;
     }
-    .product-carousel .swiper {
-        overflow-y: visible;
-    }
+    // .product-carousel .swiper {
+    //     overflow-y: visible;
+    // }
     .card-item.product-catalog {
         margin: 2rem;
     }

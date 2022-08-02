@@ -26,7 +26,7 @@ const escritorios = [escritorio1, escritorio2, escritorio3, escritorio4];
 
 const CategoriesPopular = () => {
     return (
-        <section className='categories-box'>
+        <section className='categories-popular'>
             <div className="info">
                 <h2>Categorias populares</h2>
                 <button>Ver todas</button>

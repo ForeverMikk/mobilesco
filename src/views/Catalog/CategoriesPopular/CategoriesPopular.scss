@@ -1,19 +1,27 @@
 
-.categories-box {
+.categories-popular {
     margin: 5rem;
     z-index: -1;
 }
 
-.categories-box .info {
+.categories-popular .swiper {
+    height: 24rem;
+}
+
+.categories-popular .swiper-wrapper {
+    height: auto;
+}
+
+.categories-popular .info {
     display: flex;
     margin-bottom: 2rem;
 }
-.categories-box .info h2 {
+.categories-popular .info h2 {
     font-family: var(--title-font);
     color: var(--first-color);
     margin-right: 2rem;
 }
-.categories-box .info button {
+.categories-popular .info button {
     font-family: var(--text-font);
     color: #fff;
     background: var(--first-color);
@@ -22,14 +30,14 @@
     transition: all 0.3s ease-out;
 }
 
-.categories-box .info button:hover {
+.categories-popular .info button:hover {
     cursor: pointer;
     background: var(--first-color-light);
 }
 
 
 @media screen and (max-width: 768px) {
-    .categories-box {
+    .categories-popular {
         margin: 4rem 2rem;
     }
     
@@ -37,19 +45,19 @@
 
 
 @media screen and (max-width: 640px) {
-    .categories-box {
+    .categories-popular {
         margin: 3rem 0;
     }
-    .categories-box .info {
+    .categories-popular .info {
         justify-content: space-between;
     }
-    .categories-box .info h2 {
+    .categories-popular .info h2 {
         font-size: var(--h3-font-size);
     }
-    .categories-box .info button {
+    .categories-popular .info button {
         font-size: var(--smaller-font-size);
     }
-    .categories-box .swiper {
+    .categories-popular .swiper {
         z-index: 1;
     }
 }

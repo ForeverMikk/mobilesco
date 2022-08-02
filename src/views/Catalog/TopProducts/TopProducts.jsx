@@ -14,7 +14,7 @@ const TopProducts = () => {
         const fetchData = async() => {
             const data = await getAllProducts();
 
-            setTopProducts(data.slice(2,9));
+            setTopProducts(data.slice(0,9));
         }
 
         fetchData()
@@ -55,14 +55,14 @@ const TopProducts = () => {
                 // onSlideChange={() => console.log('Sliding')}
                 // onSwiper={(swiper)=> console.log(swiper)}
              >
-                {topProducts && topProducts.map((item, index) => (
+                {topProducts && topProducts.map(({data, images}, index) => (
                     <SwiperSlide key={index}>
                         <ProductItem 
-                            id={item.CLAVE}
-                            price={item.COSTO}
-                            name={item.NOMBRE} 
-                            description={item.DESCRIPCION}
-                            img={item.IMAGEN}
+                            id={data.CLAVE}
+                            price={data.COSTO}
+                            name={data.NOMBRE} 
+                            description={data.DESCRIPCION}
+                            img={`https://mobilesco.mx/API/images/uploads/${data.CLAVE}/${images[0].NOMBRE}`}
                             className="product-catalog"/>
                     </SwiperSlide>
                 ))}

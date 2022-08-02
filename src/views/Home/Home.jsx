@@ -21,9 +21,6 @@ const Home = () => {
             const data = await getProductById(1);
             const images = await getProductImages(1);
             
-            console.log(images);
-            console.log(data);
-
             setProductImages(images[2]);
             setProduct(data);
         }

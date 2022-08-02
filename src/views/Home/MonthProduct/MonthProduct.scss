@@ -40,6 +40,7 @@
     font-size: var(--small-font-size);
     font-weight: var(--font-semibold);
     background: var(--second-color);
+    letter-spacing: 1px;
 }
 .month-product .buttons .buy, .month-product .buttons .cart {
     transition: all 0.3s ease-out;

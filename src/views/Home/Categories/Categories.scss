@@ -25,9 +25,16 @@
     margin-bottom: 5rem;
 }
 
-.swiper-main {
+.home-categories .swiper-main {
     width: 90%;
     margin: 0 5rem;
+}
+
+.home-categories .swiper {
+    height: 25rem;
+}
+.home-categories .swiper-wrapper {
+    height: auto;
 }
 
 .category-card {

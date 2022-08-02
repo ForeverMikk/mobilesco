@@ -3,7 +3,7 @@ import axios from 'axios';
 const MOBILESCO_URL = 'https://mobilesco.mx/API/muebles'
 
 export const getAllProducts = async() => {
-    const response = await axios.get(MOBILESCO_URL);
+    const response = await axios.get(MOBILESCO_URL + '?opt=all');
     const data = response.data;
 
     return data;

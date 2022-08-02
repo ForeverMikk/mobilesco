@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 import './MonthProduct.scss';
 
@@ -17,9 +17,9 @@ const MonthProduct = ({ name, description, img }) => {
                 </p>
 
                 <div className='buttons'>
-                    <button className='buy'>Comprar</button>
+                    <button className='buy'>Cotizar</button>
                     <button className='cart'>
-                        <FontAwesomeIcon icon={faCartShopping} />
+                        <FontAwesomeIcon icon={faHeart} />
                     </button>
                 </div>
             </div>

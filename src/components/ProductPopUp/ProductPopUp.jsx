@@ -43,6 +43,7 @@ const ProductPopUp = ({ name, id, category, description, color, material, img, p
                 <h3 className="category">Categoria {category}</h3>
                 <h1>{name}</h1>
                 <p className='description'>{description}</p>
+                <p>Precio: {price}</p>
                 
                 <div className="colors">
                     <h3 className='colors-title'>Colores: </h3>

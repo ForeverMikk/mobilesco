@@ -13,10 +13,8 @@ const ProductCarousel = () => {
     useEffect(() => {
       const fetchData = async()=> {
         const data = await getAllProducts();
-        
-        const list = data.slice(1,7);
-        
-        setProductsList(list);
+
+        setProductsList(data.slice(0,9));
       }
 
       fetchData()
@@ -56,17 +54,17 @@ const ProductCarousel = () => {
                 // onSlideChange={() => console.log('Sliding')}
                 // onSwiper={(swiper)=> console.log(swiper)}
             >
-                {productsList && productsList.map((item, index) => (
+                {productsList && productsList.map(({data, images}, index) => (
                     <SwiperSlide key={index}>
                         <ProductItem 
-                            id={item.CLAVE}
-                            price={item.COSTO}
-                            name={item.NOMBRE} 
-                            description={item.DESCRIPCION}
-                            img={item.IMAGEN}
-                            category={item.CATEGORIA}
-                            color={item.COLOR}
-                            material={item.MATERIAL}
+                            id={data.CLAVE}
+                            price={data.COSTO}
+                            name={data.NOMBRE} 
+                            description={data.DESCRIPCION}
+                            img={`https://mobilesco.mx/API/images/uploads/${data.CLAVE}/${images[0].NOMBRE}`}
+                            category={data.CATEGORIA}
+                            color={data.COLOR}
+                            material={data.MATERIAL}
                             className="product-catalog"
                         />
                     </SwiperSlide>
