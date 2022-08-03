@@ -2,7 +2,7 @@ import React from 'react';
 import {Navigation, Pagination, Scrollbar, A11y} from 'swiper';
 import {Swiper, SwiperSlide} from 'swiper/react';
 
-import './Categories.scss';
+import './HomeCategories.scss';
 import category from '../../../asstes/img/category.jpg';
 
 const categories = [
@@ -50,7 +50,7 @@ const CategoryCard = ({title, img, description}) => {
 }
 
 
-const Categories = () => {
+const HomeCategories = () => {
     return (
         <section className='home-categories'>
             <h2 className='title'>Categorías que podrían interesarte</h2>
@@ -101,4 +101,4 @@ const Categories = () => {
     )
 }
 
-export default Categories;
+export default HomeCategories;

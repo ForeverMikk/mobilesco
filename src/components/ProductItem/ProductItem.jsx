@@ -1,14 +1,15 @@
 
 import React from 'react';
 import Popup from 'reactjs-popup';
-// import { useSelector } from 'react-redux';
+import toast from 'react-hot-toast'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { useDispatch } from 'react-redux';
 
 import './ProductItem.scss'
-import { cartActions } from '../../store/cart-slice';
 import ProductPopUp from '../ProductPopUp/ProductPopUp';
+import { cartActions } from '../../store/cart-slice';
+import { productClicked } from '../../services/productSercive';
 
 
 const ProductItem = ({id, name, description, img, className, price, category, color, material }) => {
@@ -19,6 +20,10 @@ const ProductItem = ({id, name, description, img, className, price, category, co
     // const productSelected = productList.find(item => item.id === id);
 
     const addToCart = () => {
+
+        toast.success("Agregaste un producto a tu wishlist");
+        productClicked(id);
+
         dispatch(cartActions.addToCart({
             name,
             id,
@@ -59,7 +64,9 @@ const ProductItem = ({id, name, description, img, className, price, category, co
                     />
                 </Popup>
                 
-                <button className={`heart`} onClick={addToCart}>
+                <button 
+                    className={`heart`} 
+                    onClick={addToCart}>
                     <FontAwesomeIcon icon={faHeart} />
                 </button>
                 

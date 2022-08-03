@@ -3,7 +3,6 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 0 5rem;
     // box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
 }
 .product-carousel .text {
@@ -27,12 +26,22 @@
 }
 
 @media screen and (min-width: 1920px) {
+    .product-carousel {
+        min-height: 60vh;
+        margin: 0 5rem;
+    }
     .product-carousel .text .title {
         font-size: var(--big-font-size);
         margin: 3rem 0;
     }
     .product-carousel .text .description {
         font-size: var(--h3-font-size);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .product-carousel {
+        height: 60vh;
     }
 }
 

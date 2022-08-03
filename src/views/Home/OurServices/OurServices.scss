@@ -59,11 +59,29 @@
     background: var(--first-color);
 }
 
+@media screen and (min-width: 1920px) {
+    .our-services {
+        height: 60vh;
+    }
+}
 
-@media screen and (min-width: 1024px) {
-    // .our-services {
-    //     flex-direction: column;
-    // }
+@media screen and (max-width: 1024px) {
+    .our-services {
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .our-services .img img {
+        height: 35rem;
+    }
+    .our-services .img {
+        margin-bottom: 3rem;
+    }
+    .our-services .services-home {
+        margin-left: 3rem;
+        width: 80%;   
+    }
 }
 
 

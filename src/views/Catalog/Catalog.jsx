@@ -22,16 +22,21 @@ const CaregorieCircle = ({img, name}) => {
 
 const Catalog = () => {
 
+    const [input, setInput] = useState();
     const [productsFiltered, setProductsFiltered] = useState();
 
     const onChange = async(event) => {
-        const productInput = event.target.value.toLowerCase();
+        const productInput = event.target.value;
         const productsList = await getAllProducts();
+        setInput(productInput);
 
+        console.log('input', productInput);
+        console.log('search', productInput);
         if(productInput.length > 2) {
             const filtered = productsList.filter(item => {
-                const fullName = item.NOMBRE.toLowerCase();
+                const fullName = item.data.NOMBRE.toLowerCase();
 
+                // return productInput && fullName.match(productInput) 
                 return fullName.indexOf(productInput) >= 0;
             })
             console.log("filtrados",filtered)
@@ -51,7 +56,8 @@ const Catalog = () => {
 
                 <p className='description'>Si estás en busca de mobiliario de calidad entonces eres bienvenido. Tenemos diferentes tipos de muebles esperando a ser repartidos.</p>
 
-                <SearchBar onChange={onChange} productsFiltered={productsFiltered}/>
+                <SearchBar onChange={onChange} productsFiltered={productsFiltered} input={input}/>
+                {/* <button onClick={onSearch}>Buscar</button> */}
 
                 <div className='categories'>
                     <CaregorieCircle img={sillas} name="Sillas" />

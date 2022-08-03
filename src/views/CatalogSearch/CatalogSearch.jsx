@@ -12,10 +12,11 @@ const CatalogSearch = () => {
     const onChange = async(event) => {
         const productInput = event.target.value.toLowerCase();
         const productsList = await getAllProducts();
+        console.log("lista", productsList);
 
         if(productInput.length > 2) {
             const filtered = productsList.filter(item => {
-                const fullName = item.NOMBRE.toLowerCase();
+                const fullName = item.data.NOMBRE.toLowerCase();
 
                 return fullName.indexOf(productInput) >= 0;
             })

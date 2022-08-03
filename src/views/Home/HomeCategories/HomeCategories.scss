@@ -79,11 +79,20 @@
 }
 
 @media screen and (min-width: 1920px) {
+    .home-categories {
+        height: 60vh;  
+    }
     .home-categories h2 {
         font-size: var(--big-font-size);
     }
     .home-categories .subtitle {
         font-size: var(--h3-font-size);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .home-categories {
+        height: 65vh;
     }
 }
 

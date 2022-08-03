@@ -36,3 +36,15 @@ export const getProductImages = async(id) => {
 
     return data;
 }
+
+export const productClicked = async(id) => {
+    await axios.post(`https://mobilesco.mx/API/busquedas`, { 
+        "idMueble": id
+     }).then(res => {
+        console.log('response',res);
+        console.log('data response',res.data);
+
+    }).catch((err) => {
+        console.log(err)
+    })
+}

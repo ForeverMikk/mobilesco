@@ -5,7 +5,7 @@ import ProductItem from '../../components/ProductItem/ProductItem';
 import SearchBox from '../../components/SearchBox/SearchBox';
 import ProductCarousel from './ProductCarousel/ProductCarousel';
 import OurServices from './OurServices/OurServices';
-import Categories from './Categories/Categories';
+import HomeCategories from './HomeCategories/HomeCategories';
 import MonthProduct from './MonthProduct/MonthProduct';
 import Suscribe from './Suscribe/Suscribe';
 import { getProductById, getProductImages } from '../../services/productSercive';
@@ -50,7 +50,7 @@ const Home = () => {
 
             <ProductCarousel />
             <OurServices />
-            <Categories />
+            <HomeCategories />
             {product && <MonthProduct 
                 name={product.NOMBRE}
                 description={product.DESCRIPCION}

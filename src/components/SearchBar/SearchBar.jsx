@@ -3,7 +3,15 @@ import { Link } from 'react-router-dom';
 
 import './SearchBar.scss';
 
-const SearchBar = ({ onChange, productsFiltered }) => {
+// const useQuery = () => {
+//     const search = useLocation();
+
+//     return React.useMemo(() => new URLSearchParams(search), [search]);
+// }
+
+const SearchBar = ({ onChange, productsFiltered, input }) => {
+
+    // let query = useQuery();
 
     return (
         <div className='search-bar'>
@@ -11,7 +19,7 @@ const SearchBar = ({ onChange, productsFiltered }) => {
                 <input type="text" placeholder='Encuentra un mueble a tu medida' onChange={onChange}/>
                 <div className="buttons">
                     <button className='search-button'>Buscar</button>
-                    <Link to='/catalog-search'>
+                    <Link to={`/catalog-search?name=${input}`}>
                         <button className='categories'>Categorias</button>
                     </Link>
                 </div>
@@ -20,7 +28,7 @@ const SearchBar = ({ onChange, productsFiltered }) => {
             {productsFiltered && <div className="dropdown">
                 {productsFiltered.map((item, index) => (
                     <div key={index} className="dropdown-row">
-                        <p className='item-name'>{item.NOMBRE}</p>
+                        <p className='item-name'>{item.data.NOMBRE}</p>
                     </div>
                 ))}
             </div>}

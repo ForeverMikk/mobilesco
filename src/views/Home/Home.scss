@@ -1,6 +1,6 @@
 header {
     height: 100vh;
-    padding: 2.5rem 5rem;
+    padding:  0 5rem 2.5rem;
     background: var(--third-color);
 
 }
@@ -30,7 +30,8 @@ header .description {
 
 @media screen and (min-width: 1920px) {
     header {
-        height: 100vh;
+        height: auto;
+        padding:  0 5rem;
     }
     header .background {
         background-size: cover;
@@ -48,6 +49,7 @@ header .description {
 @media screen and (max-width: 1024px) {
     header .title {
         font-size: var(--h1-font-size);
+        padding-top: 5rem;
     }
 }
 

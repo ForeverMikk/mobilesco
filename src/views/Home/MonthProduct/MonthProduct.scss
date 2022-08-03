@@ -83,6 +83,15 @@
         font-size: var(--normal-font-size);
     }
 }
+@media screen and (max-width: 1024px) {
+    .month-product .img img {
+        width: 20rem;
+        margin: 0 3rem;
+    }
+    .month-product .data {
+        margin: 0 0 0 5rem;
+    }
+}
 
 @media screen and (max-width: 768px) {
     .month-product {

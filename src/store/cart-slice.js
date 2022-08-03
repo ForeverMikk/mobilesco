@@ -5,6 +5,7 @@ const cartSlice = createSlice({
     initialState: {
         itemList: [],
         totalQuantity: 0,
+        productInput: "",
         // showCart: false,
         // changed: false
     },
