@@ -82,7 +82,7 @@
     font-size: larger;
     color: var(--first-color);
 }
-.card-item .card-buttons .heart.active {
+.card-item.active .card-buttons .heart {
     color: var(--second-color);
 }
 .card-item .card-buttons .heart:hover {

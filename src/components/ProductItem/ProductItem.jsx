@@ -1,10 +1,9 @@
-
-import React from 'react';
+import React,{ useState } from 'react';
 import Popup from 'reactjs-popup';
 import toast from 'react-hot-toast'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import './ProductItem.scss'
 import ProductPopUp from '../ProductPopUp/ProductPopUp';
@@ -15,15 +14,19 @@ import { productClicked } from '../../services/productSercive';
 const ProductItem = ({id, name, description, img, className, price, category, color, material }) => {
     
     const dispatch = useDispatch();
-    // const productList = useSelector(state => state.cart.itemList);
-
-    // const productSelected = productList.find(item => item.id === id);
-
+    const [productState, setProductState] = useState(false);
+    const productList = useSelector(state => state.cart.itemList);
+    
     const addToCart = () => {
-
+        
+        
+        const currentProduct = productList.find(item => item.id === id);
         toast.success("Agregaste un producto a tu wishlist");
-        productClicked(id);
+        if(currentProduct) {
+            setProductState(!productState);
+        }
 
+        productClicked(id);
         dispatch(cartActions.addToCart({
             name,
             id,
@@ -37,7 +40,7 @@ const ProductItem = ({id, name, description, img, className, price, category, co
     }
 
     return (
-        <div className={`card-item ${className}`}>
+        <div className={`card-item ${className} ${productState ? 'active' : ''}`}>
             <img src={img} alt={name} />
             <h3 className="card-title">
                 {name}
@@ -69,7 +72,6 @@ const ProductItem = ({id, name, description, img, className, price, category, co
                     onClick={addToCart}>
                     <FontAwesomeIcon icon={faHeart} />
                 </button>
-                
                 
             </div>
         </div>
