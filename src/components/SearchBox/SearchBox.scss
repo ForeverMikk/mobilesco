@@ -49,6 +49,12 @@
 
 @media screen and (min-width: 1920px) {
     .search-box {
-        bottom: 9rem;
+        bottom: 4rem;
+    }
+}
+
+@media screen and (min-height: 1800px)  {
+    .search-box {
+        bottom: 23rem;
     }
 }

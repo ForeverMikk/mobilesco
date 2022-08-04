@@ -27,7 +27,8 @@ header .description {
     bottom: -2rem;
 }
 
-@media screen and (min-width: 1920px) {
+
+@media screen and (min-width: 1920px)  {
     header {
         height: 80vh;
         padding:  0 5rem;
@@ -42,6 +43,14 @@ header .description {
 
     header .description {
         font-size: var(--h3-font-size);
+        bottom: 9rem;
+    }
+}
+
+@media screen and (min-height: 1800px)  {
+    header .description {
+        font-size: var(--h2-font-size);
+        bottom: 20rem;
     }
 }
 
