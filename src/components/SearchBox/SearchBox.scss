@@ -45,3 +45,10 @@
     background-repeat: no-repeat;
     -webkit-appearance: none;
 }
+
+
+@media screen and (min-width: 1920px) {
+    .search-box {
+        bottom: 9rem;
+    }
+}

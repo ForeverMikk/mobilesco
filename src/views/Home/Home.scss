@@ -2,7 +2,6 @@ header {
     height: 100vh;
     padding:  0 5rem 2.5rem;
     background: var(--third-color);
-
 }
 header .background {
     height: 90%;
@@ -30,7 +29,7 @@ header .description {
 
 @media screen and (min-width: 1920px) {
     header {
-        height: auto;
+        height: 80vh;
         padding:  0 5rem;
     }
     header .background {
