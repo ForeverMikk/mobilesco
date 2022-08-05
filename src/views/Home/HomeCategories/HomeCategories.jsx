@@ -8,14 +8,17 @@ import { getAllCategories } from '../../../services/categoryService';
 
 const HomeCategories = () => {
 
-    const [categories, setCategories] = useState();
-    const getCategories = async() => {
-        const categories = await getAllCategories();
-        
-        setCategories(categories);
-    }
+    const [categories, setCategories] = useState([]);
+    
 
     useEffect(() => {
+
+        const getCategories = async() => {
+            const categoriesGet = await getAllCategories();
+            
+            setCategories(categoriesGet);
+        }
+
         getCategories()
     }, [])
     
