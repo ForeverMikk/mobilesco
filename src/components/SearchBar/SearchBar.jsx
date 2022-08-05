@@ -1,17 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { getProductsFiltered } from '../../services/productSercive';
 
 import './SearchBar.scss';
 
-// const useQuery = () => {
-//     const search = useLocation();
 
-//     return React.useMemo(() => new URLSearchParams(search), [search]);
-// }
+const SearchBar = ({productsFiltered ,setProductsFiltered}) => {
 
-const SearchBar = ({ onChange, productsFiltered, input }) => {
+    const [input, setInput] = useState()
+    // const [productsFiltered, setProductsFiltered] = useState();
 
-    // let query = useQuery();
+    const onChange = async(event) => {
+        setInput(event.target.value.toLowerCase());
+        if(input.length > 1) {
+            const filtered = await getProductsFiltered(input);
+            setProductsFiltered(filtered);
+        }
+
+        if(input.trim() === ''){
+            setProductsFiltered(null);
+        }
+    }
 
     return (
         <div className='search-bar'>

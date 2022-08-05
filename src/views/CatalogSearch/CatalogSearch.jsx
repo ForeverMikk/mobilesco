@@ -1,37 +1,17 @@
 import React, { useState } from 'react';
+// import { useParams } from 'react-router-dom';
 
 import './CatalogSearch.scss';
 import ProductsList from './ProductsList/ProductList';
 import SearchBar from '../../components/SearchBar/SearchBar';
-import { getAllProducts } from '../../services/productSercive';
 
 const CatalogSearch = () => {
 
     const [productsFiltered, setProductsFiltered] = useState();
-
-    const onChange = async(event) => {
-        const productInput = event.target.value.toLowerCase();
-        const productsList = await getAllProducts();
-        console.log("lista", productsList);
-
-        if(productInput.length > 2) {
-            const filtered = productsList.filter(item => {
-                const fullName = item.data.NOMBRE.toLowerCase();
-
-                return fullName.indexOf(productInput) >= 0;
-            })
-            console.log("filtrados",filtered)
-            setProductsFiltered(filtered);
-        } 
-
-        if(productInput.trim() === ''){
-            setProductsFiltered(null);
-        }
-    }
     
     return(
         <section className='catalog-search'>
-            <SearchBar onChange={onChange} productsFiltered={productsFiltered}/>
+            <SearchBar setProductsFiltered={setProductsFiltered} productsFiltered={productsFiltered}/>
             {productsFiltered && <ProductsList products={productsFiltered}/> }
         </section>
     )

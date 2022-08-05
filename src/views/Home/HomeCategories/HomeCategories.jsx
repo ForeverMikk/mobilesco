@@ -1,56 +1,25 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Navigation, Pagination, Scrollbar, A11y} from 'swiper';
 import {Swiper, SwiperSlide} from 'swiper/react';
 
 import './HomeCategories.scss';
-import category from '../../../asstes/img/category.jpg';
-
-const categories = [
-    {
-        name: "Escolares",
-        img: category,
-        description: "Eres parte de una institución escolar y buscas llenar las aulas ¡Este lugar es para ti!"
-    },
-    {
-        name: "De Oficina",
-        img: category,
-        description: "Eres un empresario, emprendedor o parte de una gran organización, aquí podemos mostrarte todo lo que necesitas para equipar oficinas"
-    },
-    {
-        name: "Escolares 2",
-        img: category,
-        description: "Te presentamos un catálogo exclusivo de mobiliario escolar para la mayor comodidad de los estudiantes, maestros y administrativos"
-    },
-    {
-        name: "De Oficina 2",
-        img: category,
-        description: "Te mostramos un catálogo exclusivo para mobiliario de oficina, para la mejorar la eficiencia de los trabajadores en un espacio cómodo"
-    },
-    {
-        name: "De Casa",
-        img: category,
-        description: "¡Tenemos todo lo que buscas! Mesas, sillas, comedores, sillones, alacenas, etc."
-    },
-    {
-        name: "Otros",
-        img: category,
-        description: "Contamos con muebles versátiles que se pueden acomodar en cualquier espacio"
-    },
-
-]
-
-const CategoryCard = ({title, img, description}) => {
-    return(
-        <div className='category-card'>
-            <h3 className='title'>{title}</h3>
-            <img src={img} alt={title} />
-            <p className="description">{description}</p>
-        </div>
-    )
-}
-
+import CategoryCard from './CategoryCard/CategoryCard';
+import { getAllCategories } from '../../../services/categoryService';
 
 const HomeCategories = () => {
+
+    const [categories, setCategories] = useState();
+    const getCategories = async() => {
+        const categories = await getAllCategories();
+        
+        setCategories(categories);
+    }
+
+    useEffect(() => {
+        getCategories()
+    }, [])
+    
+
     return (
         <section className='home-categories'>
             <h2 className='title'>Categorías que podrían interesarte</h2>
@@ -89,9 +58,12 @@ const HomeCategories = () => {
                }}
             >
 
-                {categories.map((item, index) => (
+                {categories && categories.map((item, index) => (
                     <SwiperSlide key={index}>
-                        <CategoryCard title={item.name} img={item.img} description={item.description} />
+                        <CategoryCard 
+                            title={item.cat_nombre} 
+                            img={`https://mobilesco.mx/API/images/uploads/categorias/${item.cat_imagen}`} 
+                            description={item.cat_descripcion} />
                     </SwiperSlide>
                 ))}  
                 
