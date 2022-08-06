@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 import './CatalogSearch.scss';
 import ProductsList from './ProductsList/ProductList';
-import SearchBar from '../../components/SearchBar/SearchBar';
+import SearchBar from './SearchBar/SearchBar';
 // import { getAllProducts } from '../../services/productSercive';
 
 const CatalogSearch = () => {

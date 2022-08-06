@@ -35,7 +35,7 @@ const HomeCategories = () => {
                 // pagination={{ clickable: true }}
                 // scrollbar={{ draggable: true }}
                 spaceBetween={50}
-                slidesPerView={4}
+                slidesPerView={3}
                 breakpoints={{
                     0: {
                         width: 640,
@@ -51,12 +51,12 @@ const HomeCategories = () => {
                    // when window width is >= 768px
                    768: {
                        width: 768,
-                       slidesPerView: 3,
+                       slidesPerView: 2,
                    },
-                   1980: {
-                    width: 1980,
+                   1920: {
+                    width: 1920,
                     spaceBetween: 50,
-                    slidesPerView: 5,
+                    slidesPerView: 4,
                     },
                }}
             >
