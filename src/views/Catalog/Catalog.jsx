@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import './Catalog.scss';
 import sillas from '../../asstes/img/sillas.png';
@@ -23,20 +23,32 @@ const CaregorieCircle = ({img, name}) => {
 const Catalog = () => {
 
     const [input, setInput] = useState();
+    const [productList, setProductList] = useState();
     const [productsFiltered, setProductsFiltered] = useState();
+
+    useEffect(() => {
+      
+        const getProducts = async() => {
+            const getList = await getAllProducts();
+
+            setProductList(getList);
+        }
+
+        getProducts();
+
+    }, [])
+    
 
     const onChange = async(event) => {
         const productInput = event.target.value;
-        const productsList = await getAllProducts();
         setInput(productInput);
 
         console.log('input', productInput);
         console.log('search', productInput);
         if(productInput.length > 2) {
-            const filtered = productsList.filter(item => {
+            const filtered = productList.filter(item => {
                 const fullName = item.data.NOMBRE.toLowerCase();
 
-                // return productInput && fullName.match(productInput) 
                 return fullName.indexOf(productInput) >= 0;
             })
             console.log("filtrados",filtered)
@@ -56,7 +68,7 @@ const Catalog = () => {
 
                 <p className='description'>Si estás en busca de mobiliario de calidad entonces eres bienvenido. Tenemos diferentes tipos de muebles esperando a ser repartidos.</p>
 
-                <SearchBar onChange={onChange} productsFiltered={productsFiltered} input={input}/>
+                <SearchBar onChange={onChange} productsFiltered={productsFiltered} setProductsFiltered={setProductsFiltered}/>
                 {/* <button onClick={onSearch}>Buscar</button> */}
 
                 <div className='categories'>

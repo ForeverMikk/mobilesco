@@ -9,11 +9,11 @@ import SearchBar from '../../components/SearchBar/SearchBar';
 const CatalogSearch = () => {
 
     // const [input, setInput] = useState();
-    const [productsFiltered, setProductsFiltered] = useState();
+    const [productsFiltered, setProductsFiltered] = useState([]);
     
     return(
         <section className='catalog-search'>
-            <SearchBar setProductsFiltered={setProductsFiltered}/>
+            <SearchBar productsFiltered={productsFiltered} setProductsFiltered={setProductsFiltered()}/>
             {productsFiltered && <ProductsList products={productsFiltered}/> }
         </section>
     )

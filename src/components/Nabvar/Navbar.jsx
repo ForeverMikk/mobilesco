@@ -27,7 +27,8 @@ const Navbar = () => {
             </button>
 
             <ul className={ buttonClicked ? 'nav-menu active' : 'nav-menu'}>
-            <div id="higslide-div-atrato-info"
+
+            {/* <div id="higslide-div-atrato-info"
                 data-plataform="other"  
                 data-type="info" 
                 data-price="PRECIO DEL PRODUCTO" 
@@ -36,7 +37,8 @@ const Navbar = () => {
                 data-linkcolor="black" 
                 data-urlhost="https://sandbox.atratopago.com">
                     Atrato
-            </div>
+            </div> */}
+
                 <li><Link to="/about-us" onClick={activeMenu}>Sobre Nosotros</Link></li>
 
                 <li><Link to="/contact" onClick={activeMenu}>Contacto</Link></li>
