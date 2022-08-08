@@ -1,0 +1,11 @@
+.product-popup .images-carousel {
+    display: flex;
+    align-items: center;
+}
+.product-popup .images-carousel img{
+    height: 5rem;
+    width: auto;
+    border-radius: 1rem;
+    border: 1px solid var(--first-color-light);
+    margin: 1rem 1.5rem;
+}

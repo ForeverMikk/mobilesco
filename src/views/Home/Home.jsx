@@ -21,7 +21,8 @@ const Home = () => {
             const data = await getProductById(1);
             const images = await getProductImages(1);
             
-            setProductImages(images[2]);
+            setProductImages(images);
+            console.log(images)
             setProduct(data);
         }
         fetchData()
@@ -35,7 +36,7 @@ const Home = () => {
                     {product && <ProductItem 
                         name={product.NOMBRE} 
                         description={product.DESCRIPCION}
-                        img={`https://mobilesco.mx/API/images/uploads/${product.CLAVE}/${productImages.NOMBRE}`} 
+                        img={`https://mobilesco.mx/API/images/uploads/${product.CLAVE}/${productImages[0].NOMBRE}`} 
                         images={productImages}
                         className="home"
                         id={product.CLAVE}

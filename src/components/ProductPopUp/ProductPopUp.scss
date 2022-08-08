@@ -12,16 +12,15 @@
     border-radius: 2rem;
 }
 .product-popup .img {
-
-    // height: 100%;
     width: 50%;
     display: flex;
     justify-content: center;
-    // background: url('../../asstes/img/sillas/silla-nueva.png') no-repeat center;
+    align-items: center;
+    flex-direction: column;
     background-size: contain;
 }
 .popup-content .img img {
-    width: 80%;
+    width: 60%;
     height: auto;
 }
 

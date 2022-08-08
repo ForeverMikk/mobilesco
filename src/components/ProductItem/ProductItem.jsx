@@ -19,7 +19,7 @@ const ProductItem = ({id, name, description, img, images, className, price, cate
     
     const addToCart = () => {
         
-        
+        console.log(images)
         const currentProduct = productList.find(item => item.id === id);
         toast.success("Agregaste un producto a tu wishlist");
         if(currentProduct) {

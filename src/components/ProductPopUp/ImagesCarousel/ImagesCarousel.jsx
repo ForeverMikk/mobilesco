@@ -1,10 +1,16 @@
 import React from 'react';
 
+import './ImagesCarousel.scss';
 
 const ImagesCarousel = ({id, images}) => {
     return (
-        <div>
-            hola
+        <div className='images-carousel'>
+            {images.map((img) => (
+                <img 
+                    src={`https://mobilesco.mx/API/images/uploads/${id}/${img.NOMBRE}`} 
+                    alt={`${img.MUEBLE} ${img.CLAVE_COLOR}`} 
+                />
+            ))}
         </div>
     )
 }

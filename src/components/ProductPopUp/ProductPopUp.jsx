@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
@@ -21,6 +21,9 @@ const ProductPopUp = ({ name, id, category, description, color, material, img, p
     }
     
     const incrementHandler = () => {
+        if(productSelected){ 
+            setProductQuantity(productSelected.quantity)
+        }
         dispatch(cartActions.addToCart({
             name,
             id,
@@ -32,13 +35,6 @@ const ProductPopUp = ({ name, id, category, description, color, material, img, p
             material
         }))
     }
-
-    useEffect(() => {
-        if(productSelected){ 
-           setProductQuantity(productSelected.quantity)
-        }
-    }, [productSelected])
-    
 
     return (
         <div className='product-popup'>
@@ -78,7 +74,7 @@ const ProductPopUp = ({ name, id, category, description, color, material, img, p
                     <h3 className="quantity-title">Cantidad</h3>
                     <div className="buttons">
                         <button className='less' onClick={decrementHandler}>-</button>
-                        {productQuantity > 0 ? <p>{productQuantity}</p> : <p>0</p> }
+                        {productQuantity ? <p>{productQuantity}</p> : <p>0</p> }
                         <button className='more' onClick={incrementHandler}>+</button>
                     </div>
                 </div>
