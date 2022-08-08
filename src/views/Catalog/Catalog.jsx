@@ -27,7 +27,6 @@ const Catalog = () => {
     const [productsFiltered, setProductsFiltered] = useState();
 
     useEffect(() => {
-      
         const getProducts = async() => {
             setProductList(await getAllProducts());
         }
@@ -40,15 +39,12 @@ const Catalog = () => {
         const productInput = event.target.value;
         setInput(productInput);
 
-        console.log('input', productInput);
-        console.log('search', productInput);
         if(productInput.length > 2) {
             const filtered = productList.filter(item => {
                 const fullName = item.data.NOMBRE.toLowerCase();
 
-                return fullName.indexOf(productInput) >= 0;
+                return fullName.indexOf(input) >= 0;
             })
-            console.log("filtrados",filtered)
             setProductsFiltered(filtered);
         } 
 
@@ -70,7 +66,7 @@ const Catalog = () => {
                         <div className='input-box'>
                             <input type="text" placeholder='Encuentra un mueble a tu medida' onChange={onChange}/>
                         
-                            <Link to={`/catalog-search?name=${input}`}>
+                            <Link to={`/catalog-search/${input}`}>
                                 <button className='search-button'>Buscar</button>
                             </Link>
                         </div>
