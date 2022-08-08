@@ -36,6 +36,7 @@ const Home = () => {
                         name={product.NOMBRE} 
                         description={product.DESCRIPCION}
                         img={`https://mobilesco.mx/API/images/uploads/${product.CLAVE}/${productImages.NOMBRE}`} 
+                        images={productImages}
                         className="home"
                         id={product.CLAVE}
                         price={parseInt(product.COSTO)}

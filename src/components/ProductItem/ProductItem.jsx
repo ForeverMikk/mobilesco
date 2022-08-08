@@ -11,7 +11,7 @@ import { cartActions } from '../../store/cart-slice';
 import { productClicked } from '../../services/productSercive';
 
 
-const ProductItem = ({id, name, description, img, className, price, category, color, material }) => {
+const ProductItem = ({id, name, description, img, images, className, price, category, color, material }) => {
     
     const dispatch = useDispatch();
     const [productState, setProductState] = useState(false);
@@ -33,6 +33,7 @@ const ProductItem = ({id, name, description, img, className, price, category, co
             price,
             description,
             img,
+            images,
             category,
             color,
             material
@@ -60,6 +61,7 @@ const ProductItem = ({id, name, description, img, className, price, category, co
                         name={name} 
                         description={description} 
                         category={category} 
+                        images={images}
                         price={price}
                         color={color}
                         material={material}

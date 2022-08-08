@@ -49,12 +49,13 @@ const CatalogSearch = () => {
                     <SearchBar input={input} onChange={onChange}/>
                     <button className='categories'>Categorias</button>
                 </div>
+                
                 {productsFiltered && <div className="dropdown">
-                            {productsFiltered.map((item, index) => (
-                                <div key={index} className="dropdown-row">
-                                    <p className='item-name'>{item.data.NOMBRE}</p>
-                                </div>
-                            ))}
+                    {productsFiltered.map((item, index) => (
+                        <div key={index} className="dropdown-row">
+                            <p className='item-name'>{item.data.NOMBRE}</p>
+                        </div>
+                    ))}
                 </div>}
             
             </di>
