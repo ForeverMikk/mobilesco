@@ -18,7 +18,6 @@ const CatalogSearch = () => {
             setProductList(await getAllProducts());
         }
         getProducts();
-        // onChange();
     }, [])
     
 

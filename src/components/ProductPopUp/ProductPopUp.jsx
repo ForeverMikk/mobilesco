@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
@@ -8,22 +8,18 @@ import './ProductPopUp.scss';
 import ImagesCarousel from './ImagesCarousel/ImagesCarousel';
 import { cartActions } from '../../store/cart-slice';
 
-const ProductPopUp = ({ name, id, category, description, color, material, img, price, images }) => {
-
-    const productList = useSelector(state => state.cart.itemList);
-    const productSelected = productList.find(item => item.id === id);
-    const [productQuantity, setProductQuantity] = useState();
+const ProductPopUp = ({ name, id, category, description, color, material, img, price, images, quantity }) => {
 
     const dispatch = useDispatch();
+    const productList = useSelector(state => state.cart.itemList);
+    const productSelected = productList.find(item => item.id === id);
+    // const [productQuantity, setProductQuantity] = useState(quantity);
 
     const decrementHandler = () => {
         dispatch(cartActions.removeFromCart(id));
     }
     
     const incrementHandler = () => {
-        if(productSelected){ 
-            setProductQuantity(productSelected.quantity)
-        }
         dispatch(cartActions.addToCart({
             name,
             id,
@@ -34,7 +30,13 @@ const ProductPopUp = ({ name, id, category, description, color, material, img, p
             color,
             material
         }))
+
+        console.log(productSelected);
     }
+
+    // useEffect(() => {
+    //     setProductQuantity(productSelected.quantity)
+    // }, [productSelected])
 
     return (
         <div className='product-popup'>
@@ -74,7 +76,7 @@ const ProductPopUp = ({ name, id, category, description, color, material, img, p
                     <h3 className="quantity-title">Cantidad</h3>
                     <div className="buttons">
                         <button className='less' onClick={decrementHandler}>-</button>
-                        {productQuantity ? <p>{productQuantity}</p> : <p>0</p> }
+                        {/* <p>{productQuantity}</p> */}
                         <button className='more' onClick={incrementHandler}>+</button>
                     </div>
                 </div>

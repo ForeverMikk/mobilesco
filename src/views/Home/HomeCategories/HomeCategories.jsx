@@ -10,9 +10,7 @@ const HomeCategories = () => {
 
     const [categories, setCategories] = useState([]);
     
-
     useEffect(() => {
-
         const getCategories = async() => {
             const categoriesGet = await getAllCategories();
             

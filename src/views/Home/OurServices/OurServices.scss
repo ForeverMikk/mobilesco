@@ -65,6 +65,13 @@
     }
 }
 
+@media screen and (min-height: 1500px) {
+    .our-services {
+        height: 60vh;
+    }
+}
+
+
 @media screen and (max-width: 1024px) {
     .our-services {
         height: auto;

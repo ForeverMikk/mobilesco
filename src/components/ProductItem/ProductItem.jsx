@@ -11,7 +11,7 @@ import { cartActions } from '../../store/cart-slice';
 import { productClicked } from '../../services/productSercive';
 
 
-const ProductItem = ({id, name, description, img, images, className, price, category, color, material }) => {
+const ProductItem = ({id, name, description, img, images, className, price, category, color, material, quantity }) => {
     
     const dispatch = useDispatch();
     const [productState, setProductState] = useState(false);
@@ -36,7 +36,8 @@ const ProductItem = ({id, name, description, img, images, className, price, cate
             images,
             category,
             color,
-            material
+            material,
+            quantity
         }))
     }
 
@@ -66,6 +67,7 @@ const ProductItem = ({id, name, description, img, images, className, price, cate
                         color={color}
                         material={material}
                         img={img}
+                        quantity={quantity}
                     />
                 </Popup>
                 

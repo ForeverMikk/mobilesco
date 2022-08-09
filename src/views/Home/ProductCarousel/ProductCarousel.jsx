@@ -24,7 +24,7 @@ const ProductCarousel = () => {
         <section className="product-carousel">
             <div className='text'>
                 <h3 className="title">Nuestros productos más vendidos: </h3>
-                <p className="description">Un catálogo de los muebles más populares para todo tipo de usos, encontrarás las mejores sillas, mesas, repisas, comedores, muebles de oficina y para escuelas.</p>
+                <p className="description">Adopta tu mueble ideal, el único que se quedará a tu lado tanto como lo desees. </p>
             </div>
 
             <Swiper
@@ -69,7 +69,6 @@ const ProductCarousel = () => {
                         />
                     </SwiperSlide>
                 ))}
-
             </Swiper>
            
         </section>

@@ -32,7 +32,7 @@ const Home = () => {
         <>
             <header>
                 <div className="background">
-                    <h1 className='title'>Make your interior <br /> look better</h1>
+                    <h1 className='title'>Nuestra misión es transformar cada uno de tus espacios, en un lugar especial a tu medida. </h1>
                     {product && <ProductItem 
                         name={product.NOMBRE} 
                         description={product.DESCRIPCION}
@@ -46,7 +46,7 @@ const Home = () => {
                         material={product.MATERIAL}
                     />}
                     <SearchBox />
-                    <p className='description'>Si estás en busca de mobiliario de calidad entonces eres bienvenido. Tenemos diferentes tipos de muebles esperando a ser repartidos.</p>
+                    <p className='description'>¿Buscas muebles multi-usuario? ¿Multi-usos? ¿Multi-gusto? Tenemos productos únicos que además de ornamentar tu espacio, se adaptan a él y lo optimizan.</p>
                 </div>
             </header>
 
@@ -56,7 +56,7 @@ const Home = () => {
             {product && <MonthProduct 
                 name={product.NOMBRE}
                 description={product.DESCRIPCION}
-                img={`https://mobilesco.mx/API/images/uploads/${product.CLAVE}/${productImages.NOMBRE}`}
+                img={`https://mobilesco.mx/API/images/uploads/${product.CLAVE}/${productImages[0].NOMBRE}`}
             />}
             <Suscribe />
         </>

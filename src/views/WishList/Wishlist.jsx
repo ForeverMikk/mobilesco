@@ -44,6 +44,8 @@ const Wishlist = () => {
                                Cantidad: <span>{item.quantity}</span>
                                <br />
                                Nombre: <span>{item.name}</span>
+                               <br />
+                               Precio Total: <span>{item.totalPrice}</span>
                             </p>
                         ))}
                     </div>

@@ -13,8 +13,9 @@ header .title {
     padding: 1rem 2rem;
     font-family: var(--title-font);
     font-weight: var(--font-medium);
-    font-size: var(--big-font-size);
+    font-size: 2rem;
     color: var(--first-color);
+    width: 60%;
 }
 header .description {
     width: 40%;
