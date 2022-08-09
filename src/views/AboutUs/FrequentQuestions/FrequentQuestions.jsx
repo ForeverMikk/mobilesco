@@ -7,14 +7,10 @@ import './FrequentQuestions.scss';
 const FrequentQuestions = () => {
 
     const [showAnswer, setShowAnswer] = useState(
-        {show: [false, false, false, false]}
+        {
+            show: [false, false, false, false]
+        }
     );
-
-    const changeName = () => {
-        let answer = "answer";
-        answer += this.state.show === true ? "hide" : "show";
-        return answer;
-    }
 
     const showHide = (num) => {
         setShowAnswer((prevState) => {
