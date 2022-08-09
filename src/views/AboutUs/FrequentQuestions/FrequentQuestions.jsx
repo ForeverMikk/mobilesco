@@ -25,7 +25,6 @@ const FrequentQuestions = () => {
             <h1>Preguntas frecuentes</h1>
 
             <div className="container">
-                <div className="row">
                     <div className="container-faq">
 
                         <div className={`item-faq ${showAnswer.show[0] ? 'active' : ''}`}>
@@ -77,7 +76,6 @@ const FrequentQuestions = () => {
                         </div>
 
                     </div>
-                </div>
             </div>
 
         </section>

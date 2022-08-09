@@ -1,20 +1,35 @@
+.frequent-questions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .frequent-questions h1,.frequent-questions h2, .frequent-questions h3 {
     font-family: var(--title-font);
+}
+
+.frequent-questions h1 {
+    font-size: var(--big-font-size);
+    margin-bottom: 3rem;
 }
 
 .frequent-questions p {
     font-family: var(--text-font);
 }
 
+.frequent-questions .container {
+    display: flex;
+    justify-content: center;
+}
 .container-faq {
     background: var(--first-color-light);
     box-shadow: 0 0 20px -1px rgba(0,0,0,.1);
     padding: 1.5rem;
     border-radius: 2rem;
-   
+//    text-align: center;
     height: auto;
-    width: 80%;
-    margin-left: 150px;
+    width: 50%;
+    // margin-left: 150px;
 }
 
 .container-faq .title-faq {
