@@ -1,0 +1,25 @@
+.join-us {
+    margin: 5rem 0 0;
+    // text-align: center;
+}
+
+.join-us .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.join-us h1 {
+    font-family: var(--title-font);
+    font-size: var(--big-font-size);
+}
+
+.join-us p {
+    display: flex;
+    align-items: center;
+    font-family: var(--text-font);
+    font-size: var(--h3-font-size);
+    text-align: center;
+    width: 60%;
+    margin: 3rem 0;
+}

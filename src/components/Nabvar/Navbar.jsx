@@ -41,9 +41,9 @@ const Navbar = () => {
 
                 <li><Link to="/about-us" onClick={activeMenu}>Sobre Nosotros</Link></li>
 
-                <li><Link to="/contact" onClick={activeMenu}>Contacto</Link></li>
-
                 <li><Link to="/catalog" onClick={activeMenu}>Catálogo</Link></li>
+
+                <li><Link to="/contact" onClick={activeMenu}>Contacto</Link></li>
 
                 <li>
                     <Link to="/wishlist" onClick={activeMenu}>

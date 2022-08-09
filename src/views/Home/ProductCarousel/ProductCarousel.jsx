@@ -60,6 +60,7 @@ const ProductCarousel = () => {
                             id={data.CLAVE}
                             price={data.COSTO}
                             name={data.NOMBRE} 
+                            images={images}
                             description={data.DESCRIPCION}
                             img={`https://mobilesco.mx/API/images/uploads/${data.CLAVE}/${images[0].NOMBRE}`}
                             category={data.CATEGORIA}

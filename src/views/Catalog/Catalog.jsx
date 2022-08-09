@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 
 import './Catalog.scss';
 import sillas from '../../asstes/img/sillas.png';
@@ -9,7 +8,9 @@ import libreros from '../../asstes/img/libreros.png';
 import CategoriesPopular from './CategoriesPopular/CategoriesPopular';
 import TopProducts from './TopProducts/TopProducts';
 import DownloadCatalog from './DownloadCatalog/DownloadCatalog';
+import ProductsList from './ProductsList/ProductList';
 import { getAllProducts } from '../../services/productSercive';
+import SearchBar from './SearchBar/SearchBar';
 
 const CaregorieCircle = ({img, name}) => {
     return (
@@ -61,26 +62,8 @@ const Catalog = () => {
 
                 <p className='description'>Si estás en busca de mobiliario de calidad entonces eres bienvenido. Tenemos diferentes tipos de muebles esperando a ser repartidos.</p>
 
-                <div className="search-bar">
-                    <div className="buttons">
-                        <div className='input-box'>
-                            <input type="text" placeholder='Encuentra un mueble a tu medida' onChange={onChange}/>
-                        
-                            <Link to={`/catalog-search/${input}`}>
-                                <button className='search-button'>Buscar</button>
-                            </Link>
-                        </div>
-                        <button className='categories'>Categorias</button>
-                    </div>
+                <SearchBar productsFiltered={productsFiltered} onChange={onChange} />
 
-                    {productsFiltered && <div className="dropdown">
-                        {productsFiltered.map((item, index) => (
-                            <div key={index} className="dropdown-row">
-                                <p className='item-name'>{item.data.NOMBRE}</p>
-                            </div>
-                        ))}
-                    </div>}
-                </div>
                 {/* <button onClick={onSearch}>Buscar</button> */}
 
                 <div className='categories'>
@@ -90,6 +73,8 @@ const Catalog = () => {
                     <CaregorieCircle img={libreros} name="Libreros" />
                 </div>
             </div>
+
+            {productsFiltered && <ProductsList products={productsFiltered}/> }
 
             <CategoriesPopular />
             <TopProducts />
