@@ -7,67 +7,48 @@ import shoopingCart from '../../asstes/img/shopping-cart.png';
 import supportAgent from '../../asstes/img/support-agent.png';
 import truck from '../../asstes/img/truck.png';
 
-import aboutBackground from '../../asstes/img/about-us-background.png';
-import politicImg from '../../asstes/img/hand-shake.png';
+import aboutBackground from '../../asstes/img/about-us-background.jpg';
 import ServiceCard from './ServiceCard/ServiceCard';
 import Gallery from './Gallery/Gallery';
 import FrequentQuestions from './FrequentQuestions/FrequentQuestions';
 import JoinUs from './JoinUs/JoinUs';
 
 
-
-const Politic = ({icon, title, description}) => {
-    return (
-        <div className='politic'>
-            <img src={icon} alt={title} />
-            <div className="info">
-                <h3>{title}</h3>
-                <p>{description}</p>
-            </div>
-        </div>
-    )
-}
 const AboutUs = () => {
     return (
         <section className='about-us'>
-            <h1 className="title">Los años nos respaldan... </h1>
+            <h1 className="title">Más de 20 años de experiencia nos respaldan…</h1>
 
             <div className="img">
                 <img src={aboutBackground} alt="Short video of introduction" />
             </div>
 
-            <div className="politics">
-               <Politic title="Políticas de retorno accesibles" description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit" icon={politicImg} />
-               <Politic title="Políticas de retorno accesibles" description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit" icon={politicImg} />
-               <Politic title="Políticas de retorno accesibles" description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit" icon={politicImg} />
-            </div>
-
             <div className="services">
                 <ServiceCard 
                     img={serviceImg} 
-                    title="El precio que mejor se te acomoda" 
+                    title="Es momento de elegir tu relación ideal: la mayor satisfacción, al mejor precio." 
                     icon={handShake} 
-                    description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat" 
+                    description="Capacidades del tamaño de nuestros clientes: Nuestra infraestructura instalada nos permite atender y satisfacer una gran demanda. " 
                 />
                 <ServiceCard 
                     img={serviceImg} 
-                    title="El precio que mejor se te acomoda" 
+                    title="Una amplia variedad de opciones de productos, para que elijas a tu manera." 
                     icon={shoopingCart} 
                     reverse="reverse"
-                    description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat" 
+                    description="La atención al detalle es nuestro valor agregado : Por ello aseguramos la calidad a partir de procesos estandarizados y supervisados para entregarte, nada más y nada menos que el mejor resultado. " 
                 />
                 <ServiceCard 
                     img={serviceImg} 
-                    title="El precio que mejor se te acomoda" 
+                    title="Presupuestamos tu proyecto en tiempo récord , servicio y atención al cliente como siempre lo quisiste." 
                     icon={supportAgent} 
-                    description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat" 
+                    description="Equipo altamente capacitado: Nuestros colaboradores son nuestra familia, por lo que la amplia trayectoria en la industria nos motiva a realizar un trabajo de gran calidad, basado en empatía , cuidado y eficiencia. " 
                 />
                 <ServiceCard 
                     img={serviceImg} 
-                    title="El precio que mejor se te acomoda" 
+                    title="Políticas de reparación accesibles para todo el catálogo, calidad garantizada." 
                     icon={truck} 
                     reverse="reverse"
-                    description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat" 
+                    description="Nuestros clientes son nuestros mejores aliados: La satisfacción de los clientes es nuestro principal motor, por ello cuidamos nuestras relaciones a partir de la entrega  y el servicio puntual al cliente. " 
                 />
             </div>
             

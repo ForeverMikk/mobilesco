@@ -1,7 +1,7 @@
 .service-card {
     display: flex;
     justify-content: center;
-    align-items: center;
+    // align-items: center;
     margin: 5rem;
 }
 
@@ -26,13 +26,16 @@
     font-family: var(--title-font);
     font-size: var(--h3-font-size);
     margin: 2rem 0;
+    text-align: left;
+    width: 70%;
 }
 
 .service-card .service-info .description {
     text-align: left;
     width: 50%;
+    color: var(--first-color);
     font-family: var(--text-font);
-    font-size: var(--small-font-size);
+    // font-size: var(--small-font-size);
 
 }
 
@@ -43,6 +46,14 @@
 .service-card.reverse .service-info {
     align-items: flex-end;
 }
+.service-card.reverse .service-info .title {
+    text-align: right;
+    width: 70%;
+}
+
+.service-card.reverse .service-info .description {
+    text-align: right;
+}
 
 @media screen and (max-width: 1024px) {
 
@@ -52,7 +63,10 @@
     .service-card .service-info .title{
         margin: 2rem;
     }
-    .service-card .service-info .description, .service-card .service-info img {
+    .service-card.reverse .service-info .description, 
+    .service-card.reverse .service-info img,
+    .service-card .service-info .description, 
+    .service-card .service-info img {
         margin: 0 2rem;
         width: auto;
     }
@@ -71,7 +85,8 @@
         width: 100%;
     }
 
-    .service-card.reverse .service-info {
+    .service-card.reverse 
+    .service-info {
         margin: 0 2rem 0 0;
     }
 }
@@ -87,7 +102,8 @@
     .service-card .img {
         width: 85%;
     }
-    .service-card .service-info, .service-card.reverse .service-info {
+    .service-card .service-info, 
+    .service-card.reverse .service-info {
         margin: 1.5rem 0 0 0;
         width: auto;
         align-items: center;

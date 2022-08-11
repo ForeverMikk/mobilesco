@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 import './Wishlist.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faHeart, faCheck, faLocationCrosshairs } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faHeart, faCheck } from '@fortawesome/free-solid-svg-icons';
 import PreviewProduct from './PreviewProduct/PreviewProduct';
 import { sendEmailData } from '../../services/emailService';
 
@@ -13,9 +13,9 @@ const Wishlist = () => {
     const [addressInfo, setAddressInfo] = useState(
         {
             tipoEntrega: 'a domicilio',
-            lugar: '',
             calle: '',
             numero: '',
+            lugar: '',
             cp: ''
         }
     );
@@ -48,14 +48,20 @@ const Wishlist = () => {
     }   
 
     const onChangeAddress = (e) => {
-        console.log(e)
+        const value = e.target.value;
+
+        setAddressInfo({
+            ...addressInfo,
+            [e.target.name]: value
+        })
+        console.log(addressInfo)
     }
 
     const onChangePickUp = (e) => {
-        const pickUp = e.target.value;
+        const value = e.target.value;
 
         setAddressInfo({
-            tipoEntrega: pickUp
+            tipoEntrega: value
         })
 
         // console.log(addressInfo)
@@ -123,10 +129,15 @@ const Wishlist = () => {
 
                     <div className="shipping-info" onChange={onChangeAddress}>
                         <h3>Zona de Entrega</h3>
-                        <p>
-                            <FontAwesomeIcon icon={faLocationCrosshairs} /> Pachuca de Sotos, Hgo.
-                        </p>
-                        <button>Cambiar</button>
+                        <input type="text" name='calle' value={addressInfo.calle} id='calle' placeholder='Dirección' />
+                        <input type="text" name='lugar' value={addressInfo.lugar} id='lugar' placeholder='Ciudad o Localidad' />
+
+                        <div className="other">
+                            <input type="text" name='numero' value={addressInfo.numero} id='numero' placeholder='Número Exterior' />
+                            <input type="text" name='cp' value={addressInfo.cp} id='cp' placeholder='Código Postal' />
+                        </div>
+
+                        {/* <button>Cambiar</button> */}
                     </div>
 
                     <div className="user-info" onChange={onChangeUser}>

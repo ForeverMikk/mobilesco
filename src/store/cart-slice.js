@@ -18,13 +18,13 @@ const cartSlice = createSlice({
             // Si el item esta creado agregar uno nuevo, si no agregarlo
             if(itemExists) {
                 itemExists.quantity ++;
-                itemExists.totalPrice += newItem.price;
+                itemExists.totalPrice += parseInt(newItem.price);
             } else {
                 state.itemList.push({
                     id: newItem.id,
-                    price: newItem.price,
+                    price: parseInt(newItem.price),
                     quantity: 1,
-                    totalPrice: newItem.price,
+                    totalPrice: parseInt(newItem.price),
                     name: newItem.name,
                     description: newItem.description,
                     img: newItem.img,
@@ -45,7 +45,7 @@ const cartSlice = createSlice({
                 state.totalQuantity--;
             } else {
                 itemExists.quantity--;
-                itemExists.totalPrice -= itemExists.price;
+                itemExists.totalPrice -= parseInt(itemExists.price);
             }
         },
         deleteFromCart(state, action) {
