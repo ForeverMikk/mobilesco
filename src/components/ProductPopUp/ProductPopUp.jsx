@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
@@ -11,9 +11,9 @@ import { cartActions } from '../../store/cart-slice';
 const ProductPopUp = ({ name, id, category, description, color, material, img, price, images, quantity }) => {
 
     const dispatch = useDispatch();
-    const productList = useSelector(state => state.cart.itemList);
-    const productSelected = productList.find(item => item.id === id);
-    // const [productQuantity, setProductQuantity] = useState(quantity);
+    const [productColors, setProductColors] = useState([]);
+    // const productList = useSelector(state => state.cart.itemList);
+    // const [productQuantity, setProductQuantity] = useState(0);
 
     const decrementHandler = () => {
         dispatch(cartActions.removeFromCart(id));
@@ -28,15 +28,22 @@ const ProductPopUp = ({ name, id, category, description, color, material, img, p
             img,
             category,
             color,
-            material
+            images,
+            material,
         }))
-
-        console.log(productSelected);
     }
 
-    // useEffect(() => {
-    //     setProductQuantity(productSelected.quantity)
-    // }, [productSelected])
+    useEffect(() => {
+        console.log('c',color)
+        console.log('m',material)
+        console.log("q", quantity)
+        // const productSelected = productList.find(item => item.id === id);
+
+        // setProductQuantity(productSelected.quantity)
+        setProductColors(images);
+        console.log('colores', images)
+    
+    }, [])
 
     return (
         <div className='product-popup'>
@@ -55,9 +62,9 @@ const ProductPopUp = ({ name, id, category, description, color, material, img, p
                 <div className="colors">
                     <h3 className='colors-title'>Colores: </h3>
                     <div className="buttons">
-                        <button></button>
-                        <button></button>
-                        <button></button>
+                        {productColors.map((item, index) => (
+                            <button key={index} style={{'background': item.COLOR_CODIGO}}></button>
+                        ))}
                     </div>
                     <label htmlFor="" className='label'>{color}</label>
                 </div>

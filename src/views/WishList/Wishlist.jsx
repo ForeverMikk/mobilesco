@@ -1,14 +1,71 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 
 import './Wishlist.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faHeart, faCheck, faLocationCrosshairs } from '@fortawesome/free-solid-svg-icons';
 import PreviewProduct from './PreviewProduct/PreviewProduct';
+import { sendEmailData } from '../../services/emailService';
 
 const Wishlist = () => {
 
     const cartProducts = useSelector(state => state.cart.itemList);
+    const [addressInfo, setAddressInfo] = useState(
+        {
+            tipoEntrega: 'a domicilio',
+            lugar: '',
+            calle: '',
+            numero: '',
+            cp: ''
+        }
+    );
+    const [userInfo, setUserInfo] = useState(
+        {
+            name: '',
+            email: '',
+            phone: ''
+        }
+    );
+
+    const [extraInfo, setExtraInfo] = useState('');
+
+    const sendSaleData = async(productList, addressInfo, userInfo, extraInfo) => {
+        await sendEmailData({
+            "productList": productList,
+            "addressInfo": addressInfo,
+            "userInfo": userInfo,
+            "extraInfo": extraInfo
+        })
+    }
+
+    const onChangeUser = (e) => {
+        const value = e.target.value;
+
+        setUserInfo({
+            ...userInfo,
+            [e.target.name]: value
+        })
+    }   
+
+    const onChangeAddress = (e) => {
+        console.log(e)
+    }
+
+    const onChangePickUp = (e) => {
+        const pickUp = e.target.value;
+
+        setAddressInfo({
+            tipoEntrega: pickUp
+        })
+
+        // console.log(addressInfo)
+    }
+
+    const onChangeExtra = (e) => {
+        const extra = e.target.value;
+
+        setExtraInfo(extra);
+    }
 
     return(
         <section className="wishlist">
@@ -50,21 +107,21 @@ const Wishlist = () => {
                         ))}
                     </div>
 
-                    <div className="contact-info">
+                    <div className="contact-info" onChange={onChangePickUp}>
                         <h3>Tipo de Entrega</h3>
-                        <input type="radio" name="shipping" id="home-delivery" />
+                        <input type="radio" name="shipping" id="home-delivery" value="a domicilio" />
                         <label htmlFor="shipping">Envio a domicilio</label>
-                        <input type="radio" name="shipping" id="pick-up" />
+                        <input type="radio" name="shipping" id="pick-up" value="recoger en sucursal"/>
                         <label htmlFor="shipping">Recoger en sucursal</label>
                     </div>
 
-                    <div className="special-info">
-                            <h3>Especificaciones adicionales</h3>
-                            <p>Envía un comentario con las características deseadas para tu mobiliario; agrega medidas específicas, disponibilidad de colores, etc. </p>
-                            <textarea name="texarea" id="texarea" cols="30" rows="10"></textarea>
+                    <div className="special-info" onChange={onChangeExtra}>
+                        <h3>Especificaciones adicionales</h3>
+                        <p>Envía un comentario con las características deseadas para tu mobiliario; agrega medidas específicas, disponibilidad de colores, etc. </p>
+                        <textarea name="texarea" id="texarea" cols="30" rows="10"></textarea>
                     </div>
 
-                    <div className="shipping-info">
+                    <div className="shipping-info" onChange={onChangeAddress}>
                         <h3>Zona de Entrega</h3>
                         <p>
                             <FontAwesomeIcon icon={faLocationCrosshairs} /> Pachuca de Sotos, Hgo.
@@ -72,12 +129,12 @@ const Wishlist = () => {
                         <button>Cambiar</button>
                     </div>
 
-                    <div className="user-info">
+                    <div className="user-info" onChange={onChangeUser}>
                         <h3>Datos de Contacto</h3>
-                        <input type="text" name="name" id="name" className="name" placeholder='Nombre'/>
-                        <input type="text" name="email" id="email" className="email" placeholder='Correo electrónico'/>
-                        <input type="text" name="phone" id="phone" className="phone" placeholder='Teléfono'/>
-                        <button>Solicitar</button>
+                        <input type="text" name="name" value={userInfo.name} id="name" className="name" placeholder='Nombre'/>
+                        <input type="text" name="email" value={userInfo.email} id="email" className="email" placeholder='Correo electrónico'/>
+                        <input type="text" name="phone" value={userInfo.phone} id="phone" className="phone" placeholder='Teléfono'/>
+                        <button onClick={() => {sendSaleData(cartProducts, addressInfo, userInfo, extraInfo )}}>Solicitar</button>
                     </div>
                 </aside>
 

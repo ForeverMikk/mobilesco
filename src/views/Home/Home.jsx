@@ -38,12 +38,13 @@ const Home = () => {
                         description={product.DESCRIPCION}
                         img={`https://mobilesco.mx/API/images/uploads/${product.CLAVE}/${productImages[0].NOMBRE}`} 
                         images={productImages}
-                        className="home"
                         id={product.CLAVE}
                         price={parseInt(product.COSTO)}
                         category={product.CATEGORIA}
-                        color={product.COLOR}
+                        color={productImages[0].COLOR}
                         material={product.MATERIAL}
+                        quantity={0}
+                        className="home"
                     />}
                     <SearchBox />
                     <p className='description'>¿Buscas muebles multi-usuario? ¿Multi-usos? ¿Multi-gusto? Tenemos productos únicos que además de ornamentar tu espacio, se adaptan a él y lo optimizan.</p>

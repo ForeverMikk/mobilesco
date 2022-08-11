@@ -1,4 +1,4 @@
-import React,{ useState } from 'react';
+import React,{ useState, useEffect } from 'react';
 import Popup from 'reactjs-popup';
 import toast from 'react-hot-toast'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -14,12 +14,11 @@ import { productClicked } from '../../services/productSercive';
 const ProductItem = ({id, name, description, img, images, className, price, category, color, material, quantity }) => {
     
     const dispatch = useDispatch();
-    const [productState, setProductState] = useState(false);
     const productList = useSelector(state => state.cart.itemList);
+    const [productState, setProductState] = useState(false);
     
     const addToCart = () => {
-        
-        console.log(images)
+        // console.log(images)
         const currentProduct = productList.find(item => item.id === id);
         toast.success("Agregaste un producto a tu wishlist");
         if(currentProduct) {
@@ -40,6 +39,7 @@ const ProductItem = ({id, name, description, img, images, className, price, cate
             quantity
         }))
     }
+    
 
     return (
         <div className={`card-item ${className} ${productState ? 'active' : ''}`}>

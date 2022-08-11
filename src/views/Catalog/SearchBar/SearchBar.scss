@@ -17,7 +17,7 @@
 .search-bar .search-button, 
 .search-bar .categories{
     padding: 0.5rem;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .search-bar .search-button, .search-bar .categories {
@@ -32,14 +32,15 @@
 }
 
 .search-bar .dropdown {
+    margin-top: 10px;
     font-family: var(--text-font);
     font-size: var(--smaller-font-size);
     align-self: auto;
     height: 10rem;
     margin-left: -8rem;
 
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     background: var(--fifth-color);
     width: 30rem;
     overflow-y: scroll;
@@ -50,7 +51,6 @@
 .item-name {
     padding-top: 5px;
     padding-bottom: 5px;
-
 }
 
 .search-bar .search-button {

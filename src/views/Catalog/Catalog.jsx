@@ -69,7 +69,7 @@ const Catalog = () => {
                 <div className='categories'>
                     <CaregorieCircle img={sillas} name="Sillas" />
                     <CaregorieCircle img={mesas} name="Mesas" />
-                    <CaregorieCircle img={escritorios} name="Escritorioss" />
+                    <CaregorieCircle img={escritorios} name="Escritorios" />
                     <CaregorieCircle img={libreros} name="Libreros" />
                 </div>
             </div>

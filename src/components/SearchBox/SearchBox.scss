@@ -1,5 +1,5 @@
 .search-box {
-    width: 15rem;
+    width: 16.5rem;
     padding: 1.5rem;
     background: #fff;
     font-family: var(--text-font);
@@ -12,7 +12,7 @@
     
     box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
 }
-.search-box p, .search-box input, .search-box select {
+.search-box p, .search-box input {
     margin-bottom: 1rem;
 }
 
@@ -20,7 +20,7 @@
     color: var(--second-color);
 }
 
-.search-box input, .search-box select, .search-box option {
+.search-box input {
     width: 100%;
     border: none;
     border-radius: 5px;
@@ -34,16 +34,15 @@
     padding: 0.6rem 1rem;
 }
 
-.search-box select {
-    line-height: 1.5em;
-    background-image: 
-        linear-gradient(45deg, transparent 50%, var(--first-color) 50%), 
-        linear-gradient(135deg, var(--first-color) 50%, transparent 50%), 
-        linear-gradient(to right, var(--first-color-light), var(--first-color-light));
-    background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), 100% 0;
-    background-size: 5px 5px, 5px 5px, 3em 3em;
-    background-repeat: no-repeat;
-    -webkit-appearance: none;
+.search-box button {
+    width: 100%;
+    color: #fff;
+    background: var(--second-color);
+    font-family: var(--text-font);
+    font-size: var(--h3-font-size);
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
 }
 
 
