@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import ProductItem from '../../../components/ProductItem/ProductItem';
-import { getAllProducts } from '../../../services/productSercive';
+
 
 import './ProductCarousel.scss';
+import ProductItem from '../../../components/ProductItem/ProductItem';
+import { getAllProducts } from '../../../services/productSercive';
 
 const ProductCarousel = () => {
 
@@ -58,7 +59,7 @@ const ProductCarousel = () => {
                     <SwiperSlide key={index}>
                         <ProductItem 
                             id={data.CLAVE}
-                            price={data.COSTO}
+                            // price={data.COSTO}
                             name={data.NOMBRE} 
                             images={images}
                             description={data.DESCRIPCION}

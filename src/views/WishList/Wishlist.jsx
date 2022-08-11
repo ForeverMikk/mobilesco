@@ -54,7 +54,7 @@ const Wishlist = () => {
             ...addressInfo,
             [e.target.name]: value
         })
-        console.log(addressInfo)
+        // console.log(addressInfo)
     }
 
     const onChangePickUp = (e) => {
@@ -91,8 +91,8 @@ const Wishlist = () => {
                             key={index}
                             id={item.id}
                             title={item.name}
-                            quantity={item.quantity}
-                            description={item.description} 
+                            quantity={item.cantidad}
+                            descripcion={item.descripcion} 
                             img={item.img}
                             price={item.price}
                         />
@@ -104,11 +104,15 @@ const Wishlist = () => {
                         <h3>Resumen del pedido</h3>
                         {cartProducts && cartProducts.map((item, index) => (
                             <p key={index}>
-                               Cantidad: <span>{item.quantity}</span>
+                               Cantidad: <span>{item.cantidad}</span>
                                <br />
                                Nombre: <span>{item.name}</span>
+                               {/* <br /> */}
+                               {/* Precio Total: <span>{item.totalPrice}</span> */}
                                <br />
-                               Precio Total: <span>{item.totalPrice}</span>
+                               Color: <span>{item.color}</span>
+                               <br />
+                               Material: <span>{item.material}</span>
                             </p>
                         ))}
                     </div>

@@ -22,13 +22,17 @@ const cartSlice = createSlice({
             } else {
                 state.itemList.push({
                     id: newItem.id,
-                    price: parseInt(newItem.price),
-                    quantity: 1,
-                    totalPrice: parseInt(newItem.price),
+                    // price: parseInt(newItem.price),
+                    cantidad: 1,
+                    category: newItem.category,
+                    // totalPrice: parseInt(newItem.price),
                     name: newItem.name,
-                    description: newItem.description,
+                    descripcion: newItem.descripcion,
                     img: newItem.img,
-                    productState: true
+                    material: newItem.material,
+                    color: newItem.color,
+                    images: newItem.images,
+                    // productState: true
                 });
                 state.totalQuantity++;
             }
@@ -44,8 +48,8 @@ const cartSlice = createSlice({
                 state.itemList = state.itemList.filter(item => item.id !== id);
                 state.totalQuantity--;
             } else {
-                itemExists.quantity--;
-                itemExists.totalPrice -= parseInt(itemExists.price);
+                itemExists.cantidad--;
+                // itemExists.totalPrice -= parseInt(itemExists.price);
             }
         },
         deleteFromCart(state, action) {
@@ -58,8 +62,8 @@ const cartSlice = createSlice({
                 state.totalQuantity--;
             } else {
                 state.itemList = state.itemList.filter(item => item.id !== id);
-                itemExists.quantity = 0;
-                itemExists.totalPrice = 0;
+                itemExists.cantidad = 0;
+                // itemExists.totalPrice = 0;
                 state.totalQuantity--;
             }
         }

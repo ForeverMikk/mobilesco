@@ -1,4 +1,4 @@
-import React,{ useState, useEffect } from 'react';
+import React,{ useState } from 'react';
 import Popup from 'reactjs-popup';
 import toast from 'react-hot-toast'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,7 +11,7 @@ import { cartActions } from '../../store/cart-slice';
 import { productClicked } from '../../services/productSercive';
 
 
-const ProductItem = ({id, name, description, img, images, className, price, category, color, material, quantity }) => {
+const ProductItem = ({id, name, descripcion, img, images, className, category, color, material, cantidad }) => {
     
     const dispatch = useDispatch();
     const productList = useSelector(state => state.cart.itemList);
@@ -29,14 +29,14 @@ const ProductItem = ({id, name, description, img, images, className, price, cate
         dispatch(cartActions.addToCart({
             name,
             id,
-            price,
-            description,
+            // price,
+            descripcion,
             img,
             images,
             category,
             color,
             material,
-            quantity
+            cantidad
         }))
     }
     
@@ -48,7 +48,7 @@ const ProductItem = ({id, name, description, img, images, className, price, cate
                 {name}
             </h3>
             <p className="item-desc">
-                {description}
+                {descripcion}
             </p>
 
             <div className="card-buttons">
@@ -60,14 +60,14 @@ const ProductItem = ({id, name, description, img, images, className, price, cate
                     <ProductPopUp 
                         id={id} 
                         name={name} 
-                        description={description} 
+                        descripcion={descripcion} 
                         category={category} 
                         images={images}
-                        price={price}
+                        // price={price}
                         color={color}
                         material={material}
                         img={img}
-                        quantity={quantity}
+                        quantity={cantidad}
                     />
                 </Popup>
                 

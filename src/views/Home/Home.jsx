@@ -3,6 +3,7 @@ import React, {useEffect, useState} from 'react';
 import './Home.scss';
 import ProductItem from '../../components/ProductItem/ProductItem';
 import SearchBox from '../../components/SearchBox/SearchBox';
+import PromosCarousel from './PromosCarousel/PromosCarousel';
 import ProductCarousel from './ProductCarousel/ProductCarousel';
 import OurServices from './OurServices/OurServices';
 import HomeCategories from './HomeCategories/HomeCategories';
@@ -35,11 +36,11 @@ const Home = () => {
                     <h1 className='title'>Nuestra misión es transformar cada uno de tus espacios, en un lugar especial a tu medida. </h1>
                     {product && <ProductItem 
                         name={product.NOMBRE} 
-                        description={product.DESCRIPCION}
+                        descripcion={product.DESCRIPCION}
                         img={`https://mobilesco.mx/API/images/uploads/${product.CLAVE}/${productImages[0].NOMBRE}`} 
                         images={productImages}
                         id={product.CLAVE}
-                        price={parseInt(product.COSTO)}
+                        // price={parseInt(product.COSTO)}
                         category={product.CATEGORIA}
                         color={productImages[0].COLOR}
                         material={product.MATERIAL}
@@ -51,12 +52,13 @@ const Home = () => {
                 </div>
             </header>
 
+            <PromosCarousel />
             <ProductCarousel />
             <OurServices />
             <HomeCategories />
             {product && <MonthProduct 
                 name={product.NOMBRE}
-                description={product.DESCRIPCION}
+                descripcion={product.DESCRIPCION}
                 img={`https://mobilesco.mx/API/images/uploads/${product.CLAVE}/${productImages[0].NOMBRE}`}
             />}
             <Suscribe />

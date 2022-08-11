@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
@@ -8,10 +8,10 @@ import './ProductPopUp.scss';
 import ImagesCarousel from './ImagesCarousel/ImagesCarousel';
 import { cartActions } from '../../store/cart-slice';
 
-const ProductPopUp = ({ name, id, category, description, color, material, img, price, images, quantity }) => {
+const ProductPopUp = ({ name, id, category, descripcion, color, material, img, images, cantidad }) => {
 
     const dispatch = useDispatch();
-    const [productColors, setProductColors] = useState([]);
+    const [productColors, setProductColors] = useState();
     // const productList = useSelector(state => state.cart.itemList);
     // const [productQuantity, setProductQuantity] = useState(0);
 
@@ -23,8 +23,8 @@ const ProductPopUp = ({ name, id, category, description, color, material, img, p
         dispatch(cartActions.addToCart({
             name,
             id,
-            price,
-            description,
+            // price,
+            descripcion,
             img,
             category,
             color,
@@ -34,14 +34,14 @@ const ProductPopUp = ({ name, id, category, description, color, material, img, p
     }
 
     useEffect(() => {
-        console.log('c',color)
-        console.log('m',material)
-        console.log("q", quantity)
+        // console.log('c',color)
+        // console.log('m',material)
+        // console.log("q", cantidad)
         // const productSelected = productList.find(item => item.id === id);
 
         // setProductQuantity(productSelected.quantity)
         setProductColors(images);
-        console.log('colores', images)
+        // console.log('colores', images)
     
     }, [])
 
@@ -56,8 +56,8 @@ const ProductPopUp = ({ name, id, category, description, color, material, img, p
             <div className="product-info">
                 <h3 className="category">Categoria {category}</h3>
                 <h1>{name}</h1>
-                <p className='description'>{description}</p>
-                <p>Precio: {price}</p>
+                {/* <p className='description'>{descripcion}</p>
+                <p>Precio: {price}</p> */}
                 
                 <div className="colors">
                     <h3 className='colors-title'>Colores: </h3>
@@ -83,7 +83,7 @@ const ProductPopUp = ({ name, id, category, description, color, material, img, p
                     <h3 className="quantity-title">Cantidad</h3>
                     <div className="buttons">
                         <button className='less' onClick={decrementHandler}>-</button>
-                        {/* <p>{productQuantity}</p> */}
+                        <p>{cantidad}</p>
                         <button className='more' onClick={incrementHandler}>+</button>
                     </div>
                 </div>
