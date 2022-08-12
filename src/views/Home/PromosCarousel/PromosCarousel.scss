@@ -1,0 +1,27 @@
+.promos-carousel {
+    height: 100vh;
+}
+.promos-carousel .video {
+    height: 100vh;
+    width: auto;
+}
+.promos-carousel .swiper-slide {
+    text-align: center;
+    background: var(--third-color);
+}
+
+
+@media screen and (max-width: 768px) {
+    .promos-carousel {
+        height: auto;
+    }
+    .promos-carousel .video {
+        height: auto;
+        width: 150vw;
+    }
+    
+    .promos-carousel .swiper-slide {
+        text-align: left;
+        background: var(--third-color);
+    }
+}

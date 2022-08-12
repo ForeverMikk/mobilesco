@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import './PromosCarousel.scss';
@@ -30,7 +30,7 @@ const promos = [
 
 const Video = ({video, name}) => {
     return (
-        <video controls className={name}>
+        <video className={`video ${name}`} autoPlay loop muted playsInline>
             <source src={video} type='video/mp4' />
         </video>
     )
@@ -38,12 +38,18 @@ const Video = ({video, name}) => {
 
 const PromosCarousel = () => {
     return (
-        <section className='promos Carousel'>
+        <section className='promos-carousel'>
             <Swiper
-                modules={[Navigation, Pagination, Scrollbar, A11y]}
-                navigation
+                modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade, Autoplay]}
+                // navigation
                 spaceBetween={0}
                 slidesPerView={1}
+                loop
+                effect={"fade"}
+                autoplay={{
+                    "delay": 3000,
+                    "disableOnInteraction": false
+                }}
             >
                 {promos.map(({video, name}) => (
                     <SwiperSlide key={name}>

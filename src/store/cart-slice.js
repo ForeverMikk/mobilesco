@@ -17,7 +17,7 @@ const cartSlice = createSlice({
             
             // Si el item esta creado agregar uno nuevo, si no agregarlo
             if(itemExists) {
-                itemExists.quantity ++;
+                itemExists.cantidad ++;
                 itemExists.totalPrice += parseInt(newItem.price);
             } else {
                 state.itemList.push({
@@ -43,7 +43,7 @@ const cartSlice = createSlice({
             const itemExists = state.itemList.find(item => item.id === id);
 
             // Si el item es solo uno lo borra, si es mayor a uno solo resta el total y el precio total
-            if(itemExists.quantity === 1) {
+            if(itemExists.cantidad === 1) {
                 state.itemList.productState = false;
                 state.itemList = state.itemList.filter(item => item.id !== id);
                 state.totalQuantity--;
@@ -56,7 +56,7 @@ const cartSlice = createSlice({
             const id = action.payload;
             const itemExists = state.itemList.find(item => item.id === id);
 
-            if(itemExists.quantity === 1){
+            if(itemExists.cantidad === 1){
                 state.itemList.productState = false;
                 state.itemList = state.itemList.filter(item => item.id !== id);
                 state.totalQuantity--;
