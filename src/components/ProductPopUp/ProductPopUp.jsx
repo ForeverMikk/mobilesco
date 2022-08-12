@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { useDispatch } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
@@ -11,10 +11,7 @@ import { cartActions } from '../../store/cart-slice';
 const ProductPopUp = ({ name, id, category, descripcion, color, material, img, images, cantidad }) => {
 
     const dispatch = useDispatch();
-    const [productColors, setProductColors] = useState();
-    // const productList = useSelector(state => state.cart.itemList);
-    // const [productQuantity, setProductQuantity] = useState(0);
-
+    
     const decrementHandler = () => {
         dispatch(cartActions.removeFromCart(id));
     }
@@ -32,19 +29,6 @@ const ProductPopUp = ({ name, id, category, descripcion, color, material, img, i
             material,
         }))
     }
-
-    useEffect(() => {
-        // console.log('c',color)
-        // console.log('m',material)
-        // console.log("q", cantidad)
-        // const productSelected = productList.find(item => item.id === id);
-
-        // setProductQuantity(productSelected.quantity)
-        setProductColors(images);
-        // console.log('colores', images)
-    
-    }, [])
-
     return (
         <div className='product-popup'>
 
@@ -62,7 +46,7 @@ const ProductPopUp = ({ name, id, category, descripcion, color, material, img, i
                 <div className="colors">
                     <h3 className='colors-title'>Colores: </h3>
                     <div className="buttons">
-                        {productColors.map((item, index) => (
+                        {images && images.map((item, index) => (
                             <button key={index} style={{'background': item.COLOR_CODIGO}}></button>
                         ))}
                     </div>
