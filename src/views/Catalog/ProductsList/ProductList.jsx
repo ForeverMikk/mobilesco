@@ -13,7 +13,7 @@ const ProductList = ({products}) => {
                     id={data.CLAVE}
                     name={data.NOMBRE}
                     img={`https://mobilesco.mx/API/images/uploads/${data.CLAVE}/${images[0].NOMBRE}`}
-                    description={data.DESCRIPCION}
+                    descripcion={data.DESCRIPCION}
                     price={data.COSTO}
                     category={data.CATEGORIA}
                     color={data.COLOR}

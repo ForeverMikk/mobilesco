@@ -33,7 +33,9 @@
 .top-products .swiper .card-item {
     background: var(--first-color);
 }
-.top-products .swiper .card-item .card-title {
+.top-products .swiper .card-item .card-title, 
+.top-products .swiper .card-item .item-desc {
+    text-align: left;
     color: #fff;
 }
 .top-products .swiper .card-item .heart {

@@ -31,7 +31,7 @@ const ProductCarousel = () => {
             <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 navigation
-                spaceBetween={0}
+                spaceBetween={10}
                 slidesPerView={3}
                 breakpoints={{
                     0: {
@@ -62,7 +62,7 @@ const ProductCarousel = () => {
                             // price={data.COSTO}
                             name={data.NOMBRE} 
                             images={images}
-                            description={data.DESCRIPCION}
+                            descripcion={data.DESCRIPCION}
                             img={`https://mobilesco.mx/API/images/uploads/${data.CLAVE}/${images[0].NOMBRE}`}
                             category={data.CATEGORIA}
                             color={data.COLOR}

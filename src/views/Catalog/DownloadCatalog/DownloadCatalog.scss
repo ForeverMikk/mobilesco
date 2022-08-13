@@ -19,18 +19,19 @@
     font-family: var(--title-font);
 }
 
-.download-catalog .data button {
+.download-catalog .data a {
     color: #fff;
     font-weight: var(--font-bold);
     font-size: var(--normal-font-size);
-    width: 10rem;
-    padding: 0.5rem;
+    font-family: var(--text-font);
+    // width: 10rem;
+    padding: 0.5rem 3rem;
     border-radius: 2rem;
     background: var(--second-color);
     transition: all 0.3s ease-out;
 }
 
-.download-catalog .data button:hover {
+.download-catalog .data a:hover {
     background: var(--first-color-light);
     cursor: pointer;
 }

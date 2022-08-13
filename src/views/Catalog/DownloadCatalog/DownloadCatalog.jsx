@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import './DownloadCatalog.scss';
+import catalog from '../../../asstes/catalog/Catalogo_Mobilesco.pdf';
 import ProductItem from '../../../components/ProductItem/ProductItem';
 import { getProductById, getProductImages } from '../../../services/productSercive';
 
@@ -29,12 +30,13 @@ const DownloadCatalog = () => {
                         id={product.CLAVE}
                         price={parseInt(product.COSTO)}
                         category={product.CATEGORIA}
+                        images={productImages}
                         color={product.COLOR}
                         material={product.MATERIAL}
                     />}
             <div className='data'>
                 <h2 className='title'>Descarga el catálogo</h2>
-                <button>PDF</button>
+                <a href={catalog} download='Catalogo_Mobilesco' className='download'>PDF</a>
             </div>
             {product && <ProductItem 
                         name={product.NOMBRE} 
@@ -44,6 +46,7 @@ const DownloadCatalog = () => {
                         price={parseInt(product.COSTO)}
                         category={product.CATEGORIA}
                         color={product.COLOR}
+                        images={productImages}
                         material={product.MATERIAL}
                     />}
         </section>

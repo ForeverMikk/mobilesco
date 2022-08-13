@@ -26,6 +26,7 @@ const Catalog = () => {
     const [input, setInput] = useState();
     const [productList, setProductList] = useState();
     const [productsFiltered, setProductsFiltered] = useState();
+    const [isSearched, setIsSearched] = useState(true);
 
     useEffect(() => {
         const getProducts = async() => {
@@ -35,6 +36,10 @@ const Catalog = () => {
 
     }, [])
     
+    const onSearch = () => {
+        console.log("Search")
+        setIsSearched(!isSearched);
+    }
 
     const onChange = async(event) => {
         const productInput = event.target.value;
@@ -46,12 +51,15 @@ const Catalog = () => {
 
                 return fullName.indexOf(input) >= 0;
             })
+            onSearch();
             setProductsFiltered(filtered);
         } 
 
         if(productInput.trim() === ''){
             setProductsFiltered(null);
         }
+
+        
     }
 
     return (
@@ -66,7 +74,7 @@ const Catalog = () => {
 
                 {/* <button onClick={onSearch}>Buscar</button> */}
 
-                <div className='categories'>
+                <div className={isSearched ? 'categories' : 'categories hide' }>
                     <CaregorieCircle img={sillas} name="Sillas" />
                     <CaregorieCircle img={mesas} name="Mesas" />
                     <CaregorieCircle img={escritorios} name="Escritorios" />

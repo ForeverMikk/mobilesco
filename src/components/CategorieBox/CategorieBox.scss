@@ -3,7 +3,7 @@
     width: 20rem;
     height: 22rem;
     text-align: center;
-    padding: 2rem 1.5rem;
+    padding: 1rem;
     border-top-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
     transition: all 0.3s ease-out;
@@ -14,16 +14,16 @@
 }
 .box .img-grid {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     // align-items: center;
     flex-wrap: wrap;
 }
 .box .img-grid img {
     // padding: 0.25rem;
-    margin: 0.25rem;
+    margin: 0.5rem;
     height: 7rem;
-    border-top-left-radius: 2rem;
-    border-bottom-right-radius: 2rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
     transition: all 0.3s ease-out;
 }
 .box .img-grid img:hover{
@@ -31,10 +31,11 @@
 }
 
 .box .data {
+    padding: 0 1rem;
+    margin: 1rem 0 0 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1rem 0 0 0;
 }
 
 .box .data p, .box .data button {

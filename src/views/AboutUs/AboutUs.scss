@@ -1,6 +1,7 @@
 .about-us {
     margin: 3rem;
     text-align: center;
+    scroll-behavior: smooth !important;
 }
 
 .about-us .title {
@@ -16,6 +17,7 @@
 }
 
 .about-us .img img {
+    border-radius: 2rem;
     width: 100%;
 }
 

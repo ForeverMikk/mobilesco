@@ -61,7 +61,10 @@ const TopProducts = () => {
                             id={data.CLAVE}
                             price={data.COSTO}
                             name={data.NOMBRE} 
-                            description={data.DESCRIPCION}
+                            color={data.COLOR}
+                            images={images}
+                            material={data.MATERIAL}
+                            descripcion={data.DESCRIPCION}
                             img={`https://mobilesco.mx/API/images/uploads/${data.CLAVE}/${images[0].NOMBRE}`}
                             className="product-catalog"/>
                     </SwiperSlide>

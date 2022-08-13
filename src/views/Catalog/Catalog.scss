@@ -30,6 +30,10 @@
     justify-content: center;
     align-items: center;
 }
+.catalog .categories.hide {
+    display: none;
+}
+
 .catalog .categories button {
     margin: 3rem;
 }

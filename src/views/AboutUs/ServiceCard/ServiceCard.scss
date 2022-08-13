@@ -54,6 +54,15 @@
 .service-card.reverse .service-info .description {
     text-align: right;
 }
+@media screen and (min-height: 1500px) {
+    .service-card {
+        margin: 5rem 10rem;
+    }
+
+    .service-card .service-info {
+        width: auto;
+    }
+}
 
 @media screen and (max-width: 1024px) {
 

@@ -4,13 +4,18 @@
     align-items: center;
 }
 
-.frequent-questions h1,.frequent-questions h2, .frequent-questions h3 {
+.frequent-questions h1,.frequent-questions h2 {
     font-family: var(--title-font);
+    color: var(--first-color);
 }
-
 .frequent-questions h1 {
     font-size: var(--big-font-size);
     margin-bottom: 3rem;
+}
+
+.frequent-questions h3 {
+    font-family: var(--title-font);
+    color: #fff;
 }
 
 .frequent-questions p {
@@ -36,17 +41,21 @@
     text-align: center;
     font-size: 2rem;
     margin-bottom: 1rem;
+    color: #fff;
 }
 
 .container-faq .item-faq {
-    background: var(--third-color);
+    background: var(--first-color);
     margin-bottom: 10px;
     border-radius: 30px;
+    // color: ;
 }
 
 .container-faq .item-faq.active {
-    background: var(--first-color);
-    color: #fff;
+    background: var(--third-color);
+}
+.container-faq .item-faq.active h3, .container-faq .item-faq.active p {
+    color: var(--first-color);
 }
 
 .container-faq .item-faq .question {

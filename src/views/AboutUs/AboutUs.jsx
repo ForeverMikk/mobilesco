@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import './AboutUs.scss';
 import serviceImg from '../../asstes/img/services.jpg';
@@ -13,10 +13,22 @@ import Gallery from './Gallery/Gallery';
 import FrequentQuestions from './FrequentQuestions/FrequentQuestions';
 import JoinUs from './JoinUs/JoinUs';
 
+const scrollTop = () => {
+    const scrolledElement = document.getElementById('about-us');
+
+    scrolledElement.scrollIntoView();
+}
+
 
 const AboutUs = () => {
+
+    useEffect(() => {
+        scrollTop()
+    }, [])
+    
+
     return (
-        <section className='about-us'>
+        <section className='about-us' id='about-us'>
             <h1 className="title">Más de 20 años de experiencia nos respaldan…</h1>
 
             <div className="img">

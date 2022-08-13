@@ -4,7 +4,7 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 import './MonthProduct.scss';
 
-const MonthProduct = ({ name, description, img }) => {
+const MonthProduct = ({ name, descripcion, img }) => {
     return(
         <section className='month-product'>
 
@@ -13,7 +13,7 @@ const MonthProduct = ({ name, description, img }) => {
                 <h2 className="title">{name}</h2>
                 
                 <p className="description">
-                    {description}
+                    {descripcion}
                 </p>
 
                 <div className='buttons'>
