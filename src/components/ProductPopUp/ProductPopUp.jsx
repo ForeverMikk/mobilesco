@@ -1,8 +1,9 @@
 import React from 'react'
+import toast from 'react-hot-toast';
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
 
 import './ProductPopUp.scss';
 import ImagesCarousel from './ImagesCarousel/ImagesCarousel';
@@ -17,6 +18,7 @@ const ProductPopUp = ({ name, id, category, descripcion, color, material, img, i
     }
     
     const incrementHandler = () => {
+        toast.success("Agregaste este producto a tu lista de deseos");
         dispatch(cartActions.addToCart({
             name,
             id,

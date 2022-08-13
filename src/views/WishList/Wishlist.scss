@@ -48,7 +48,8 @@
 .preview .basket {
     width: 70%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .preview .summary {
@@ -92,7 +93,11 @@
 }
 
 
-.preview .summary input[type="text"], .preview .summary button {
+.preview .summary input[type="text"], 
+.preview .summary input[type="number"],
+.preview .summary input[type="email"],
+.preview .summary input[type="tel"],
+.preview .summary button {
     padding: 0.5rem 1rem;
     border-radius: 2rem;
     border: none;

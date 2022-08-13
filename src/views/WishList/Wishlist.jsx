@@ -29,7 +29,9 @@ const Wishlist = () => {
 
     const [extraInfo, setExtraInfo] = useState('');
 
-    const sendSaleData = async(productList, addressInfo, userInfo, extraInfo) => {
+    const sendSaleData = async(e, productList, addressInfo, userInfo, extraInfo) => {
+        e.preventDefault();
+
         await sendEmailData({
             "productList": productList,
             "addressInfo": addressInfo,
@@ -100,57 +102,59 @@ const Wishlist = () => {
                 </div>
                 
                 <aside className='summary'>
-                    <div className="summary-resume">
-                        <h3>Resumen del pedido</h3>
-                        {cartProducts && cartProducts.map((item, index) => (
-                            <p key={index}>
-                               Cantidad: <span>{item.cantidad}</span>
-                               <br />
-                               Nombre: <span>{item.name}</span>
-                               {/* <br /> */}
-                               {/* Precio Total: <span>{item.totalPrice}</span> */}
-                               <br />
-                               Color: <span>{item.color}</span>
-                               <br />
-                               Material: <span>{item.material}</span>
-                            </p>
-                        ))}
-                    </div>
-
-                    <div className="contact-info" onChange={onChangePickUp}>
-                        <h3>Tipo de Entrega</h3>
-                        <input type="radio" name="shipping" id="home-delivery" value="a domicilio" />
-                        <label htmlFor="shipping">Envio a domicilio</label>
-                        <input type="radio" name="shipping" id="pick-up" value="recoger en sucursal"/>
-                        <label htmlFor="shipping">Recoger en sucursal</label>
-                    </div>
-
-                    <div className="special-info" onChange={onChangeExtra}>
-                        <h3>Especificaciones adicionales</h3>
-                        <p>Envía un comentario con las características deseadas para tu mobiliario; agrega medidas específicas, disponibilidad de colores, etc. </p>
-                        <textarea name="texarea" id="texarea" cols="30" rows="10"></textarea>
-                    </div>
-
-                    <div className="shipping-info" onChange={onChangeAddress}>
-                        <h3>Zona de Entrega</h3>
-                        <input type="text" name='calle' value={addressInfo.calle} id='calle' placeholder='Dirección' />
-                        <input type="text" name='lugar' value={addressInfo.lugar} id='lugar' placeholder='Ciudad o Localidad' />
-
-                        <div className="other">
-                            <input type="text" name='numero' value={addressInfo.numero} id='numero' placeholder='Número Exterior' />
-                            <input type="text" name='cp' value={addressInfo.cp} id='cp' placeholder='Código Postal' />
+                    <form id='form' onSubmit={(e) => {sendSaleData(e, cartProducts, addressInfo, userInfo, extraInfo )}}>
+                        <div className="summary-resume">
+                            <h3>Resumen del pedido</h3>
+                            {cartProducts && cartProducts.map((item, index) => (
+                                <p key={index}>
+                                Cantidad: <span>{item.cantidad}</span>
+                                <br />
+                                Nombre: <span>{item.name}</span>
+                                {/* <br /> */}
+                                {/* Precio Total: <span>{item.totalPrice}</span> */}
+                                <br />
+                                Color: <span>{item.color}</span>
+                                <br />
+                                Material: <span>{item.material}</span>
+                                </p>
+                            ))}
                         </div>
 
-                        {/* <button>Cambiar</button> */}
-                    </div>
+                        <div className="contact-info" onChange={onChangePickUp} required>
+                            <h3>Tipo de Entrega</h3>
+                            <input type="radio" name="shipping" id="home-delivery" value="a domicilio"/>
+                            <label htmlFor="shipping">Envio a domicilio</label>
+                            <input type="radio" name="shipping" id="pick-up" value="recoger en sucursal" />
+                            <label htmlFor="shipping">Recoger en sucursal</label>
+                        </div>
 
-                    <div className="user-info" onChange={onChangeUser}>
-                        <h3>Datos de Contacto</h3>
-                        <input type="text" name="name" value={userInfo.name} id="name" className="name" placeholder='Nombre'/>
-                        <input type="text" name="email" value={userInfo.email} id="email" className="email" placeholder='Correo electrónico'/>
-                        <input type="text" name="phone" value={userInfo.phone} id="phone" className="phone" placeholder='Teléfono'/>
-                        <button onClick={() => {sendSaleData(cartProducts, addressInfo, userInfo, extraInfo )}}>Solicitar</button>
-                    </div>
+                        <div className="special-info" onChange={onChangeExtra}>
+                            <h3>Especificaciones adicionales</h3>
+                            <p>Envía un comentario con las características deseadas para tu mobiliario; agrega medidas específicas, disponibilidad de colores, etc. </p>
+                            <textarea name="texarea" id="texarea" cols="30" rows="10" required></textarea>
+                        </div>
+
+                        <div className="shipping-info" onChange={onChangeAddress}>
+                            <h3>Zona de Entrega</h3>
+                            <input type="text" name='calle' value={addressInfo.calle} id='calle' placeholder='Dirección' required/>
+                            <input type="text" name='lugar' value={addressInfo.lugar} id='lugar' placeholder='Ciudad o Localidad' required/>
+
+                            <div className="other">
+                                <input type="number" name='numero' value={addressInfo.numero} id='numero' placeholder='Número Exterior' required/>
+                                <input type="number" name='cp' value={addressInfo.cp} id='cp' placeholder='Código Postal' required/>
+                            </div>
+
+                            {/* <button>Cambiar</button> */}
+                        </div>
+
+                        <div className="user-info" onChange={onChangeUser}>
+                            <h3>Datos de Contacto</h3>
+                            <input type="text" name="name" value={userInfo.name} id="name" className="name" placeholder='Nombre' required/>
+                            <input type="email" name="email" value={userInfo.email} id="email" className="email" placeholder='Correo electrónico' required/>
+                            <input type="tel" name="phone" value={userInfo.phone} id="phone" className="phone" placeholder='Teléfono' required/>
+                            <button type='submit'>Solicitar</button>
+                        </div>
+                    </form>
                 </aside>
 
             </div>

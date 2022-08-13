@@ -20,7 +20,7 @@ const ProductItem = ({id, name, descripcion, img, images, className, category, c
     const addToCart = () => {
         // console.log(images)
         const currentProduct = productList.find(item => item.id === id);
-        toast.success("Agregaste un producto a tu wishlist");
+        toast.success("Agregaste un producto a tu lista de deseos");
         if(currentProduct) {
             setProductState(!productState);
         }
