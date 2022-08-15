@@ -38,12 +38,15 @@ const AboutUs = () => {
             <div className="services">
                 <ServiceCard 
                     img={serviceImg} 
+                    id="hand"
                     title="Es momento de elegir tu relación ideal: la mayor satisfacción, al mejor precio." 
                     icon={handShake} 
+                    reverse=""
                     description="Nuestra capacidad depende del tamaño de nuestros clientes. Contamos con una gran infraestructura instalada que nos permite atender y satisfacer una gran demanda. " 
                 />
                 <ServiceCard 
                     img={serviceImg} 
+                    id="cart"
                     title="Una amplia variedad de opciones de productos, para que elijas a tu manera." 
                     icon={shoopingCart} 
                     reverse="reverse"
@@ -51,12 +54,15 @@ const AboutUs = () => {
                 />
                 <ServiceCard 
                     img={serviceImg} 
+                    id="support"
                     title="Presupuestamos tu proyecto en tiempo récord , servicio y atención al cliente como siempre lo quisiste." 
                     icon={supportAgent} 
+                    reverse=""
                     description="Equipo altamente capacitado: Nuestros colaboradores son nuestra familia, por lo que la amplia trayectoria en la industria nos motiva a realizar un trabajo de gran calidad, basado en empatía , cuidado y eficiencia. " 
                 />
                 <ServiceCard 
                     img={serviceImg} 
+                    id="truck"
                     title="Políticas de reparación accesibles para todo el catálogo, calidad garantizada." 
                     icon={truck} 
                     reverse="reverse"

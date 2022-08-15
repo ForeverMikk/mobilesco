@@ -26,16 +26,23 @@
     align-items: center;
 }
 .our-services .service {
-    width: 20rem;
+    width: 17rem;
     color: var(--first-color);
     margin: 2rem 5rem 2rem 1rem;
 }
+
 .our-services .service img {
     width: 4rem;
+    transition: all 0.4s ease-out;
 }
+.our-services .service img:hover {
+    transform: translateY(-10px);
+}
+
 .our-services .service .title {
     margin: 1rem 0;
     font-family: var(--title-font);
+    font-size: var(--h3-font-size);
     font-weight: var(--font-bold);
 }
 

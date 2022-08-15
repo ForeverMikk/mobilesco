@@ -24,7 +24,7 @@ const SearchBox = () => {
 
     return (
         <div className='search-box'>
-            <p>Categoria</p>
+            <p>Categoría</p>
             {categories && <DropdownCategories itemList={categories} />}
             <p>Tipo de Mueble</p>
             {types && <DropdownTypes itemList={types} />}

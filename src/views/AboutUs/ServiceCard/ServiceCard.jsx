@@ -2,9 +2,9 @@ import React from 'react';
 
 
 import './ServiceCard.scss';
-const ServiceCard = ({img, title, description, icon, reverse}) => {
+const ServiceCard = ({img, title, description, icon, reverse, id}) => {
     return (
-        <div className={`service-card ${reverse}`}>
+        <div id={id} className={`service-card ${reverse}`}>
             <div className="img">
                 <img src={img} alt={title} />
             </div>
