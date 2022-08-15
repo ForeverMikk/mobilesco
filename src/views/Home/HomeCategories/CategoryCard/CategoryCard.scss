@@ -1,6 +1,6 @@
 .category-card {
     width: 18rem;
-    height: 23rem;
+    height: 22rem;
     padding: 1.5rem 1rem;
     border-top-left-radius: 1.25rem;
     border-bottom-right-radius: 1.25rem;
@@ -9,7 +9,7 @@
 
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     font-family: var(--text-font);
     background: var(--first-color);
     transition: all 0.3s ease-out;
@@ -30,7 +30,9 @@
 }
 
 .category-card img {
-    margin: 0.4rem 0.5rem ;
+    object-fit: cover;
+    margin: 0.5rem ;
+    height: 9rem;
     border-top-left-radius: 1.25rem;
     border-bottom-right-radius: 1.25rem;
     margin-bottom: 1rem;

@@ -3,13 +3,14 @@ import toast from 'react-hot-toast';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faClose } from '@fortawesome/free-solid-svg-icons';
 
 import './ProductPopUp.scss';
 import ImagesCarousel from './ImagesCarousel/ImagesCarousel';
 import { cartActions } from '../../store/cart-slice';
+import Loader from '../Loader/Loader';
 
-const ProductPopUp = ({ name, id, category, descripcion, color, material, img, images, cantidad }) => {
+const ProductPopUp = ({ name, id, category, descripcion, color, material, img, images, cantidad, close }) => {
 
     const dispatch = useDispatch();
     
@@ -33,10 +34,19 @@ const ProductPopUp = ({ name, id, category, descripcion, color, material, img, i
     }
     return (
         <div className='product-popup'>
+            <button className='close' onClick={close}>
+                <FontAwesomeIcon icon={faClose} />
+            </button>
 
             <div className="img">
-                <img src={img} alt={name} />
-                <ImagesCarousel images={images} id={id}/>
+
+                {images ? <>
+                    <img src={img} alt={name} />
+                    <ImagesCarousel images={images} id={id}/> 
+                </> : 
+                <Loader />
+                }
+
             </div>
             
             <div className="product-info">

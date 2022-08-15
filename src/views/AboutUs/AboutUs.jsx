@@ -40,7 +40,7 @@ const AboutUs = () => {
                     img={serviceImg} 
                     title="Es momento de elegir tu relación ideal: la mayor satisfacción, al mejor precio." 
                     icon={handShake} 
-                    description="Capacidades del tamaño de nuestros clientes: Nuestra infraestructura instalada nos permite atender y satisfacer una gran demanda. " 
+                    description="Nuestra capacidad depende del tamaño de nuestros clientes. Contamos con una gran infraestructura instalada que nos permite atender y satisfacer una gran demanda. " 
                 />
                 <ServiceCard 
                     img={serviceImg} 

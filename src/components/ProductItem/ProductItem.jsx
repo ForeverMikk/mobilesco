@@ -57,18 +57,21 @@ const ProductItem = ({id, name, descripcion, img, images, className, category, c
                     nested
                     trigger={<button className='more'>Ver más</button>}
                 >
-                    <ProductPopUp 
-                        id={id} 
-                        name={name} 
-                        descripcion={descripcion} 
-                        category={category} 
-                        images={images}
-                        // price={price}
-                        color={color}
-                        material={material}
-                        img={img}
-                        quantity={cantidad}
-                    />
+                    {close => (
+                        <ProductPopUp 
+                            id={id} 
+                            name={name} 
+                            descripcion={descripcion} 
+                            category={category} 
+                            images={images}
+                            // price={price}
+                            color={color}
+                            material={material}
+                            img={img}
+                            quantity={cantidad}
+                            close={close}
+                        />
+                    )}
                 </Popup>
                 
                 <button 
