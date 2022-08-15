@@ -37,7 +37,9 @@ const Footer = () => {
                     <Link to='/contact'>
                         <p>Contactanos</p>
                     </Link>
-                    <p>Trabaja con nosotros</p>
+                    <Link to='/contact'>
+                        <p>Trabaja con nosotros</p>
+                    </Link>
                 </div>
 
                 <div className="help">

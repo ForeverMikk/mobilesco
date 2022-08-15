@@ -18,7 +18,9 @@ function App() {
           }
         }}
       />
+      
       <Navbar />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />
