@@ -112,6 +112,24 @@
 }
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
+    .wishlist {
+        padding: 2rem;
+    }
     
+    .status-bar {
+        flex-direction: column;   
+    }
+    .status-bar p {
+        margin: 0.5rem;
+    }
+    .preview {
+        flex-direction: column;
+    }
+    .preview .basket {
+        width: auto;
+    }
+    .preview .summary {
+        width: auto;
+    }
 }

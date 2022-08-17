@@ -56,3 +56,18 @@
     background: var(--first-color);
     color: var(--third-color);
 }
+
+
+@media screen and (max-width: 768px) {
+    .preview-product {
+        height: auto;
+        width: auto;
+        flex-direction: column;
+    }
+    .preview-product .img {
+        width: 70%;
+    }
+    .preview-product .preview-info {
+        width: 80%;
+    }
+}
