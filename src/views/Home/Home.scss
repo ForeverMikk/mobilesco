@@ -63,6 +63,14 @@ header .description {
     }
 }
 
+@media screen and (max-width: 768px) {
+    header .title {
+        padding: 1rem;
+        font-size: 2rem;
+        width: auto;
+    }
+}
+
 @media screen and (max-width: 640px) {
     header {
         height: 100vh;
@@ -73,3 +81,5 @@ header .description {
         visibility: hidden;
     }
 }
+
+

@@ -10,6 +10,7 @@ import HomeCategories from './HomeCategories/HomeCategories';
 import MonthProduct from './MonthProduct/MonthProduct';
 import Suscribe from './Suscribe/Suscribe';
 import { getProductById, getProductImages } from '../../services/productSercive';
+import Atrato from '../../components/Atrato/Atrato';
 
 
 const Home = () => {
@@ -32,6 +33,7 @@ const Home = () => {
     return (
         <>
             <header>
+                {/* <Atrato /> */}
                 <div className="background">
                     <h1 className='title'>Nuestra misión es transformar cada uno de tus espacios, en un lugar especial a tu medida. </h1>
                     {product && <ProductItem 
