@@ -7,3 +7,5 @@ const TopCarousel = ({ itemList }) => {
         <div>Hola Top</div>
     )
 }
+
+export default TopCarousel;

@@ -10,7 +10,6 @@ import HomeCategories from './HomeCategories/HomeCategories';
 import MonthProduct from './MonthProduct/MonthProduct';
 import Suscribe from './Suscribe/Suscribe';
 import { getProductById, getProductImages } from '../../services/productSercive';
-import Atrato from '../../components/Atrato/Atrato';
 
 
 const Home = () => {
