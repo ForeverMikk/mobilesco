@@ -9,3 +9,13 @@
     border: 1px solid var(--first-color-light);
     margin: 1rem 1.5rem;
 }
+
+
+@media screen and (max-width: 768px) {
+    .product-popup .images-carousel {
+        justify-content: center;
+    }
+    .product-popup .images-carousel img {
+        margin: 0.5rem;
+    }
+}
