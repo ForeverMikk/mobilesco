@@ -9,7 +9,6 @@ import ProductItem from '../../../components/ProductItem/ProductItem';
 
 
 const TopCarousel = () => {
-
     const [productsList, setProductsList] = useState();
 
     useEffect(() => {
@@ -21,7 +20,6 @@ const TopCarousel = () => {
 
       fetchData()
     }, [])
-
 
     return (
         <div className="top-carousel">

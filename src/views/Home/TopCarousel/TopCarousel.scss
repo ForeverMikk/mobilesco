@@ -3,6 +3,9 @@
     right: 3rem;
     top: 7rem;
 }
+.card-item.home .item-desc {
+    display: none;
+}
 
 .top-carousel .swiper {
     width: 16rem;
@@ -18,5 +21,12 @@
 @media screen and (min-width: 1920px) {
     .top-carousel {
         right: 7rem;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .top-carousel {
+        visibility: hidden;
     }
 }
