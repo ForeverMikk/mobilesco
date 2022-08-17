@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import toast from 'react-hot-toast';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faClose } from '@fortawesome/free-solid-svg-icons';
@@ -13,12 +13,6 @@ import Loader from '../Loader/Loader';
 const ProductPopUp = ({ name, id, category, descripcion, color, material, img, images, close }) => {
 
     const dispatch = useDispatch();
-    const productSelected = useSelector(state => state.cart.itemList);
-    const [productQuantity, setProductQuantity] = useState();
-
-    const decrementHandler = () => {
-        dispatch(cartActions.removeFromCart(id));
-    }
     
     const incrementHandler = () => {
         toast.success("Agregaste este producto a tu lista de deseos");
@@ -34,16 +28,6 @@ const ProductPopUp = ({ name, id, category, descripcion, color, material, img, i
             material,
         }))
     }
-
-    useEffect(() => {
-        const getProductQuantity = () => {
-            // setProductQuantity(productSelected.cantidad);
-            console.log(productSelected);
-            // console.log(productQuantity);
-        }
-
-        getProductQuantity()
-    }, [])
     
     return (
         <div className='product-popup'>
@@ -85,15 +69,6 @@ const ProductPopUp = ({ name, id, category, descripcion, color, material, img, i
                         {/* <button>Preescolar</button>
                         <button>Primaria</button>
                         <button>Sec / Ejecutivo</button> */}
-                    </div>
-                </div>
-
-                <div className="quantity">
-                    <h3 className="quantity-title">Cantidad</h3>
-                    <div className="buttons">
-                        <button className='less' onClick={decrementHandler}>-</button>
-                        {/* {productQuantity && productQuantity > 0 && productQuantity !== undefined ? <p>{productQuantity}</p> : <p> 0 </p>} */}
-                        <button className='more' onClick={incrementHandler}>+</button>
                     </div>
                 </div>
 
