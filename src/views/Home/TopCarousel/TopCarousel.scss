@@ -1,0 +1,22 @@
+.top-carousel {
+    position: absolute;
+    right: 3rem;
+    top: 7rem;
+}
+
+.top-carousel .swiper {
+    width: 16rem;
+    height: 27rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.top-carousel .swiper-wrapper {
+    height: auto;
+}
+
+@media screen and (min-width: 1920px) {
+    .top-carousel {
+        right: 7rem;
+    }
+}
