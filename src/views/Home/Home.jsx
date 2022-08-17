@@ -8,7 +8,7 @@ import OurServices from './OurServices/OurServices';
 import HomeCategories from './HomeCategories/HomeCategories';
 import MonthProduct from './MonthProduct/MonthProduct';
 import Suscribe from './Suscribe/Suscribe';
-import TopCarousel from './TopCarousel/TopCarusel';
+import TopCarousel from './TopCarousel/TopCarousel';
 import { getProductById, getProductImages } from '../../services/productSercive';
 
 
