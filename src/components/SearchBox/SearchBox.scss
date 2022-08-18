@@ -35,6 +35,7 @@
 }
 
 .search-box button {
+    cursor: pointer;
     width: 100%;
     color: #fff;
     background: var(--second-color);
@@ -43,6 +44,10 @@
     margin-top: 0.5rem;
     padding: 0.5rem 1rem;
     border-radius: 2rem;
+    transition: all 0.4s ease-out;
+}
+.search-box button:hover {
+    background: var(--first-color);
 }
 
 

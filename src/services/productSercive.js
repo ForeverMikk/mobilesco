@@ -32,7 +32,6 @@ export const getProductsFiltered = async(input) => {
     return productsFiltered;
 }
 
-
 export const getProductsByCategory = async(category) => {
     const response = await axios.get(MOBILESCO_URL + `?idCategoria=${category}`, {headers: HEADERS});
     const data = response.data;

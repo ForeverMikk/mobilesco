@@ -58,8 +58,6 @@ const Catalog = () => {
         if(productInput.trim() === ''){
             setProductsFiltered(null);
         }
-
-        
     }
 
     return (
