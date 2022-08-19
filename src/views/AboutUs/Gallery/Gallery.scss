@@ -31,12 +31,12 @@
 // First Row
 .gallery .item-1 {
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: 4;
     grid-row-start: 1;
-    grid-row-end: 7;
+    grid-row-end: 6;
 }
 .gallery .item-2 {
-    grid-column-start: 3;
+    grid-column-start: 4;
     grid-column-end: 7;
     grid-row-start: 1;
     grid-row-end: 6;
@@ -63,13 +63,13 @@
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 11;
-    grid-row-end: 17;
+    grid-row-end: 16;
 }
 .gallery .item-6 {
     grid-column-start: 4;
     grid-column-end: 7;
     grid-row-start: 11;
-    grid-row-end: 15;
+    grid-row-end: 16;
 } 
  
 
@@ -77,13 +77,13 @@
 .gallery .item-7 {
     grid-column-start: 1;
     grid-column-end: 4;
-    grid-row-start: 17;
+    grid-row-start: 16;
     grid-row-end: 21;
 }
 .gallery .item-8 {
     grid-column-start: 4;
     grid-column-end: 7;
-    grid-row-start: 15;
+    grid-row-start: 16;
     grid-row-end: 21;
 }
 
