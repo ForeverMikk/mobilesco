@@ -16,6 +16,7 @@ const ProductItem = ({id, name, descripcion, img, images, className, category, c
     const dispatch = useDispatch();
     const productList = useSelector(state => state.cart.itemList);
     const [productState, setProductState] = useState(false);
+    const [isFavorite, setIsFavorite] = useState();
     
     const addToCart = () => {
         // console.log(images)

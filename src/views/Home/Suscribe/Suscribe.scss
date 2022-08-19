@@ -68,6 +68,7 @@
     outline: none;
     color: #fff;
     background: var(--first-color-light);
+    margin: 0 0 0.5rem 0;
 }
 .suscribe .custom-search-input::placeholder {
     color: #fff;
@@ -75,15 +76,13 @@
 
 .suscribe .custom-search-botton {
     position: absolute;
-    right: 3px; 
-    top: 3px;
-    bottom: 3px;
+    right: 2px;
+    // bottom: 1px;
     border: 0;
     background: var(--second-color);
     color: #fff;
     outline: none;
-    margin: 0;
-    padding: 0 1rem;
+    padding: 10px 20px 10px 20px;
     border-radius: 2rem;
     z-index: 2;
     transition: all 0.3s ease-out;
