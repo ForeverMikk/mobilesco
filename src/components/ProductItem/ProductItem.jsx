@@ -15,15 +15,19 @@ const ProductItem = ({id, name, descripcion, img, images, className, category, c
     
     const dispatch = useDispatch();
     const productList = useSelector(state => state.cart.itemList);
-    const [productState, setProductState] = useState(false);
-    const [isFavorite, setIsFavorite] = useState();
+    const [isFavorite, setIsFavorite] = useState(false);
     
+    const addFavorite = () => {
+        setIsFavorite(!isFavorite)
+    }
+
     const addToCart = () => {
         // console.log(images)
         const currentProduct = productList.find(item => item.id === id);
         toast.success("Agregaste un producto a tu lista de deseos");
         if(currentProduct) {
-            setProductState(!productState);
+            addFavorite()
+            console.log(isFavorite);
         }
 
         productClicked(id);
@@ -42,7 +46,7 @@ const ProductItem = ({id, name, descripcion, img, images, className, category, c
     
 
     return (
-        <div className={`card-item ${className} ${productState ? 'active' : ''}`}>
+        <div className={`card-item ${className} ${isFavorite ? 'active' : ''}`}>
             <img src={img} alt={name} />
             <h3 className="card-title">
                 {name}
@@ -69,6 +73,8 @@ const ProductItem = ({id, name, descripcion, img, images, className, category, c
                             material={material}
                             img={img}
                             close={close}
+                            setIsFavorite={setIsFavorite}
+                            isFavorite={isFavorite}
                         />
                     )}
                 </Popup>

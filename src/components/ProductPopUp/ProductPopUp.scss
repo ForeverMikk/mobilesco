@@ -187,6 +187,13 @@
     color: var(--second-color);
 }
 
+.bottom-buttons .heart:hover,
+.bottom-buttons .heart.active {
+    background: var(--first-color);
+    border: 0.125rem solid #fff;
+    color: #fff;
+}
+
 
 .card-footer {
     margin-top: 1rem;

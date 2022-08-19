@@ -10,12 +10,17 @@ import ImagesCarousel from './ImagesCarousel/ImagesCarousel';
 import { cartActions } from '../../store/cart-slice';
 import Loader from '../Loader/Loader';
 
-const ProductPopUp = ({ name, id, category, descripcion, color, material, img, images, close }) => {
+const ProductPopUp = ({ name, id, category, descripcion, color, material, img, images, close, isFavorite, setIsFavorite }) => {
 
     const dispatch = useDispatch();
     
+    const addFavorite = () => {
+        setIsFavorite(!isFavorite);
+    }
+
     const incrementHandler = () => {
         toast.success("Agregaste este producto a tu lista de deseos");
+        addFavorite();
         dispatch(cartActions.addToCart({
             name,
             id,
@@ -76,7 +81,7 @@ const ProductPopUp = ({ name, id, category, descripcion, color, material, img, i
                     <Link to='/wishlist' className='quote'>
                         Cotizar Ahora
                     </Link>
-                    <button className='heart' onClick={incrementHandler}>
+                    <button className={`heart ${isFavorite ? 'active' : ''}`} onClick={incrementHandler}>
                         <FontAwesomeIcon icon={faHeart} />
                     </button>
                 </div>

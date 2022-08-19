@@ -29,7 +29,7 @@
 
 @media screen and (min-width: 1920px) {
     .product-carousel {
-        height: 70vh;
+        height: 65vh;
         margin: 0 5rem;
     }
     .product-carousel .text .title {
@@ -40,10 +40,15 @@
         font-size: var(--h3-font-size);
     }
 }
+@media screen and (min-width: 1800px) {
+    .product-carousel {
+        height: 60vh;
+    }
+}
 
 @media screen and (min-height: 1500px) {
     .product-carousel {
-        height: 70vh;
+        height: 60vh;
     }
 }
 

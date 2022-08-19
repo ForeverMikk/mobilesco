@@ -1,5 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { Toaster } from 'react-hot-toast';
+
+import './App.css';
 import Navbar from "./components/Nabvar/Navbar";
 import Footer from './views/Footer/Footer';
 import Home from './views/Home/Home';

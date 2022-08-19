@@ -38,7 +38,7 @@ const Suscribe = () => {
                 <input type="text" className='custom-search-input' name='name' placeholder='Nombre Completo' required/>
                 <input type="email" className="custom-search-input" name='email' placeholder="Correo electrónico" required></input>
                 <input type="tel" className="custom-search-input" name='phone' placeholder="Teléfono" required></input>
-                <button className="custom-search-botton" type="submit">Suscribir</button>
+                <button className="custom-search-botton" type="submit">Suscribirse</button>
             </form>
             
         </section>

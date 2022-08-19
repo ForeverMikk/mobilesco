@@ -85,7 +85,8 @@
 .card-item.active .card-buttons .heart {
     color: var(--second-color);
 }
-.card-item .card-buttons .heart:hover {
+.card-item .card-buttons .heart:hover,
+.card-item .card-buttons .heart.active {
     color: var(--second-color);
 }
 

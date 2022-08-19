@@ -21,6 +21,12 @@ const CaregorieCircle = ({img, name}) => {
     )
 }
 
+const scrollTop = () => {
+    const scrolledElement = document.getElementById('catalog');
+
+    scrolledElement.scrollIntoView();
+}
+
 const Catalog = () => {
 
     const [input, setInput] = useState();
@@ -33,6 +39,7 @@ const Catalog = () => {
             setProductList(await getAllProducts());
         }
         getProducts();
+        scrollTop();
 
     }, [])
     
@@ -61,7 +68,7 @@ const Catalog = () => {
     }
 
     return (
-        <section className="catalog">
+        <section className="catalog" id='catalog'>
             <div className="header">
 
                 <h1 className="title">Echa a un vistazo a<br />nuestro catálogo</h1>
