@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
 import './TopProducts.scss';
+import defaultImg from '../../../asstes/img/silla.jpg';
 import ProductItem from '../../../components/ProductItem/ProductItem';
 import { getAllProducts } from '../../../services/productSercive';
 
@@ -57,6 +58,7 @@ const TopProducts = () => {
              >
                 {topProducts && topProducts.map(({data, images}, index) => (
                     <SwiperSlide key={index}>
+                        {images && images.length > 0 ?
                         <ProductItem 
                             id={data.CLAVE}
                             price={data.COSTO}
@@ -66,7 +68,18 @@ const TopProducts = () => {
                             material={data.MATERIAL}
                             descripcion={data.DESCRIPCION}
                             img={`https://mobilesco.mx/API/images/uploads/${data.CLAVE}/${images[0].NOMBRE}`}
-                            className="product-catalog"/>
+                            className="product-catalog"
+                        /> : <ProductItem 
+                            id={data.CLAVE}
+                            price={data.COSTO}
+                            name={data.NOMBRE} 
+                            color={data.COLOR}
+                            images={images}
+                            material={data.MATERIAL}
+                            descripcion={data.DESCRIPCION}
+                            img={defaultImg}
+                            className="product-catalog"
+                        />}
                     </SwiperSlide>
                 ))}
             </Swiper>

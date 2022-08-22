@@ -12,10 +12,10 @@ const DownloadCatalog = () => {
 
     useEffect(() => {
         const fetchData = async() => {
-            const data = await getProductById(1);
-            const images = await getProductImages(1);
+            const data = await getProductById(79);
+            const images = await getProductImages(79);
             
-            setProductImages(images[2]);
+            setProductImages(images);
             setProduct(data)
         }
         fetchData()
@@ -26,7 +26,7 @@ const DownloadCatalog = () => {
             {product && <ProductItem 
                         name={product.NOMBRE} 
                         description={product.DESCRIPCION}
-                        img={`https://mobilesco.mx/API/images/uploads/${product.CLAVE}/${productImages.NOMBRE}`} 
+                        img={`https://mobilesco.mx/API/images/uploads/${product.CLAVE}/${productImages[0].NOMBRE}`} 
                         id={product.CLAVE}
                         price={parseInt(product.COSTO)}
                         category={product.CATEGORIA}
@@ -41,7 +41,7 @@ const DownloadCatalog = () => {
             {product && <ProductItem 
                         name={product.NOMBRE} 
                         description={product.DESCRIPCION}
-                        img={`https://mobilesco.mx/API/images/uploads/${product.CLAVE}/${productImages.NOMBRE}`} 
+                        img={`https://mobilesco.mx/API/images/uploads/${product.CLAVE}/${productImages[0].NOMBRE}`} 
                         id={product.CLAVE}
                         price={parseInt(product.COSTO)}
                         category={product.CATEGORIA}

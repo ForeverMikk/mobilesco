@@ -19,12 +19,13 @@ const Home = () => {
 
     useEffect(() => {
         const fetchData = async() => {
-            const data = await getProductById(1);
-            const images = await getProductImages(1);
+            const data = await getProductById(79);
+            const images = await getProductImages(79);
             
-            setProductImages(images);
-            console.log(images)
             setProduct(data);
+            setProductImages(images);
+            // console.log("img", images)
+            // console.log("data", data)
         }
         fetchData()
     }, [])

@@ -3,9 +3,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
 import './TopCarousel.scss';
+import silla from '../../../asstes/img/silla.jpg';
 import { getAllProducts } from '../../../services/productSercive';
 import ProductItem from '../../../components/ProductItem/ProductItem';
-
 
 
 const TopCarousel = () => {
@@ -15,7 +15,7 @@ const TopCarousel = () => {
       const fetchData = async()=> {
         const data = await getAllProducts();
 
-        setProductsList(data.slice(0,5));
+        setProductsList(data.slice(0,9));
       }
 
       fetchData()
@@ -31,18 +31,31 @@ const TopCarousel = () => {
             >
                 {productsList && productsList.map(({data, images}, index) => (
                     <SwiperSlide key={index} >
-                        <ProductItem 
-                            id={data.CLAVE}
-                            // price={data.COSTO}
-                            name={data.NOMBRE} 
-                            images={images}
-                            descripcion={data.DESCRIPCION}
-                            img={`https://mobilesco.mx/API/images/uploads/${data.CLAVE}/${images[0].NOMBRE}`}
-                            category={data.CATEGORIA}
-                            color={data.COLOR}
-                            material={data.MATERIAL}
-                            className="home" 
+                        {images && images.length > 0 ?
+                            <ProductItem 
+                                key={index}
+                                id={data.CLAVE}
+                                name={data.NOMBRE}
+                                img={`https://mobilesco.mx/API/images/uploads/${data.CLAVE}/${images[0].NOMBRE}`}
+                                descripcion={data.DESCRIPCION}
+                                price={data.COSTO}
+                                category={data.CATEGORIA}
+                                color={data.COLOR}
+                                material={data.MATERIAL}
+                                className="home"
+                            /> : <ProductItem 
+                                key={index}
+                                id={data.CLAVE}
+                                name={data.NOMBRE}
+                                img={silla}
+                                descripcion={data.DESCRIPCION}
+                                price={data.COSTO}
+                                category={data.CATEGORIA}
+                                color={data.COLOR}
+                                material={data.MATERIAL}
+                                className="home"
                             />
+                        }
                     </SwiperSlide>
                 ))}
             </Swiper>

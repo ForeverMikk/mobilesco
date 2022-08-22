@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 
 import './ProductCarousel.scss';
+import silla from '../../../asstes/img/silla.jpg';
 import ProductItem from '../../../components/ProductItem/ProductItem';
 import { getAllProducts } from '../../../services/productSercive';
 
@@ -15,7 +16,7 @@ const ProductCarousel = () => {
       const fetchData = async()=> {
         const data = await getAllProducts();
 
-        setProductsList(data.slice(0,9));
+        setProductsList(data.slice(0,4));
       }
 
       fetchData()
@@ -31,7 +32,7 @@ const ProductCarousel = () => {
             <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 navigation
-                spaceBetween={10}
+                spaceBetween={50}
                 slidesPerView={3}
                 breakpoints={{
                     0: {
@@ -57,18 +58,31 @@ const ProductCarousel = () => {
             >
                 {productsList && productsList.map(({data, images}, index) => (
                     <SwiperSlide key={index}>
-                        <ProductItem 
-                            id={data.CLAVE}
-                            // price={data.COSTO}
-                            name={data.NOMBRE} 
-                            images={images}
-                            descripcion={data.DESCRIPCION}
-                            img={`https://mobilesco.mx/API/images/uploads/${data.CLAVE}/${images[0].NOMBRE}`}
-                            category={data.CATEGORIA}
-                            color={data.COLOR}
-                            material={data.MATERIAL}
-                            className="product-catalog"
-                        />
+                         {images && images.length > 0 ? 
+                            <ProductItem 
+                                id={data.CLAVE}
+                                // price={data.COSTO}
+                                name={data.NOMBRE} 
+                                images={images}
+                                descripcion={data.DESCRIPCION}
+                                img={`https://mobilesco.mx/API/images/uploads/${data.CLAVE}/${images[0].NOMBRE}`}
+                                category={data.CATEGORIA}
+                                color={data.COLOR}
+                                material={data.MATERIAL}
+                                className="product-catalog"
+                            /> : <ProductItem 
+                                id={data.CLAVE}
+                                // price={data.COSTO}
+                                name={data.NOMBRE} 
+                                images={images}
+                                descripcion={data.DESCRIPCION}
+                                img={silla}
+                                category={data.CATEGORIA}
+                                color={data.COLOR}
+                                material={data.MATERIAL}
+                                className="product-catalog"
+                            /> 
+                         }
                     </SwiperSlide>
                 ))}
             </Swiper>

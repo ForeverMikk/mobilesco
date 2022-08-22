@@ -5,7 +5,6 @@ const MOBILESCO_URL = 'https://mobilesco.mx/API/mailer/';
 const HEADERS = {
     'api-key': 'e2325ad7', 
     'Accept': 'application/json',
-    // 'Content-Type': 'text/plain'
 };
 
 

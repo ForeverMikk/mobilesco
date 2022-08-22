@@ -4,7 +4,6 @@ const  MOBILESCO_URL = 'https://mobilesco.mx/API/categorias';
 const HEADERS = {
     'api-key': 'cc0763ce', 
     'Accept': 'application/json',
-    'Content-Type': 'text/plain'
 }
 
 export const getAllCategories = async() => {
