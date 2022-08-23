@@ -9,7 +9,7 @@ const MonthProduct = ({ name, descripcion, img }) => {
         <section className='month-product'>
 
             <div className="data">
-                <h3 className="subtitle">Muebles del Mes</h3>
+                <h3 className="subtitle">Lo más destacado</h3>
                 <h2 className="title">{name}</h2>
                 
                 <p className="description">

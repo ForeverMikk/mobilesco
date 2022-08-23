@@ -17,6 +17,10 @@
     transform: translateY(-10px) scale(1.007)
 }
 .card-item img {
+    height: 12rem;
+    width: 12rem;
+    object-fit: contain;
+
     padding: 1.5rem;
     border-top-left-radius: 1.25rem;
     border-bottom-right-radius: 1.25rem;

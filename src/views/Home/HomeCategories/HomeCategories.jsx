@@ -37,13 +37,13 @@ const HomeCategories = () => {
                 breakpoints={{
                     0: {
                         width: 640,
-                        spaceBetween: 0,
+                        spaceBetween: 10,
                         slidesPerView: 1,
                     },
                     // when window width is >= 640px
                    640: {
                        width: 640,
-                       spaceBetween: 0,
+                       spaceBetween: 10,
                        slidesPerView: 1,
                    },
                    // when window width is >= 768px
@@ -52,9 +52,9 @@ const HomeCategories = () => {
                        slidesPerView: 2,
                    },
                    1920: {
-                    width: 1920,
-                    spaceBetween: 50,
-                    slidesPerView: 4,
+                        width: 1920,
+                        spaceBetween: 50,
+                        slidesPerView: 4,
                     },
                }}
             >

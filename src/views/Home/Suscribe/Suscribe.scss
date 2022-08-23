@@ -22,12 +22,14 @@
     font-size: var(--big-font-size);
     font-weight: var(--font-normal);
 }
+
 .suscribe .subtitle {
-    font-size: var(--big-font-size);
-    font-weight: var(--font-normal);
+    font-size: 3.25rem;
+    font-weight: 800;
     color: var(--second-color);
     margin: 0.5rem 0 1rem 0;
 }
+
 .suscribe .complement {
     font-family: var(--text-font);
     font-weight: var(--font-normal);
@@ -47,25 +49,18 @@
     cursor: pointer;
     background: var(--first-color-light);
 }
-.suscribe .select-button .email-button, .suscribe .select-button .phone-button {
-    background: var(--second-color);
-}
 
-.suscribe .mail-form, .suscribe .phone-form  {
-    position: relative;
+
+.suscribe .mail-form  {
     width: 20rem;
     font-family: var(--text-font);
-    // display: inline-block;
 }
+
 .suscribe .custom-search-input {
-    position: relative;
     width: 100%;
     border: 1px solid var(--first-color-light);
     border-radius: 2rem;
-    padding: 10px 100px 10px 20px; 
-    line-height: 1;
-    box-sizing: border-box;
-    outline: none;
+    padding: 0.55rem 1.5rem;
     color: #fff;
     background: var(--first-color-light);
     margin: 0 0 0.5rem 0;
@@ -75,18 +70,14 @@
 }
 
 .suscribe .custom-search-botton {
-    position: absolute;
-    right: 2px;
-    // bottom: 1px;
     border: 0;
     background: var(--second-color);
     color: #fff;
-    outline: none;
-    padding: 10px 20px 10px 20px;
+    padding: 0.55rem 1.5rem;
     border-radius: 2rem;
-    z-index: 2;
     transition: all 0.3s ease-out;
 }
+
 .suscribe .custom-search-botton:hover {
     cursor: pointer;
     color: var(--first-color);
@@ -98,6 +89,9 @@
     .suscribe .title, .suscribe .subtitle {
         font-size: var(--h1-font-size);
     }
+    .suscribe .subtitle {
+        font-size: var(--big-font-size);
+    }
 }
 
 @media screen and (max-width:  640px) {
@@ -108,7 +102,7 @@
         font-size: var(--h2-font-size);
     }
 
-    .suscribe .mail-form, .suscribe .phone-form {
+    .suscribe .mail-form {
         width: 15rem;
     }
 }
