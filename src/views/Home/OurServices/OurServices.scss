@@ -109,7 +109,6 @@
         height: 70%;
     }
     .our-services .services-home  {
-        width: 80%;
         align-items: stretch;
     }
     .our-services .services-home .services-top, .our-services .services-home .services-bottom {
@@ -140,6 +139,7 @@
         margin-left: 0;  
     }
     .our-services .service {
+        width: 80%;
         margin: 1.5rem 0;
         padding: 1rem 0;
         border-bottom: 1px solid var(--first-color-light);
@@ -148,6 +148,6 @@
         width: 3rem;
     }
     .our-services button {
-        margin-left: 1rem;
+        margin-left: 2.5rem;
     }
 }

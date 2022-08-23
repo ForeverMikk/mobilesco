@@ -80,6 +80,7 @@
 @media screen and (max-width: 640px) {
     .home-categories {
         height: 100vh;
+        margin: 3rem 0;
         justify-content: center;
     }
     .home-categories .title {
@@ -93,6 +94,6 @@
         margin-bottom: 4rem;
     }
     .home-categories .category-card {
-        margin-left: 2rem;
+        margin: 1rem;
     }
 }

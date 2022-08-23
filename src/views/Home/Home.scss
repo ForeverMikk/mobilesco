@@ -60,9 +60,11 @@ header .description {
 @media screen and (max-width: 1024px) {
     header .title {
         font-size: var(--h1-font-size);
-        padding-top: 5rem;
+        padding-top: 3rem;
     }
+
     header .background {
+        height: 80%;
         background-size: cover;
     }
 }
