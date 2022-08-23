@@ -24,7 +24,7 @@ const TopProducts = () => {
     return(
         <section className='top-products'>
             <div className='info'>
-                <h2>Top Sillas</h2>
+                <h2>Productos destacados</h2>
                 <button> Ver todos</button>
             </div>
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDown, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 import './FrequentQuestions.scss';
 import Question from './Question/Question';
@@ -31,7 +31,7 @@ const FrequentQuestions = () => {
                         <div className="question">
                             <h3>¿Cuáles son los métodos de pago?</h3>
                             <div className="more" onClick={() => showHide(0)}>
-                                <i> <FontAwesomeIcon icon={showAnswer.show[0] ? faAngleDown : faAngleLeft} size="2x" /> </i>
+                                <i> <FontAwesomeIcon icon={showAnswer.show[0] ? faAngleDown : faAngleRight} size="2x" /> </i>
                             </div>
                         </div>
                         <div className={`answer ${showAnswer.show[0] ? 'special' : ''}`}>

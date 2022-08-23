@@ -28,7 +28,7 @@ const CategoriesPopular = () => {
     return (
         <section className='categories-popular'>
             <div className="info">
-                <h2>Categorias populares</h2>
+                <h2>Categorias</h2>
                 <button>Ver todas</button>
             </div>
             
