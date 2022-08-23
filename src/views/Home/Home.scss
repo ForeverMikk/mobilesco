@@ -8,7 +8,7 @@ header .background {
     border-top-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
     background: url(./../../asstes/img/background.jpg) no-repeat center;
-    background-size: cover;
+    // background-size: cover;
 }
 header .title {
     padding: 2rem 3rem;
@@ -58,14 +58,19 @@ header .description {
 
 
 @media screen and (max-width: 1024px) {
+    header {
+        height: 65vh;
+    }
+    header .background {
+        height: 100%;
+        background-size: cover;
+    }
     header .title {
         font-size: var(--h1-font-size);
         padding-top: 3rem;
     }
-
-    header .background {
-        height: 80%;
-        background-size: cover;
+    header .description {
+        visibility: hidden;
     }
 }
 
@@ -74,6 +79,9 @@ header .description {
         padding: 1rem;
         font-size: 2rem;
         width: auto;
+    }
+    header .background {
+        height: 80%;
     }
 }
 

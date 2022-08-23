@@ -57,17 +57,35 @@
     }
 }
 
-@media screen and (min-height: 1500px)  {
+@media screen and (min-width: 1920px) and (min-height: 1500px)  {
     .search-box {
         bottom: 23rem;
     }
 }
 
+@media screen and (max-width: 1024px) {
+    .search-box {
+        bottom: 25rem;
+        z-index: 2;
+    }
+}
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+    .search-box {
+        bottom: -3rem;
+    }
+}
 
 
 @media screen and (max-width: 768px) {
     .search-box {
+        bottom: 15rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .search-box {
         bottom: -10rem;
-        z-index: 2;
+        left: auto;
     }
 }
