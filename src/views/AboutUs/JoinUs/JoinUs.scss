@@ -28,3 +28,13 @@
     width: 60%;
     margin: 3rem 0;
 }
+
+
+@media screen and (max-width: 768px) {
+    .join-us p {
+        width: 90%;
+    }
+    .join-us h1 {
+       font-size: var(--h1-font-size);
+    }
+}

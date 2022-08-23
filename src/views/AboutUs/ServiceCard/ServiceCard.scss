@@ -8,6 +8,8 @@
 .service-card .img {
     // height: 25rem;
     width: 40%;
+    display: flex;
+    align-items: center;
 }
 
 .service-card .img img {
@@ -35,7 +37,6 @@
     width: 50%;
     color: var(--first-color);
     font-family: var(--text-font);
-    // font-size: var(--small-font-size);
 
 }
 .service-card.reverse {
@@ -104,16 +105,42 @@
 
 @media screen and (max-width: 640px) {
     .service-card, .service-card.reverse {
-        margin:  4rem 0;
+        margin:  2rem 0;
         flex-direction: column;
     }
     .service-card .img {
+        width: 100%;
+        justify-content: center;
+    }
+    .service-card .img img {
         width: 85%;
     }
     .service-card .service-info, 
     .service-card.reverse .service-info {
         margin: 1.5rem 0 0 0;
         width: auto;
-        align-items: center;
+        align-items: flex-start;
+    }
+    .service-card .service-info .title,
+    .service-card.reverse .service-info .title {
+        font-size: var(--normal-font-size);
+        text-align: left;
+    }
+    .service-card .service-info .description,
+    .service-card.reverse .service-info .description {
+        font-size: var(--small-font-size);
+        text-align: left;
+    }
+
+    .service-card .service-info img,
+    .service-card .service-info .description,
+    .service-card.reverse .service-info img,
+    .service-card.reverse .service-info .description {
+        margin: 0 1rem;
+    }
+
+    .service-card .service-info .title,
+    .service-card.service .service-info .title {
+        margin: 1rem;
     }
 }
