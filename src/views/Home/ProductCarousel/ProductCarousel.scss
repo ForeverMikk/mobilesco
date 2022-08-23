@@ -13,7 +13,7 @@
 }
 .product-carousel .swiper {
     height: 27rem;
-    // width: 70%;
+    width: 70%;
     display: flex;
     align-items: center;
 }
@@ -22,7 +22,7 @@
 }
 
 .product-carousel .text .title {
-    font-size: var(--h2-font-size);
+    font-size: var(--h1-font-size);
     margin: 2rem 0;
 }
 

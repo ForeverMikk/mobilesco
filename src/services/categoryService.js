@@ -7,7 +7,7 @@ const HEADERS = {
 }
 
 export const getAllCategories = async() => {
-    const response = await axios.get(MOBILESCO_URL,{headers: HEADERS});
+    const response = await axios.get(MOBILESCO_URL, {headers: HEADERS});
     const data = response.data;
     
     return data;

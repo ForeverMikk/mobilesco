@@ -16,7 +16,7 @@ const ProductCarousel = () => {
       const fetchData = async()=> {
         const data = await getAllProducts();
 
-        setProductsList(data.slice(0,4));
+        setProductsList(data.slice(0,9));
       }
 
       fetchData()

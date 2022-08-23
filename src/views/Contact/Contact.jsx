@@ -18,7 +18,7 @@ const Contact = () => {
     
 
     return (
-        <sesction className="contact" id="contact">
+        <section className="contact" id="contact">
             <Widget 
                 id='pot9swBe' 
                 className='my-form' 
@@ -26,7 +26,7 @@ const Contact = () => {
                 style={{height: '100vh'}}  
                 data-tf-inline-on-mobile
             />
-        </sesction>
+        </section>
         )
 }
 

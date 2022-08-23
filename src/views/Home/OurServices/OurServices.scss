@@ -136,6 +136,9 @@
     .our-services .services-home .services-top, .our-services .services-home .services-bottom {
         flex-direction: column;
     }
+    .our-services .services-home {
+        margin-left: 0;  
+    }
     .our-services .service {
         margin: 1.5rem 0;
         padding: 1rem 0;

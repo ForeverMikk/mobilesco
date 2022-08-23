@@ -38,8 +38,6 @@ const Home = () => {
                     <h1 className='title'>Nuestra misión es transformar cada uno de tus espacios, en un lugar especial a tu medida. </h1>
                     <TopCarousel />
                     <SearchBox />
-                    <SearchBox />
-                    
                     <p className='description'>¿Buscas muebles multi-usuario? ¿Multi-usos? ¿Multi-gusto? Tenemos productos únicos que además de ornamentar tu espacio, se adaptan a él y lo optimizan.</p>
                 </div>
             </header>
