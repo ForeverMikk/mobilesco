@@ -1,0 +1,39 @@
+.types {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.types.hide {
+    display: none;
+}
+.types button {
+    margin: 3rem;
+}
+.types button img {
+    height: 8rem;
+}
+.types h3 {
+    font-family: var(--text-font);
+    font-size: var(--h3-font-size);
+    color: var(--first-color);
+}
+.type-circle img {
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease-out;
+}
+.type-circle img:hover {
+    cursor: pointer;
+    transform: translateY(-10px) scale(1.007);
+}
+
+
+
+
+@media screen and (max-width: 640px) {
+    .types {
+        flex-direction: column;
+    }
+    .types button {
+        margin: 0.5rem;
+    }
+}

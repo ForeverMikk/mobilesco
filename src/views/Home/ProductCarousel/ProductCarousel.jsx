@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 
 import './ProductCarousel.scss';
-import silla from '../../../asstes/img/silla.jpg';
+import silla from '../../../asstes/img/defaultImg.png';
 import ProductItem from '../../../components/ProductItem/ProductItem';
 import { getAllProducts } from '../../../services/productSercive';
 

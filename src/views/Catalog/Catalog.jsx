@@ -1,26 +1,14 @@
 import React, { useState, useEffect } from 'react';
 
 import './Catalog.scss';
-import sillas from '../../asstes/img/sillas.png';
-import mesas from '../../asstes/img/mesas.png';
-import escritorios from '../../asstes/img/escritorios.png';
-import libreros from '../../asstes/img/libreros.png';
 import CategoriesPopular from './CategoriesPopular/CategoriesPopular';
 import TopProducts from './TopProducts/TopProducts';
 import DownloadCatalog from './DownloadCatalog/DownloadCatalog';
 import ProductsList from './ProductsList/ProductList';
 import SearchBar from './SearchBar/SearchBar';
 import { getAllProducts } from '../../services/productSercive';
+import TypesPopular from './TypesPopular/TypesPupular';
 
-
-const CaregorieCircle = ({img, name}) => {
-    return (
-        <button className='categorie-circle'>
-            <img src={img} alt={name} />
-            <h3>{name}</h3>
-        </button>
-    )
-}
 
 const scrollTop = () => {
     const scrolledElement = document.getElementById('catalog');
@@ -49,13 +37,13 @@ const Catalog = () => {
         setIsSearched(!isSearched);
     }
 
-    const searchByCategory = async(category) => {
-        const filtered = productsFiltered.filter(item => {
-            const category = item.data.CATEGORIA.toLowerCase();
+    // const searchByCategory = async(category) => {
+    //     const filtered = productsFiltered.filter(item => {
+    //         const category = item.data.CATEGORIA.toLowerCase();
 
             
-        })
-    }
+    //     })
+    // }
 
     const onChange = async(event) => {
         const productInput = event.target.value;
@@ -69,6 +57,7 @@ const Catalog = () => {
             })
             onSearch();
             setProductsFiltered(filtered);
+            console.log(filtered)
         }
 
         if(productInput.trim() === ''){
@@ -84,16 +73,11 @@ const Catalog = () => {
 
                 <p className='description'>Echa a un vistazo a nuestro catálogo</p>
 
-                <SearchBar productsFiltered={productsFiltered} onChange={onChange} />
+               <SearchBar productsFiltered={productsFiltered} onChange={onChange} />
 
                 {/* <button onClick={onSearch}>Buscar</button> */}
 
-                <div className={isSearched ? 'categories' : 'categories hide' }>
-                    <CaregorieCircle img={sillas} name="Sillas" />
-                    <CaregorieCircle img={mesas} name="Mesas" />
-                    <CaregorieCircle img={escritorios} name="Escritorios" />
-                    <CaregorieCircle img={libreros} name="Libreros" />
-                </div>
+                <TypesPopular setProductsFiltered={setProductsFiltered}/>
             </div>
 
             {productsFiltered && <ProductsList products={productsFiltered}/> }

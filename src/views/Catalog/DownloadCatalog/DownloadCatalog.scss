@@ -36,13 +36,29 @@
     cursor: pointer;
 }
 
+
+@media screen and (max-width: 1024px) {
+    .download-catalog {
+        margin: 3rem;
+    }
+    .download-catalog .data {
+        margin: 0 2rem;
+    }
+}
+
 @media screen and (max-width: 768px) {
-   
+    .download-catalog {
+        padding: 0;
+        margin: 3rem 2rem;
+    }
+    .download-catalog .data {
+        margin: 0;
+    }
     .download-catalog .card-item {
         width: 12rem;
     }
     .download-catalog .data .title {
-        margin: 0 3rem;
+        margin: 1rem 3rem;
     }
     .download-catalog .card-item .card-title {
         font-size: var(--small-font-size);

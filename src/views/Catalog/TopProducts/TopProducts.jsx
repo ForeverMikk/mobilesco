@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
 import './TopProducts.scss';
-import defaultImg from '../../../asstes/img/silla.jpg';
+import defaultImg from '../../../asstes/img/defaultImg.png';
 import ProductItem from '../../../components/ProductItem/ProductItem';
 import { getAllProducts } from '../../../services/productSercive';
 

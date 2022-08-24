@@ -43,7 +43,7 @@
 .preview {
     display: flex;
     align-items: flex-start;
-    margin: 5rem 0 0;
+    margin: 1.5rem 0;
 }
 .preview .basket {
     width: 70%;
@@ -112,11 +112,25 @@
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
+    .wishlist {
+        padding: 3rem;
+    }
+    .preview {
+        justify-content: space-between;
+    }
+    .preview .basket {
+        width: 60%;
+    }
+    .preview .summary {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 820px) {
     .wishlist {
         padding: 2rem;
     }
-    
     .status-bar {
         flex-direction: column;   
     }

@@ -1,8 +1,8 @@
 import React from 'react';
 
 import './ProductList.scss';
+import silla from '../../../asstes/img/defaultImg.png';
 import ProductItem from '../../../components/ProductItem/ProductItem';
-import silla from '../../../asstes/img/silla.jpg';
 
 const ProductList = ({products}) => {
     return (

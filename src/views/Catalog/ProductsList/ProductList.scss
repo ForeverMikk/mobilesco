@@ -4,6 +4,7 @@
     grid-template-columns: repeat(3,1fr);
     grid-gap: 1rem;
     justify-items: center;
+    justify-content: center;
 }
 
 .grid .card-item img{
@@ -11,9 +12,22 @@
 }
 
 .grid .card-item {
+    text-align: left;
     background: var(--third-color);
 }
 
+
+@media screen and (max-width: 1024px) {
+    .grid {
+        margin: 3rem 0;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 @media screen and (max-width: 640px) {
     .grid {

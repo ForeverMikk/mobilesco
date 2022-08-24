@@ -33,6 +33,7 @@ const DownloadCatalog = () => {
                         images={productImages}
                         color={product.COLOR}
                         material={product.MATERIAL}
+                        className='download'
                     />}
             <div className='data'>
                 <h2 className='title'>Descarga el catálogo</h2>
@@ -48,6 +49,7 @@ const DownloadCatalog = () => {
                         color={product.COLOR}
                         images={productImages}
                         material={product.MATERIAL}
+                        className='download'
                     />}
         </section>
     )

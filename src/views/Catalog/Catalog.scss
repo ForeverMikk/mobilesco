@@ -1,6 +1,6 @@
 .catalog {
     text-align: center;
-    margin: 0 5rem;
+    margin: 0 2rem;
 }
 
 .catalog .title {
@@ -23,32 +23,6 @@
 .catalog .search-bar {
     margin: 3rem;
 
-}
-
-.catalog .categories {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.catalog .categories.hide {
-    display: none;
-}
-
-.catalog .categories button {
-    margin: 3rem;
-}
-
-.catalog .categories button img {
-    height: 7rem;
-}
-
-
-.categorie-circle img {
-    margin-bottom: 0.5rem;
-    transition: all 0.3s ease-out;
-}
-.categorie-circle img:hover {
-    transform: translateY(-10px) scale(1.007)
 }
 
 @media screen and (max-width: 768px) {
@@ -74,13 +48,4 @@
         width: auto;
         margin-bottom: 1rem;
     }
-    
-
-    .catalog .categories {
-        flex-direction: column;
-    }
-    .catalog .categories button {
-        margin: 0.5rem;
-    }
-
 }

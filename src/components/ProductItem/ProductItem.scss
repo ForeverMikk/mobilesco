@@ -48,6 +48,7 @@
  }
 
 
+
 .card-item .card-title {
     margin-bottom: 1rem;
     text-transform: capitalize;
@@ -100,4 +101,12 @@
 }
 .card-item.product-catalog .card-buttons .heart:hover {
     color: var(--second-color);
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .card-item.download {
+        visibility: hidden;
+    }
 }
