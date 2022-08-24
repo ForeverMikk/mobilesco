@@ -23,7 +23,7 @@ const HomeCategories = () => {
 
     return (
         <section className='home-categories'>
-            <h2 className='title'>Categorías que podrían interesarte</h2>
+            <h2 className='title'>Categorías</h2>
             <p className='subtitle'>Te ayudamos en la búsqueda de lo que necesitas con nuestro gran catálogo. Te presentamos muebles con todo tipo de usos.</p>
 
             <Swiper  

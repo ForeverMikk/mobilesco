@@ -25,7 +25,7 @@ const ProductCarousel = () => {
     return(
         <section className="product-carousel">
             <div className='text'>
-                <h3 className="title">Nuestros productos más vendidos: </h3>
+                <h3 className="title">Lo más vendidos: </h3>
                 <p className="description">Adopta tu mueble ideal, el único que se quedará a tu lado tanto como lo desees. </p>
             </div>
 

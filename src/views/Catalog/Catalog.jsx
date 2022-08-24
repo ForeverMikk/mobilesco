@@ -9,8 +9,9 @@ import CategoriesPopular from './CategoriesPopular/CategoriesPopular';
 import TopProducts from './TopProducts/TopProducts';
 import DownloadCatalog from './DownloadCatalog/DownloadCatalog';
 import ProductsList from './ProductsList/ProductList';
-import { getAllProducts } from '../../services/productSercive';
 import SearchBar from './SearchBar/SearchBar';
+import { getAllProducts } from '../../services/productSercive';
+
 
 const CaregorieCircle = ({img, name}) => {
     return (
@@ -48,6 +49,14 @@ const Catalog = () => {
         setIsSearched(!isSearched);
     }
 
+    const searchByCategory = async(category) => {
+        const filtered = productsFiltered.filter(item => {
+            const category = item.data.CATEGORIA.toLowerCase();
+
+            
+        })
+    }
+
     const onChange = async(event) => {
         const productInput = event.target.value;
         setInput(productInput);
@@ -60,7 +69,7 @@ const Catalog = () => {
             })
             onSearch();
             setProductsFiltered(filtered);
-        } 
+        }
 
         if(productInput.trim() === ''){
             setProductsFiltered(null);
