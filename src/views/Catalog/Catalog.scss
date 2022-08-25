@@ -2,7 +2,6 @@
     text-align: center;
     margin: 0 2rem;
 }
-
 .catalog .title {
     font-family: var(--title-font);
     font-size: 3rem;
@@ -11,7 +10,6 @@
 
     margin: 3rem 0 1rem 0;
 }
-
 .catalog .description {
     display: inline-block;
     font-family: var(--text-font);
@@ -19,25 +17,53 @@
     width: 40rem;
     margin-bottom: 3rem;
 }
-
 .catalog .search-bar {
     margin: 3rem;
 
+}
+
+.not-found-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.not-found-img img {
+    height: 20rem;
+    width: auto;
+    margin: 0 2rem;
+}
+
+.not-found-img p {
+    font-family: var(--text-font);
+    font-size: var(--big-font-size);
+    font-weight: var(--font-semibold);
+    width: 45%;
+    text-align: left;
+    color: var(--first-color);
+    margin: 0 2rem;
 }
 
 @media screen and (max-width: 768px) {
     .catalog .categories button {
         margin: 1rem;
     }
+
+    .not-found-img {
+        flex-direction: column-reverse;
+    }
+    .not-found-img p {
+        font-size: var(--h1-font-size);
+        width: auto;
+        text-align: center;
+        margin: 2rem 0;
+    }
 }
-
-
 
 @media screen and (max-width: 640px) {
     .catalog{
         margin: 0 2rem;
     }
-
     .catalog .title {
         font-size: var(--h1-font-size);
     }

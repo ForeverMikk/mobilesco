@@ -8,7 +8,20 @@ import ProductsList from './ProductsList/ProductList';
 import SearchBar from './SearchBar/SearchBar';
 import { getAllProducts } from '../../services/productSercive';
 import TypesPopular from './TypesPopular/TypesPupular';
+import notFoundImg from '../../asstes/img/defaultImg.jpg';
 
+const NotFoundView = ({ input }) => {
+    if(input.length > 2) {
+        return (
+            <div className="not-found-img">
+                <img src={notFoundImg} alt={`Not found ${input}`} />
+                <p>No hemos encontrado ninguna coincidencia con {input}</p>
+            </div>
+        )
+    } else {
+        return <></>
+    }
+}
 
 const scrollTop = () => {
     const scrolledElement = document.getElementById('catalog');
@@ -18,7 +31,7 @@ const scrollTop = () => {
 
 const Catalog = () => {
 
-    const [input, setInput] = useState();
+    const [input, setInput] = useState('');
     const [productList, setProductList] = useState();
     const [productsFiltered, setProductsFiltered] = useState();
     const [isSearched, setIsSearched] = useState(true);
@@ -33,7 +46,7 @@ const Catalog = () => {
     }, [])
     
     const onSearch = () => {
-        console.log("Search")
+        // console.log("Search")
         setIsSearched(!isSearched);
     }
 
@@ -57,7 +70,7 @@ const Catalog = () => {
             })
             onSearch();
             setProductsFiltered(filtered);
-            console.log(filtered)
+            // console.log(filtered)
         }
 
         if(productInput.trim() === ''){
@@ -68,19 +81,14 @@ const Catalog = () => {
     return (
         <section className="catalog" id='catalog'>
             <div className="header">
-
                 <h1 className="title">Catálogo</h1>
-
                 <p className='description'>Echa a un vistazo a nuestro catálogo</p>
-
-               <SearchBar productsFiltered={productsFiltered} onChange={onChange} />
-
-                {/* <button onClick={onSearch}>Buscar</button> */}
-
+                
+                <SearchBar productsFiltered={productsFiltered} onChange={onChange} />
                 <TypesPopular setProductsFiltered={setProductsFiltered}/>
             </div>
 
-            {productsFiltered && <ProductsList products={productsFiltered}/> }
+            {productsFiltered && productsFiltered.length > 0 ? <ProductsList products={productsFiltered}/> : <NotFoundView input={input} />}
 
             <CategoriesPopular />
             <TopProducts />

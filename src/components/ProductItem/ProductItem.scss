@@ -45,7 +45,11 @@
 }
 .card-item.product-catalog img{
      background: #fff;
- }
+}
+
+.card-item.product-catalog.active .card-buttons .heart {
+    color: var(--second-color);
+}
 
 
 
