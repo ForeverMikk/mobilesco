@@ -46,7 +46,7 @@ const Navbar = () => {
                 <li><Link to="/contact" onClick={activeMenu}>Contacto</Link></li>
 
                 <li>
-                    <Link to="/wishlist" onClick={activeMenu}>
+                    <Link to="/wishlist" onClick={activeMenu} className='heart'>
                         <span>{productsQuantity}</span>
                         <FontAwesomeIcon icon={faHeart} />
                     </Link>

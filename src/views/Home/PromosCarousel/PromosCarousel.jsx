@@ -3,10 +3,10 @@ import { Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade } from 's
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import './PromosCarousel.scss';
-import video1 from '../../../asstes/videos/PostadasRedes_Mobilesco.mp4';
+import video1 from '../../../asstes/videos/PostadasRedes_Mobilesco_3.mp4';
 import video2 from '../../../asstes/videos/PostadasRedes_Mobilesco_1.mp4';
 import video3 from '../../../asstes/videos/PostadasRedes_Mobilesco_2.mp4';
-import video4 from '../../../asstes/videos/PostadasRedes_Mobilesco_3.mp4';
+import video4 from '../../../asstes/videos/PostadasRedes_Mobilesco.mp4';
 
 const promos = [
     {
