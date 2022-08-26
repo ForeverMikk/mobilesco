@@ -73,7 +73,7 @@ const Catalog = () => {
         <section className="catalog" id='catalog'>
             <div className="header">
                 <h1 className="title">Catálogo</h1>
-                <p className='description'>"Hecha un vistazo a nuestros productos</p>
+                <p className='description'>Hecha un vistazo a nuestros productos</p>
                 
                 <SearchBar productsFiltered={productsFiltered} onChange={onChange} />
                 <TypesPopular setProductsFiltered={setProductsFiltered}/>
