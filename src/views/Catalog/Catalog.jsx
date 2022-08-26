@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
 import './Catalog.scss';
 import CategoriesPopular from './CategoriesPopular/CategoriesPopular';
@@ -8,20 +9,7 @@ import ProductsList from './ProductsList/ProductList';
 import SearchBar from './SearchBar/SearchBar';
 import { getAllProducts } from '../../services/productSercive';
 import TypesPopular from './TypesPopular/TypesPupular';
-import notFoundImg from '../../asstes/img/defaultImg.jpg';
-
-const NotFoundView = ({ input }) => {
-    if(input.length > 2) {
-        return (
-            <div className="not-found-img">
-                <img src={notFoundImg} alt={`Not found ${input}`} />
-                <p>No hemos encontrado ninguna coincidencia con {input}</p>
-            </div>
-        )
-    } else {
-        return <></>
-    }
-}
+import NotFoundView from '../../components/NotFoundView/NotFoundView';
 
 const scrollTop = () => {
     const scrolledElement = document.getElementById('catalog');
@@ -35,6 +23,7 @@ const Catalog = () => {
     const [productList, setProductList] = useState();
     const [productsFiltered, setProductsFiltered] = useState();
     const [isSearched, setIsSearched] = useState(true);
+    const searcherFromHome = useSelector(state => state.filter);
 
     useEffect(() => {
         const getProducts = async() => {
@@ -42,6 +31,8 @@ const Catalog = () => {
         }
         getProducts();
         scrollTop();
+
+        console.log(searcherFromHome)
 
     }, [])
     

@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import './SearchBox.scss';
 import { DropdownCategories, DropdownTypes } from './Dropdown/Dropdown';
@@ -13,6 +14,7 @@ const SearchBox = () => {
 
 
     const dispatch = useDispatch();
+    const searcherFromHome = useSelector(state => state.filter);
     // const dataFiltered = useSelector(state => state.filter.filteredList);
     // const dataInput = useSelector(state => state.filter.inputValue);
     
@@ -74,13 +76,11 @@ const SearchBox = () => {
     }
 
     const onSaveData = () => {
-        dispatch(filterActions.saveFiltered({
-            filteredList: filteredList,
-            inputValue: input
-        }));
+        dispatch(filterActions.saveInput(input, filteredList));
+        // dispatch(filterActions.saveFiltered(filteredList));
 
         console.log('data save');
-        // console.log('date input', dataInput);
+        console.log('date saved', searcherFromHome);
 
     }
  
@@ -107,7 +107,9 @@ const SearchBox = () => {
             {types && <DropdownTypes itemList={types} filterByType={filterByType} />}
             <p>Mueble</p>
             <input type="text" placeholder='Nombre' onChange={filterByName}/>
-            <button onClick={onSaveData}>Buscar</button>
+            <button onClick={onSaveData}>
+                Buscar
+            </button>
         </div>
     )
 }
