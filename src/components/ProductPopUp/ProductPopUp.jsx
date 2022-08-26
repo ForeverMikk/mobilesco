@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import toast from 'react-hot-toast';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -9,6 +9,7 @@ import './ProductPopUp.scss';
 import ImagesCarousel from './ImagesCarousel/ImagesCarousel';
 import { cartActions } from '../../store/cart-slice';
 import Loader from '../Loader/Loader';
+import { productClicked } from '../../services/productSercive';
 
 const ProductPopUp = ({ name, id, category, descripcion, color, material, img, images, close, isFavorite, setIsFavorite }) => {
 
@@ -33,6 +34,11 @@ const ProductPopUp = ({ name, id, category, descripcion, color, material, img, i
             material,
         }))
     }
+    
+    useEffect(() => {
+        // console.log('watch more');
+        productClicked(id);
+    }, [id])
     
     return (
         <div className='product-popup'>

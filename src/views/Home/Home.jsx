@@ -50,6 +50,10 @@ const Home = () => {
                 name={product.NOMBRE}
                 descripcion={product.DESCRIPCION}
                 img={`https://mobilesco.mx/API/images/uploads/${product.CLAVE}/${productImages[0].NOMBRE}`}
+                id={product.CLAVE}
+                category={product.CATEGORIA}
+                color={product.COLOR}
+                material={product.MATERIAL}
             />}
             <Suscribe />
         </>

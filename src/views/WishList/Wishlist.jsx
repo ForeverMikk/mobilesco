@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 import './Wishlist.scss';
@@ -6,6 +6,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faHeart, faCheck } from '@fortawesome/free-solid-svg-icons';
 import PreviewProduct from './PreviewProduct/PreviewProduct';
 import { sendEmailData } from '../../services/emailService';
+
+const scrollTop = () => {
+    const scrolledElement = document.getElementById('catalog');
+
+    scrolledElement.scrollIntoView();
+}
 
 const Wishlist = () => {
 
@@ -74,6 +80,11 @@ const Wishlist = () => {
 
         setExtraInfo(extra);
     }
+
+    useEffect(() => {
+      scrollTop();
+    }, [])
+    
 
     return(
         <section className="wishlist">

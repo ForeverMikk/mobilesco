@@ -81,17 +81,19 @@ export const getProductImages = async(id) => {
 }
 
 export const productClicked = async(id) => {
-    try {
-        await axios.post(`https://mobilesco.mx/API/busquedas`, { 
-            "idMueble": id
-         }, {headers: HEADERS}).then(res => {
-            console.log('response',res);
-            console.log('data response',res.data);
-    
-        }).catch((err) => {
-            console.log(err)
-        })
-    } catch(err) {
+    await axios.post(`https://mobilesco.mx/API/busquedas`, {"idMueble": id, "idIndicador": 1}, {headers: HEADERS})
+    .then(res => {
+        // console.log('click',res.data);
+    }).catch((err) => {
         console.log(err)
-    }
+    })
+}
+
+export const productFavorite = async(id) => {
+    await axios.post(`https://mobilesco.mx/API/busquedas`, {"idMueble": id, "idIndicador": 2}, {headers: HEADERS})
+    .then(res => {
+        // console.log('favorite',res.data);
+    }).catch((err) => {
+        console.log(err)
+    })
 }

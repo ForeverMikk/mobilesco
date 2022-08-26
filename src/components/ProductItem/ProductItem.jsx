@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import './ProductItem.scss'
 import ProductPopUp from '../ProductPopUp/ProductPopUp';
 import { cartActions } from '../../store/cart-slice';
-import { productClicked } from '../../services/productSercive';
+import { productFavorite } from '../../services/productSercive';
 
 
 const ProductItem = ({id, name, descripcion, img, images, className, category, color, material }) => {
@@ -17,31 +17,33 @@ const ProductItem = ({id, name, descripcion, img, images, className, category, c
     const productList = useSelector(state => state.cart.itemList);
     const [isFavorite, setIsFavorite] = useState(false);
     
-    const addFavorite = () => {
-        setIsFavorite(!isFavorite)
-    }
-
     const addToCart = () => {
-        // console.log(images)
         const currentProduct = productList.find(item => item.id === id);
-        toast.success("Agregaste un producto a tu lista de deseos");
+        console.log(currentProduct);
+       
         if(currentProduct) {
-            addFavorite()
-            console.log(isFavorite);
+            console.log("remove");
+            setIsFavorite(false);
+            // toast.error("Quitaste un producto a tu lista de deseos");
+            dispatch(cartActions.deleteFromCart(id));
+        } else {
+            toast.success("Agregaste un producto a tu lista de deseos");
+            console.log("add");
+            setIsFavorite(true);
+            productFavorite(id);
+            dispatch(cartActions.addToCart({
+                name,
+                id,
+                // price,
+                descripcion,
+                img,
+                images,
+                category,
+                color,
+                material,
+            }))
         }
 
-        productClicked(id);
-        dispatch(cartActions.addToCart({
-            name,
-            id,
-            // price,
-            descripcion,
-            img,
-            images,
-            category,
-            color,
-            material,
-        }))
     }
     
 

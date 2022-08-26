@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 
 import './Catalog.scss';
 import CategoriesPopular from './CategoriesPopular/CategoriesPopular';
@@ -23,7 +23,7 @@ const Catalog = () => {
     const [productList, setProductList] = useState();
     const [productsFiltered, setProductsFiltered] = useState();
     const [isSearched, setIsSearched] = useState(true);
-    const searcherFromHome = useSelector(state => state.filter);
+    // const searcherFromHome = useSelector(state => state.filter);
 
     useEffect(() => {
         const getProducts = async() => {
@@ -32,7 +32,7 @@ const Catalog = () => {
         getProducts();
         scrollTop();
 
-        console.log(searcherFromHome)
+        // console.log(searcherFromHome)
 
     }, [])
     

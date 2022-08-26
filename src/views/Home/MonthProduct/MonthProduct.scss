@@ -53,6 +53,7 @@
     font-size: var(--h3-font-size);
     color: var(--second-color);
 } 
+.month-product .buttons .cart.active,
 .month-product .buttons .cart:hover {
     cursor: pointer;
     color: var(--first-color-light);

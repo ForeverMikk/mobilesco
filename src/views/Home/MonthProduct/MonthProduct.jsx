@@ -1,10 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
+import toast from 'react-hot-toast';
+import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 import './MonthProduct.scss';
+import { cartActions } from '../../../store/cart-slice';
+import { productFavorite } from '../../../services/productSercive';
 
-const MonthProduct = ({ name, descripcion, img }) => {
+const MonthProduct = ({ name, descripcion, img, id, category, color, material }) => {
+
+    const dispatch = useDispatch();
+    const [isFavorite, setIsFavorite] = useState(false);
+
+    const addToCart = () => {
+        toast.success("Agregaste un producto a tu lista de deseos");
+        // console.log("add");
+        setIsFavorite(!isFavorite);
+        productFavorite(id);
+        dispatch(cartActions.addToCart({
+            name,
+            id,
+            // price,
+            descripcion,
+            img,
+           
+            category,
+            color,
+            material,
+        }))
+    }
+
     return(
         <section className='month-product'>
 
@@ -17,8 +44,8 @@ const MonthProduct = ({ name, descripcion, img }) => {
                 </p>
 
                 <div className='buttons'>
-                    <button className='buy'>Cotizar</button>
-                    <button className='cart'>
+                    <Link to='/wishlist' className='buy'>Cotizar</Link>
+                    <button className={isFavorite ? 'cart' : 'cart active'} onClick={addToCart}>
                         <FontAwesomeIcon icon={faHeart} />
                     </button>
                 </div>
