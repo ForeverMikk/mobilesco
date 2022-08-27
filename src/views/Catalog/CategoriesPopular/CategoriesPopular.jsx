@@ -85,6 +85,10 @@ const CategoriesPopular = ({ setProductList, productList, setIsSearched, isSearc
                 </SwiperSlide>
 
                 <SwiperSlide>
+                    <CategorieBox items={mesas} title="Mesas"/>
+                </SwiperSlide>
+
+                <SwiperSlide>
                     <CategorieBox items={archiveros} title="Archiveros"/>
                 </SwiperSlide>                
 
@@ -94,10 +98,6 @@ const CategoriesPopular = ({ setProductList, productList, setIsSearched, isSearc
 
                 <SwiperSlide>
                     <CategorieBox items={libreros} title="Libreros"/>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <CategorieBox items={mesas} title="Mesas"/>
                 </SwiperSlide>
                 
                 <SwiperSlide>
