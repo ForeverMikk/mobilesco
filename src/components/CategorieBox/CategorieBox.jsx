@@ -1,15 +1,21 @@
 import React from 'react';
 
 import './CategorieBox.scss';
+import defaultImg from '../../asstes/img/defaultImg.png';
 
 const CategorieBox = ({items ,title})=> {
+
     return (
         <div className='box'>
             <div className="img-grid">
-                <img src={items[0]} alt="" />       
-                <img src={items[1]} alt="" />       
-                <img src={items[2]} alt="" />       
-                <img src={items[3]} alt="" />
+                {items.map(({data, images}, index) => (
+                    <div className="img" key={index}>
+                        {images.length > 0 
+                            ? <img src={`https://mobilesco.mx/API/images/uploads/${data.CLAVE}/${images[0].NOMBRE}`} alt={data.NOMBRE} />       
+                            : <img src={defaultImg} alt="Default"/>
+                        }
+                    </div>
+                ))}
             </div>
 
             <div className="data">

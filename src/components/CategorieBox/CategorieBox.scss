@@ -18,15 +18,23 @@
     // align-items: center;
     flex-wrap: wrap;
 }
-.box .img-grid img {
-    // padding: 0.25rem;
+.box .img-grid .img {
+    padding: 0.3rem;
     margin: 0.5rem;
     height: 7rem;
+    width: 7rem;
+    background: #fff;
     border-top-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     transition: all 0.3s ease-out;
 }
-.box .img-grid img:hover{
+.box .img-grid .img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.box .img-grid .img:hover{
     transform: translateY(-5px) scale(1.007)
 }
 

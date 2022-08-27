@@ -27,9 +27,12 @@ const Catalog = () => {
 
     useEffect(() => {
         const getProducts = async() => {
-            setProductList(await getAllProducts());
+            const products = await getAllProducts();
+
+            setProductList(products);
         }
         getProducts();
+        // console.log(productList);
         scrollTop();
 
         // console.log(searcherFromHome)
@@ -81,8 +84,13 @@ const Catalog = () => {
 
             {productsFiltered && productsFiltered.length > 0 ? <ProductsList products={productsFiltered}/> : <NotFoundView input={input} />}
 
-            <CategoriesPopular setProductsFiltered={setProductsFiltered} setIsSearched={setIsSearched} isSearched={isSearched} />
-            <TopProducts />
+            {productList && <CategoriesPopular 
+                productList={productList}
+                setProductList={setProductList} 
+                setIsSearched={setIsSearched} 
+                isSearched={isSearched} 
+            />}
+             <TopProducts productList={productList}/>
             <DownloadCatalog />
 
         </section>
