@@ -76,12 +76,12 @@ const Catalog = () => {
                 <p className='description'>Hecha un vistazo a nuestros productos</p>
                 
                 <SearchBar productsFiltered={productsFiltered} onChange={onChange} />
-                <TypesPopular setProductsFiltered={setProductsFiltered}/>
+                <TypesPopular setProductsFiltered={setProductsFiltered} setIsSearched={setIsSearched} isSearched={isSearched}/>
             </div>
 
             {productsFiltered && productsFiltered.length > 0 ? <ProductsList products={productsFiltered}/> : <NotFoundView input={input} />}
 
-            <CategoriesPopular />
+            <CategoriesPopular setProductsFiltered={setProductsFiltered} setIsSearched={setIsSearched} isSearched={isSearched} />
             <TopProducts />
             <DownloadCatalog />
 

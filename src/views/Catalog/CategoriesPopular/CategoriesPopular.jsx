@@ -19,12 +19,14 @@ import escritorio1 from '../../../asstes/img/escritorios/escritorio-1.jpg';
 import escritorio2 from '../../../asstes/img/escritorios/escritorio-2.jpg';
 import escritorio3 from '../../../asstes/img/escritorios/escritorio-3.jpg';
 import escritorio4 from '../../../asstes/img/escritorios/escritorio-4.jpg';
+// import { getAllProducts } from '../../../services/productSercive';
 
 const sillas = [silla1, silla2, silla3, silla4];
 const mesas = [mesa1, mesa2, mesa3, mesa4];
 const escritorios = [escritorio1, escritorio2, escritorio3, escritorio4];
 
-const CategoriesPopular = () => {
+const CategoriesPopular = ({ setProductsFiltered, setIsSearched, isSearched }) => {
+    
     return (
         <section className='categories-popular'>
             <div className="info">
@@ -58,7 +60,7 @@ const CategoriesPopular = () => {
                 // onSwiper={(swiper)=> console.log(swiper)} 
              >
                 <SwiperSlide>
-                    <CategorieBox items={sillas} title="Sillas de Oficina"/>
+                    <CategorieBox items={sillas} title="Sillas de Oficina" />
                 </SwiperSlide>
 
                 <SwiperSlide>

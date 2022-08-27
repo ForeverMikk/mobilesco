@@ -17,14 +17,12 @@ const TypeCircle = ({img, name, onSearch}) => {
     )
 }
 
-const TypesPopular = ({setProductsFiltered}) => {
+const TypesPopular = ({setProductsFiltered, setIsSearched, isSearched}) => {
     
-    const [isSearched, setIsSearched] = useState(true);
+    // const [isSearched, setIsSearched] = useState(true);
     const [productList, setProductList] = useState([]);
 
     const onSearch = async(type) => {
-
-       
         const filtered = productList.filter(item => {
             const fullName = item.data.TIPO.toLowerCase();
 
