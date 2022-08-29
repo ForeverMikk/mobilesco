@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import toast from 'react-hot-toast';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -8,12 +8,13 @@ import { faHeart, faClose } from '@fortawesome/free-solid-svg-icons';
 import './ProductPopUp.scss';
 import ImagesCarousel from './ImagesCarousel/ImagesCarousel';
 import { cartActions } from '../../store/cart-slice';
-import Loader from '../Loader/Loader';
+// import Loader from '../Loader/Loader';
 import { productClicked } from '../../services/productSercive';
 
 const ProductPopUp = ({ name, id, category, descripcion, color, material, img, images, close, isFavorite, setIsFavorite }) => {
 
     const dispatch = useDispatch();
+    const [mainImage, setMainImage] = useState(img);
     
     const addFavorite = () => {
         setIsFavorite(!isFavorite);
@@ -37,6 +38,8 @@ const ProductPopUp = ({ name, id, category, descripcion, color, material, img, i
     
     useEffect(() => {
         // console.log('watch more');
+        // setMainImage(img);
+        // console.log(mainImage);
         productClicked(id);
     }, [id])
     
@@ -48,12 +51,10 @@ const ProductPopUp = ({ name, id, category, descripcion, color, material, img, i
 
             <div className="img">
 
-                {images ? <>
-                    <img src={img} alt={name} />
-                    <ImagesCarousel images={images} id={id}/> 
-                </> : 
-                <Loader />
-                }
+               {images && <>
+                    <img src={mainImage} alt={name} />
+                    <ImagesCarousel images={images} id={id} setMainImage={setMainImage}/> 
+                </>}
 
             </div>
             
@@ -67,7 +68,11 @@ const ProductPopUp = ({ name, id, category, descripcion, color, material, img, i
                     <h3 className='colors-title'>Colores: </h3>
                     <div className="buttons">
                         {images && images.map((item, index) => (
-                            <button key={index} style={{'background': item.COLOR_CODIGO}}></button>
+                            <button 
+                                key={index} 
+                                style={{'background': item.COLOR_CODIGO}} 
+                                onClick={() => setMainImage(`https://mobilesco.mx/API/images/uploads/${id}/${item.NOMBRE}`)}
+                            ></button>
                         ))}
                     </div>
                     <label htmlFor="" className='label'>{color}</label>

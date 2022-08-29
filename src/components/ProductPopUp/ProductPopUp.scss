@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 27rem;
     padding: 0;
     margin: 0;
 }
@@ -36,11 +37,14 @@
     background-size: contain;
 }
 .popup-content .img img {
-    width: 60%;
-    height: auto;
+    height: 18rem;
+    width: 18rem;
+    object-fit: contain;
+    object-position: center;
 }
 
 .product-popup h1, .product-popup h3 {
+    text-transform: capitalize;
         font-family: var(--title-font);
         color: var(--fourth-color);
 }
@@ -53,6 +57,7 @@
     background: var(--third-color);
     margin: 0;
     width: 50%;
+    height: 100%;
     padding: 2rem 5rem;
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
@@ -204,11 +209,18 @@
 @media screen and (max-width: 768px) {
     .product-popup {
         flex-direction: column;
+        height: 40rem;
     }
     .product-popup .img {
         width: 100%;
+        height: 50%;
+    }
+    .product-popup .img img {
+        height: 15rem;
+        width: 15rem;
     }
     .product-popup .product-info {
+        height: 50%;
         width: 100%;
         padding: 2rem;
     }

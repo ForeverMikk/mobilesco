@@ -39,6 +39,7 @@ const TopCarousel = () => {
                                 img={`https://mobilesco.mx/API/images/uploads/${data.CLAVE}/${images[0].NOMBRE}`}
                                 descripcion={data.DESCRIPCION}
                                 price={data.COSTO}
+                                images={images}
                                 category={data.CATEGORIA}
                                 color={data.COLOR}
                                 material={data.MATERIAL}
