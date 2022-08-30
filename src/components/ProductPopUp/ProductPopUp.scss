@@ -229,3 +229,10 @@
         font-size: var(--h2-font-size);
     }
 }
+
+@media screen and (max-width: 640px) {
+    .product-popup .img img {
+        height: 12rem;
+        width: 12rem;
+    }
+}

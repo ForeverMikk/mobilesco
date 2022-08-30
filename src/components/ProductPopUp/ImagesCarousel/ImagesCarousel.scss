@@ -4,7 +4,8 @@
 }
 .product-popup .images-carousel img{
     height: 5rem;
-    width: auto;
+    width: 5rem;
+    object-fit: contain;
     border-radius: 1rem;
     border: 1px solid var(--first-color-light);
     margin: 1rem 1.5rem;
@@ -17,5 +18,12 @@
     }
     .product-popup .images-carousel img {
         margin: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .product-popup .images-carousel img {
+        height: 4rem;
+        width: 4rem;
     }
 }
