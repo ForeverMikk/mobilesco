@@ -25,7 +25,6 @@
     transform: scale(0.97);   
 }
 
-
 // First Row
 .gallery .item-1 {
     grid-column-start: 1;
@@ -86,7 +85,6 @@
 }
 
 
-
 @media screen and (max-width: 1024px) {
     .gallery .title{
         font-size: var(--h1-font-size);
@@ -94,6 +92,7 @@
 
     .gallery .grid {
         grid-template-columns: repeat(6, 7rem);
+        grid-template-rows: repeat(20, 2.5rem);
         align-items: center;
         justify-content: center;
     }
@@ -102,7 +101,7 @@
 @media screen and (max-width: 768px) {
     .gallery .grid {
         display: flex;
-        padding: 1rem;
+        // padding: 1rem;
         flex-direction: column;
         align-items: center;
     }

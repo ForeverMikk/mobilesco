@@ -57,7 +57,7 @@ const GridItem = ({img, className}) => {
 const Gallery = () => {
     return (
         <div className="gallery">
-            <h3 className='title'>Dale un vistazo a nuestra galería</h3>
+            <h3 className='title'>Galería</h3>
 
             <div className="grid">
                 {gridItems.map((item) => 
