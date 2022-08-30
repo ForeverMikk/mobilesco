@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import { useTranslation } from 'react-i18next';
 
 import './Home.scss';
 import SearchBox from '../../components/SearchBox/SearchBox';
@@ -14,6 +15,7 @@ import { getProductById, getProductImages } from '../../services/productSercive'
 
 const Home = () => {
     
+    const { t } = useTranslation();
     const [product, setProduct] = useState();
     const [productImages, setProductImages] = useState();
 
@@ -35,10 +37,10 @@ const Home = () => {
             <header>
                 {/* <Atrato /> */}
                 <div className="background">
-                    <h1 className='title'>Nuestra misión es transformar cada uno de tus espacios, en un lugar especial a tu medida. </h1>
+                    <h1 className='title'>{t('home.title')}</h1>
                     <TopCarousel />
                     <SearchBox />
-                    <p className='description'>¿Buscas muebles multi-usuario? ¿Multi-usos? ¿Multi-gusto? Tenemos productos únicos que además de ornamentar tu espacio, se adaptan a él y lo optimizan.</p>
+                    <p className='description'>{t('home.description')}</p>
                 </div>
             </header>
 

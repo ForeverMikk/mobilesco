@@ -7,9 +7,11 @@ import './ProductCarousel.scss';
 import silla from '../../../asstes/img/defaultImg.png';
 import ProductItem from '../../../components/ProductItem/ProductItem';
 import { getAllProducts } from '../../../services/productSercive';
+import { useTranslation } from 'react-i18next';
 
 const ProductCarousel = () => {
 
+    const { t } = useTranslation();
     const [productsList, setProductsList] = useState();
 
     useEffect(() => {
@@ -25,8 +27,8 @@ const ProductCarousel = () => {
     return(
         <section className="product-carousel">
             <div className='text'>
-                <h3 className="title">Lo más vendido: </h3>
-                <p className="description">Adopta tu mueble ideal, el único que se quedará a tu lado tanto como lo desees. </p>
+                <h3 className="title">{t('home.carousel.title')}</h3>
+                <p className="description">{t('home.carousel.description')}</p>
             </div>
 
             <Swiper

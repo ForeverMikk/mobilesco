@@ -47,11 +47,14 @@
     transition: all 0.3s ease-out;
     z-index: 10;
 }
+.nav-menu li .language:hover {
+    cursor: pointer;
+}
 
 .nav-menu li .language.active {
-    background: var(--first-color);
+    background: var(--first-color-light);
     color: #fff;
-    border: 1px solid var(--first-color);
+    border: 1px solid var(--first-color-light);
 }
 
 .nav-menu li a:hover {

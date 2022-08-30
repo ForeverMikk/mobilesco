@@ -8,11 +8,12 @@ import { getAllCategories } from '../../services/categoryService';
 import { getAllTypes } from '../../services/typeService';
 import { getAllProducts } from '../../services/productSercive';
 import { filterActions } from '../../store/filter-slice';
+import { useTranslation } from 'react-i18next';
 
 
 const SearchBox = () => {
 
-
+    const { t } = useTranslation();
     const dispatch = useDispatch();
     const searcherFromHome = useSelector(state => state.filter);
     // const dataFiltered = useSelector(state => state.filter.filteredList);
@@ -101,14 +102,14 @@ const SearchBox = () => {
 
     return (
         <div className='search-box'>
-            <p>Categoría</p>
+            <p>{t('search-box.category')}</p>
             {categories && <DropdownCategories itemList={categories} filterByCategory={filterByCategory} />}
-            <p>Tipo de Mueble</p>
+            <p>{t('search-box.type')}</p>
             {types && <DropdownTypes itemList={types} filterByType={filterByType} />}
-            <p>Mueble</p>
+            <p>{t('search-box.name')}</p>
             <input type="text" placeholder='Nombre' onChange={filterByName}/>
             <button onClick={onSaveData}>
-                Buscar
+            {t('search-box.search')}
             </button>
         </div>
     )

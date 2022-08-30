@@ -1,7 +1,29 @@
 {
     "navbar" : {
-        "aboutUs": "Sobre Nosotros",
+        "about-us": "Sobre Nosotros",
         "catalog": "Catálogo",
         "contact" : "Contacto"
+    },
+    "home" : {
+        "title": "Nuestra misión es transformar tus espacios, en un lugar especial a tu medida.",
+        "description" : "¿Buscas muebles multi-usuario? ¿Multi-usos? ¿Multi-gusto? Tenemos productos únicos que además de ornamentar tu espacio, se adaptan a él y lo optimizan.",
+        "carousel": {
+            "title": "Lo más vendido",
+            "description": "Adopta tu mueble ideal, el único que se quedará a tu lado tanto como lo desees."
+        },
+        "services": {
+            "hand": "Es momento de elegir tu relación ideal: la mayor satisfacción, al mejor precio.",
+            "cart": "Una amplia variedad de opciones de productos, para que elijas a tu manera.",
+            "truck": "Políticas de reparación accesibles para todo el catálogo, calidad garantizada.",
+            "support": "Presupuestamos tu proyecto en tiempo récord , servicio y atención al cliente como siempre lo quisiste.",
+            "about-us": "Conocenos"
+        }
+    
+    },
+    "search-box": {
+        "category": "Categoría",
+        "type": "Tipo de Mueble",
+        "name": "Nombre del Mueble",
+        "search": "Buscar" 
     }
 }

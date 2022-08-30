@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import { useTranslation } from 'react-i18next';
 
 import './OurServices.scss'; 
 import services from './../../../asstes/img/services.jpg';
@@ -23,6 +24,9 @@ const Service = ({icon, title, service}) => {
 }
 
 const OurServices = () => {
+
+    const { t } = useTranslation();
+
     return (
      <section className='our-services'>
         <div className="img">
@@ -33,30 +37,30 @@ const OurServices = () => {
             <div className='services-top'>
                 <Service 
                     icon={hand} 
-                    title="Es momento de elegir tu relación ideal: la mayor satisfacción, al mejor precio."
+                    title={t('home.services.hand')}
                     service="/about-us#hand"
                 />
                 <Service 
                     icon={cart} 
-                    title="Una amplia variedad de opciones de productos, para que elijas a tu manera."
+                    title={t('home.services.cart')}
                     service="/about-us#cart"
                 />
             </div>
             <div className='services-bottom'>
                 <Service 
                     icon={truck} 
-                    title="Políticas de reparación accesibles para todo el catálogo, calidad garantizada."
+                    title={t('home.services.truck')}
                     service="/about-us#truck"
                 />
                 <Service 
                     icon={support} 
-                    title="Presupuestamos tu proyecto en tiempo récord , servicio y atención al cliente como siempre lo quisiste."
+                    title={t('home.services.support')}
                     service="/about-us#support"
                 />
             </div>
             
             <Link to='/about-us'>
-                <button>Conócenos</button>
+                <button>{t('home.services.about-us')}</button>
             </Link>
         </div>
      </section>   

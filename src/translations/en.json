@@ -1,7 +1,27 @@
 {
     "navbar" : {
-        "aboutUs": "About Us",
+        "about-us": "About Us",
         "catalog": "Catalog",
         "contact" : "Contact"
+    },
+    "home" : {
+        "title": "Our mission is to transform your spaces into a special place tailored to your needs.",
+        "description" : "Are you looking for multi-user furniture? Multi-uses? Multi-taste? We have unique products that, in addition to decorating your space, adapt to it and optimize it.",
+        "carousel": {
+            "title": "Top sellers",
+            "description": "Adopt your ideal piece of furniture, the only one that will stay by your side as long as you want it to."
+        },
+        "services": {
+            "hand": "It's time to choose your ideal relationship: the highest satisfaction, at the best price.",
+            "cart": "A wide variety of product options for you to choose from.",
+            "truck": "Accessible repair policies for the entire catalog, guaranteed quality.",
+            "support": "We quote your project in record time, service and customer care as you always wanted."
+        }
+    },
+    "search-box": {
+        "category": "Category",
+        "type": "Type of furniture",
+        "name": "Furniture Name",
+        "search": "Search" 
     }
 }

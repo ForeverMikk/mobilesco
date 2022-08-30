@@ -46,12 +46,19 @@ const Navbar = () => {
                     Atrato
             </div> */}
 
-                <li><Link to="/about-us" onClick={activeMenu}>{t('navbar.aboutUs')}</Link></li>
+                <li><Link to="/about-us" onClick={activeMenu}>{t('navbar.about-us')}</Link></li>
 
                 <li><Link to="/catalog" onClick={activeMenu}>{t('navbar.catalog')}</Link></li>
 
                 <li><Link to="/contact" onClick={activeMenu}>{t('navbar.contact')}</Link></li>
 
+                <li>
+                    <Link to="/wishlist" onClick={activeMenu} className='heart'>
+                        <span>{productsQuantity}</span>
+                        <FontAwesomeIcon icon={faHeart} />
+                    </Link>
+                </li>
+                
                 <li>
                     <button 
                         className={`language ${languageSelected ? 'active' : ''}`} 
@@ -69,12 +76,6 @@ const Navbar = () => {
                     >EN</button>
                 </li>
 
-                <li>
-                    <Link to="/wishlist" onClick={activeMenu} className='heart'>
-                        <span>{productsQuantity}</span>
-                        <FontAwesomeIcon icon={faHeart} />
-                    </Link>
-                </li>
             </ul>
         </nav>
     )
