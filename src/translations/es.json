@@ -35,7 +35,58 @@
             "phone": "Teléfono",
             "submit": "Suscribirse"
         }
-    
+    },
+    "about-us" : {
+        "title": "Más de 20 años de experiencia nos respaldan",
+        "services": {
+            "hand": {
+                "title": "Es momento de elegir tu relación ideal: la mayor satisfacción, al mejor precio.",
+                "description": "Nuestra capacidad depende del tamaño de nuestros clientes. Contamos con una gran infraestructura instalada que nos permite atender y satisfacer una gran demanda."
+            },
+            "cart": {
+                "title": "Una amplia variedad de opciones de productos, para que elijas a tu manera.",
+                "description": "La atención al detalle es nuestro valor agregado : Por ello aseguramos la calidad a partir de procesos estandarizados y supervisados para entregarte, nada más y nada menos que el mejor resultado."
+            },
+            "support": {
+                "title": "Presupuestamos tu proyecto en tiempo récord , servicio y atención al cliente como siempre lo quisiste.",
+                "description": "Equipo altamente capacitado: Nuestros colaboradores son nuestra familia, por lo que la amplia trayectoria en la industria nos motiva a realizar un trabajo de gran calidad, basado en empatía , cuidado y eficiencia."
+            },
+            "truck": {
+                "title": "Políticas de reparación accesibles para todo el catálogo, calidad garantizada.",
+                "description": "Nuestros clientes son nuestros mejores aliados: La satisfacción de los clientes es nuestro principal motor, por ello cuidamos nuestras relaciones a partir de la entrega  y el servicio puntual al cliente."
+            }
+        },
+        "frequent-questions": {
+            "title": "Preguntas frecuentes",
+            "q1": {
+                "question": "¿Cuáles son los métodos de pago?",
+                "santander": "Obtén meses sin intereses con tarjeta Santander",
+                "bbva": "Obtén meses sin intereses con tarjetas participantes",
+                "paypal": "Recibe un formato de pago por correo electrónico a través de PayPal. O si lo prefieres a través de un mensaje de texto, puedes pagar con tarjetas de crédito o débito, PayPal o PayPal Credit.",
+                "atrato": "Compra hasta en 24 meses sin necesidad de tener tarjeta. Evalúa tu perfil para conocer la oferta que Atrato tiene para ti , una vez aprobada te enviaremos una liga de pago para comenzar tu compra."
+            },
+            "q2": {
+                "question": "¿Qué costo tiene el flete?",
+                "answer": "El costo del flete depende de la distancia del punto de entrega. En compras mayores a ciertos montos podemos brindarte un descuento, pregunta por las alternativas."
+            },
+            "q3": {
+                "question": "¿Qué¿Qué tipo de garantía puedo tener?",
+                "answer": "Al comprar cualquier artículo obtén 6 meses de garantía en desperfectos de fábrica. Adicionalmente puedes obtener un descuento por mantenimiento en los primeros 12 meses de uso en tu producto. Pregunta por los términos y condiciones."
+            },
+            "q4": {
+                "question": "¿Qué descuentos están disponibles?",
+                "answer": "Por temporada ofrecemos distintos descuentos sobre productos seleccionados. Adicionalmente otorgamos regalos por montos de compra a partir de ciertos montos. También contamos con precios por mayoreo a partir de 100 piezas. Pregunta por tu descuento aplicable."
+            },
+            "q5": {
+                "question": "¿Qué materiales trabajan?",
+                "answer": "Cada producto puede realizarse en distintos tipos de materiales, puedes consultarlos en el catálogo y preguntar directamente para verificar su disponibilidad."
+            }
+        },
+        "join-us": {
+            "title": "Sé parte del equipo",
+            "description": "Unete al mejor equipo de Profesionales"
+        }, 
+        "gallery": "Galería"
     },
     "search-box": {
         "category": "Categoría",

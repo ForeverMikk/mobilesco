@@ -35,6 +35,59 @@
             "submit": "Subscribe"
         }
     },
+    "about-us" : {
+        "title": "Over 20 years of experience behind us",
+        "services": {
+            "hand": {
+                "title": "It's time to choose your ideal relationship: the greatest satisfaction, at the best price.",
+                "description": "Our capacity depends on the size of our customers. We have a large installed infrastructure that allows us to attend and satisfy a great demand."
+            },
+            "cart": {
+                "title": "A wide variety of product options for you to choose your way.",
+                "description": "Attention to detail is our added value: That is why we ensure quality through standardized and supervised processes to deliver nothing less than the best results."
+            },
+            "support": {
+                "title": "We quote your project in record time, service and customer care as you always wanted.",
+                "description": "Highly trained team: Our collaborators are our family, so the extensive experience in the industry motivates us to perform high quality work, based on empathy, care and efficiency."
+            },
+            "truck": {
+                "title": "Accessible repair policies for the entire catalog, guaranteed quality.",
+                "description": "Our customers are our best allies: Customer satisfaction is our main driver, that is why we take care of our relationships based on delivery and punctual customer service."
+            }
+        },
+        "frequent-questions": {
+            "title": "Frequently Asked Questions",
+            "q1": {
+                "question": "What payment methods are available?",
+                "santander": "Get interest free months with Santander card",
+                "bbva": "Get interest free months with participating cards",
+                "paypal": "Receive a payment form by email through PayPal. Or if you prefer via text message, you can pay with credit or debit cards, PayPal or PayPal Credit.",
+                "atrato": "Buy in up to 24 months without the need of a credit card. Evaluate your profile to know the offer that Atrato has for you, once approved we will send you a payment link to start your purchase."
+            },
+            "q2": {
+                "question": "What is the cost of freight?",
+                "answer": "The freight cost depends on the distance from the delivery point. For purchases over certain amounts we can offer you a discount, ask for alternatives."
+            },
+            "q3": {
+                "question": "What kind of warranty can I have?",
+                "answer": "When you buy any item you get 6 months warranty on factory defects. Additionally you can get a discount for maintenance in the first 12 months of use in your product. Ask for terms and conditions."
+            },
+            "q4": {
+                "question": "What discounts are available?",
+                "answer": "Seasonally we offer different discounts on selected products. Additionally, we offer gifts for purchases over certain amounts. We also offer wholesale prices starting at 100 pieces. Ask for your applicable discount."
+            },
+            "q5": {
+                "question": "What materials do you work with?",
+                "answer": "Each product can be made in different types of materials, you can check them in the catalog and ask directly to verify their availability."
+            }
+
+        },
+        "join-us": {
+            "title": "Be part of the team",
+            "description": "Join the best team of professionals"
+        }, 
+        "gallery": "Gallery"
+    },
     "search-box": {
         "category": "Category",
         "type": "Type of furniture",

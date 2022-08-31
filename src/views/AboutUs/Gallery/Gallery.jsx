@@ -9,6 +9,7 @@ import item5 from '../../../asstes/img/galery/img005.jpg';
 import item6 from '../../../asstes/img/galery/img006.jpg';
 import item7 from '../../../asstes/img/galery/img009.jpg';
 import item8 from '../../../asstes/img/galery/img011.jpg';
+import { useTranslation } from 'react-i18next';
 
 const gridItems = [
     {
@@ -55,9 +56,11 @@ const GridItem = ({img, className}) => {
 }
 
 const Gallery = () => {
+    const { t } = useTranslation();
+
     return (
         <div className="gallery">
-            <h3 className='title'>Galería</h3>
+            <h3 className='title'>{t('about-us.gallery')}</h3>
 
             <div className="grid">
                 {gridItems.map((item) => 
