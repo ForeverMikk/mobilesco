@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import './DownloadCatalog.scss';
 import catalog from '../../../asstes/catalog/Catalogo_Mobilesco.pdf';
@@ -7,6 +8,7 @@ import { getProductById, getProductImages } from '../../../services/productSerci
 
 const DownloadCatalog = () => {
 
+    const { t } = useTranslation();
     const [product, setProduct] = useState();
     const [productImages, setProductImages] = useState();
 
@@ -36,7 +38,7 @@ const DownloadCatalog = () => {
                         className='download'
                     />}
             <div className='data'>
-                <h2 className='title'>Descarga el catálogo</h2>
+                <h2 className='title'>{t('catalog.download')}</h2>
                 <a href={catalog} download='Catalogo_Mobilesco' className='download'>PDF</a>
             </div>
             {product && <ProductItem 

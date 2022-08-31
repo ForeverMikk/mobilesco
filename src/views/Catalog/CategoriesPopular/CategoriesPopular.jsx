@@ -1,20 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {Navigation, Pagination, Scrollbar, A11y} from 'swiper';
+import { useTranslation } from 'react-i18next';
+
 
 import './CategoriesPopular.scss';
 import CategorieBox from '../../../components/CategorieBox/CategorieBox';
 
 const CategoriesPopular = ({ setProductList, productList, setIsSearched, isSearched }) => {
 
+    const { t } = useTranslation();
     const [sillas, setSillas] = useState([]);
     const [archiveros, setArchiveros] = useState([]);
     const [sillasPaleta, setSillasPaleta] = useState([]);
     const [libreros, setLibreros] = useState([]);
     const [mesas, setMesas] = useState([]);
     const [mueblesGuardado, setMueblesGuardado] = useState([]);
-    
-    
 
     useEffect(() => {
         const getProductByType = (type) => {
@@ -51,8 +52,8 @@ const CategoriesPopular = ({ setProductList, productList, setIsSearched, isSearc
     return (
         <section className='categories-popular'>
             <div className="info">
-                <h2>Categorias</h2>
-                <button>Ver todas</button>
+                <h2>{t('catalog.categories.title')}</h2>
+                <button>{t('catalog.categories.button')}</button>
             </div>
             
             <Swiper 
@@ -81,27 +82,27 @@ const CategoriesPopular = ({ setProductList, productList, setIsSearched, isSearc
                 // onSwiper={(swiper)=> console.log(swiper)} 
              >
                 <SwiperSlide>
-                    <CategorieBox items={sillas} title="Sillas" />
+                    <CategorieBox items={sillas} title={t('catalog.categories.chairs')} />
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <CategorieBox items={mesas} title="Mesas"/>
+                    <CategorieBox items={mesas} title={t('catalog.categories.tables')}/>
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <CategorieBox items={archiveros} title="Archiveros"/>
+                    <CategorieBox items={archiveros} title={t('catalog.categories.archivists')}/>
                 </SwiperSlide>                
 
                 <SwiperSlide>
-                    <CategorieBox items={sillasPaleta} title="Sillas con Paleta"/>
+                    <CategorieBox items={sillasPaleta} title={t('catalog.categories.pallet-chairs')}/>
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <CategorieBox items={libreros} title="Libreros"/>
+                    <CategorieBox items={libreros} title={t('catalog.categories.bookcase')}/>
                 </SwiperSlide>
                 
                 <SwiperSlide>
-                    <CategorieBox items={mueblesGuardado} title="Muebles de Guardado"/>
+                    <CategorieBox items={mueblesGuardado} title={t('catalog.categories.storage-furniture')}/>
                 </SwiperSlide>
 
             </Swiper>

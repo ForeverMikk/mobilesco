@@ -1,6 +1,7 @@
 import React,{ useState, useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { useTranslation } from 'react-i18next';
 
 import './TopProducts.scss';
 import defaultImg from '../../../asstes/img/defaultImg.png';
@@ -9,6 +10,7 @@ import { getAllProducts } from '../../../services/productSercive';
 
 const TopProducts = () => {
 
+    const { t } = useTranslation();
     const [topProducts, setTopProducts] = useState();
 
     useEffect(() => {
@@ -24,8 +26,8 @@ const TopProducts = () => {
     return(
         <section className='top-products'>
             <div className='info'>
-                <h2>Productos destacados</h2>
-                <button> Ver todos</button>
+                <h2>{t('catalog.top-products.title')}</h2>
+                <button>{t('catalog.top-products.button')}</button>
             </div>
 
             <Swiper

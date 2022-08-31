@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 // import { useSelector } from 'react-redux';
 
 import './Catalog.scss';
@@ -19,6 +20,7 @@ const scrollTop = () => {
 
 const Catalog = () => {
 
+    const { t } = useTranslation();
     const [input, setInput] = useState('');
     const [productList, setProductList] = useState();
     const [productsFiltered, setProductsFiltered] = useState();
@@ -75,8 +77,8 @@ const Catalog = () => {
     return (
         <section className="catalog" id='catalog'>
             <div className="header">
-                <h1 className="title">Catálogo</h1>
-                <p className='description'>Hecha un vistazo a nuestros productos</p>
+                <h1 className="title">{t('catalog.title')}</h1>
+                <p className='description'>{t('catalog.description')}</p>
                 
                 <SearchBar productsFiltered={productsFiltered} onChange={onChange} />
                 <TypesPopular setProductsFiltered={setProductsFiltered} setIsSearched={setIsSearched} isSearched={isSearched}/>
@@ -90,7 +92,7 @@ const Catalog = () => {
                 setIsSearched={setIsSearched} 
                 isSearched={isSearched} 
             />}
-             <TopProducts productList={productList}/>
+            <TopProducts productList={productList}/>
             <DownloadCatalog />
 
         </section>

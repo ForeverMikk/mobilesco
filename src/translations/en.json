@@ -88,6 +88,29 @@
         }, 
         "gallery": "Gallery"
     },
+    "catalog": {
+        "title": "Catalog",
+        "description": "Check out our products",
+        "search-bar": {
+            "input": "Find a piece of furniture that fits you",
+            "submit": "Search"
+        },
+        "categories" : {
+            "title": "Categories",
+            "button": "See all",
+            "chairs": "Chairs",
+            "tables": "Tables",
+            "archivists": "Archivists",
+            "pallet-chairs":"Paller Chairs",
+            "bookcase": "Bookcase",
+            "storage-furniture":"Storage Furniture"
+        },
+        "top-products": {
+            "title": "Top Products",
+            "button": "See all"
+        },
+        "download": "Download catalog"
+    },
     "search-box": {
         "category": "Category",
         "type": "Type of furniture",

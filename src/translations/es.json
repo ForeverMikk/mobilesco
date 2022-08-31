@@ -88,6 +88,29 @@
         }, 
         "gallery": "Galería"
     },
+    "catalog": {
+        "title": "Catálogo",
+        "description": "Hecha un vistazo a nuestros productos",
+        "search-bar": {
+            "input": "Encuentra un mueble a tu medida",
+            "submit": "Buscar"
+        },
+        "categories" : {
+            "title": "Categorías",
+            "button": "Ver todas",
+            "chairs": "Sillas",
+            "tables": "Mesas",
+            "archivists": "Archiveros",
+            "pallet-chairs":"Sillas con Paleta",
+            "bookcase": "Libreros",
+            "storage-furniture":"Muebles de Guardado"
+        },
+        "top-products": {
+            "title": "Productos destacados",
+            "button": "Ver Todos"
+        },
+        "download": "Descarga el catálogo"
+    },
     "search-box": {
         "category": "Categoría",
         "type": "Tipo de Mueble",

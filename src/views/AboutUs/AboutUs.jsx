@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { useTranslation } from 'react-i18next';
 
 import './AboutUs.scss';
 import serviceImg from '../../asstes/img/services.jpg';
@@ -12,7 +13,6 @@ import ServiceCard from './ServiceCard/ServiceCard';
 import Gallery from './Gallery/Gallery';
 import FrequentQuestions from './FrequentQuestions/FrequentQuestions';
 import JoinUs from './JoinUs/JoinUs';
-import { useTranslation } from 'react-i18next';
 
 const scrollTop = () => {
     const scrolledElement = document.getElementById('about-us');
