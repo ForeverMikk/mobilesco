@@ -16,6 +16,23 @@
             "cart": "A wide variety of product options for you to choose from.",
             "truck": "Accessible repair policies for the entire catalog, guaranteed quality.",
             "support": "We quote your project in record time, service and customer care as you always wanted."
+        },
+        "categories": {
+            "title": "Categories",
+            "description": "We help you in the search of what you need with our large catalog. We present furniture with all kinds of uses."
+        },
+        "moth-product": {
+            "subtitle": "Highlights of the moth",
+            "quote": "Quote"
+        },
+        "suscribe" : {
+            "title": "Sign up and get",
+            "subtitle": "10% OFF",
+            "description": "Subscribe to our bi-weekly newsletter and get 10% on your purchase",
+            "name": "Full name",
+            "email": "E-mail",
+            "phone": "Phone",
+            "submit": "Subscribe"
         }
     },
     "search-box": {

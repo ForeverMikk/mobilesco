@@ -17,6 +17,23 @@
             "truck": "Políticas de reparación accesibles para todo el catálogo, calidad garantizada.",
             "support": "Presupuestamos tu proyecto en tiempo récord , servicio y atención al cliente como siempre lo quisiste.",
             "about-us": "Conocenos"
+        },
+        "categories": {
+            "title": "Categorías",
+            "description": "Te ayudamos en la búsqueda de lo que necesitas con nuestro gran catálogo. Te presentamos muebles con todo tipo de usos."
+        },
+        "moth-product": {
+            "subtitle": "Lo más destacado",
+            "quote": "Cotizar"
+        },
+        "suscribe" : {
+            "title": "Suscríbete y obtén",
+            "subtitle": "10% de descuento",
+            "description": "Suscríbete a nuestro boletín quincenal y obtén 10% en tu compra",
+            "name": "Nombre completo",
+            "email": "Correo electrónico",
+            "phone": "Teléfono",
+            "submit": "Suscribirse"
         }
     
     },

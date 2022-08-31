@@ -15,7 +15,7 @@
     font-family: var(--title-font);
     // padding: 0.5rem 1rem;
 }
-.suscribe .title, .suscribe .complement {
+.suscribe .title, .suscribe .description {
     color: #fff;
 }
 .suscribe .title {
@@ -30,7 +30,7 @@
     margin: 0.5rem 0 1rem 0;
 }
 
-.suscribe .complement {
+.suscribe .description {
     font-family: var(--text-font);
     font-weight: var(--font-normal);
     font-size: var(--normal-font-size);

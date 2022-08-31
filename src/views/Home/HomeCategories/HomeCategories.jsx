@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {Navigation, Pagination, Scrollbar, A11y} from 'swiper';
 import {Swiper, SwiperSlide} from 'swiper/react';
+import { useTranslation } from 'react-i18next';
 
 import './HomeCategories.scss';
 import CategoryCard from './CategoryCard/CategoryCard';
@@ -8,6 +9,7 @@ import { getAllCategories } from '../../../services/categoryService';
 
 const HomeCategories = () => {
 
+    const { t } = useTranslation();
     const [categories, setCategories] = useState([]);
     
     useEffect(() => {
@@ -23,8 +25,8 @@ const HomeCategories = () => {
 
     return (
         <section className='home-categories'>
-            <h2 className='title'>Categorías</h2>
-            <p className='subtitle'>Te ayudamos en la búsqueda de lo que necesitas con nuestro gran catálogo. Te presentamos muebles con todo tipo de usos.</p>
+            <h2 className='title'>{t('home.categories.title')}</h2>
+            <p className='subtitle'>{t('home.categories.description')}</p>
 
             <Swiper  
                 className='swiper-main'
