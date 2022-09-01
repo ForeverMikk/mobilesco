@@ -111,6 +111,41 @@
         },
         "download": "Download catalog"
     },
+    "wishlist": {
+        "title": "Request for quote",
+        "wishlist-title": "Wish list   ·  ·  ·  ",
+        "data-title": "Contact info   ·  ·  ·",
+        "confirmation-title": "Confirmation   ·  ·  ·",
+        "resume": {
+            "quantity": "Quantity: ",
+            "name": "Name: ",
+            "color": "Color: ",
+            "material": "Material: "
+        },
+        "shipping": {
+            "title": "Delivery Type",
+            "label1": "Home delivery",
+            "label2": "Pick up in branch"
+        },
+        "special-info": {
+            "title": "Additional specifications",
+            "description": "Send a comment with the desired characteristics for your furniture; add specific measurements, color availability, etc."
+        },
+        "address-info": {
+            "title": "Shipping Address",
+            "address": "Address",
+            "city": "City or Town",
+            "number": "External Number",
+            "cp": "Zip Code"
+        },
+        "user-info": {
+            "title": "Contact Info",
+            "name": "Name",
+            "email": "E-mail",
+            "phone": "Phone",
+            "submit": "Request"
+        }
+    },
     "search-box": {
         "category": "Category",
         "type": "Type of furniture",

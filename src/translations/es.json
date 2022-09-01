@@ -111,6 +111,42 @@
         },
         "download": "Descarga el catálogo"
     },
+    "wishlist": {
+        "title": "Solicitud de cotización",
+        "wishlist-title": "Lista de deseos   ·  ·  ·  ",
+        "data-title": "Datos de contacto   ·  ·  ·",
+        "confirmation-title": "Confirmación   ·  ·  ·",
+        "resume": {
+            "title": "Resumen del pedido",
+            "quantity": "Cantidad: ",
+            "name": "Nombre: ",
+            "color": "Color: ",
+            "material": "Material: "
+        },
+        "shipping": {
+            "title": "Tipo de Entrega",
+            "label1": "Envio a domicilio",
+            "label2": "Recoger en sucursal"
+        },
+        "special-info": {
+            "title": "Especificaciones adicionales",
+            "description": "Envía un comentario con las características deseadas para tu mobiliario; agrega medidas específicas, disponibilidad de colores, etc."
+        },
+        "address-info": {
+            "title": "Dirección de Envío",
+            "address": "Dirección",
+            "city": "Ciudad o Localidad",
+            "number": "Número Exterior",
+            "cp": "Código Postal"
+        },
+        "user-info": {
+            "title": "Datos de Contacto",
+            "name": "Nombre",
+            "email": "Correo electrónico",
+            "phone": "Teléfono",
+            "submit": "Solicitar"
+        }
+    },
     "search-box": {
         "category": "Categoría",
         "type": "Tipo de Mueble",
