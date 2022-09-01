@@ -107,7 +107,7 @@ const SearchBox = () => {
             <p>{t('search-box.type')}</p>
             {types && <DropdownTypes itemList={types} filterByType={filterByType} />}
             <p>{t('search-box.name')}</p>
-            <input type="text" placeholder='Nombre' onChange={filterByName}/>
+            <input type="text" placeholder={t('search-box.label')} onChange={filterByName}/>
             <button onClick={onSaveData}>
             {t('search-box.search')}
             </button>

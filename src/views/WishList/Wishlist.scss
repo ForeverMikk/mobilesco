@@ -59,7 +59,11 @@
     border-bottom-right-radius: 2rem;
     border-top-left-radius: 2rem;
 }
-.summary .summary-resume, .summary .special-info, .summary .contact-info, .summary .shipping-info, .summary .user-info {
+.summary .summary-resume, 
+.summary .shipping-info,
+.summary .special-info, 
+.summary .address-info, 
+.summary .user-info {
     background: #f5f3f1;
     border-bottom-right-radius: 2rem;
     border-top-left-radius: 2rem;
@@ -83,7 +87,10 @@
     text-align: center;
 }
 
-.preview .summary p, .preview .summary label, .preview .summary input::placeholder, .preview .summary button{
+.preview .summary p, 
+.preview .summary label, 
+.preview .summary input::placeholder, 
+.preview .summary button{
     font-family: var(--text-font);
     font-size: var(--small-font-size);
     color: var(--first-color);

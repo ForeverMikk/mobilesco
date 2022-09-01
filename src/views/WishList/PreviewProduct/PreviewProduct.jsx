@@ -1,10 +1,13 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import { useTranslation } from 'react-i18next';
+
 import './PreviewProduct.scss';
 import { cartActions } from '../../../store/cart-slice';
 
 const PreviewProduct = ({ img, name, descripcion, id, price, quantity }) => {
 
+    const { t } = useTranslation();
     const dispatch = useDispatch();
 
     const deleteHandler = () => {
@@ -37,9 +40,9 @@ const PreviewProduct = ({ img, name, descripcion, id, price, quantity }) => {
                     <button className='add' onClick={incrementHandler}>+</button>
                     <span>{quantity}</span>
                     <button className='add' onClick={decrementHandler}>-</button>
-                    <button className="remove" onClick={deleteHandler}>Eliminar</button>
+                    <button className="remove" onClick={deleteHandler}>{t('wishlist.product-info.delete')}</button>
                 </div>
-                <button className='more'>Ver más</button>
+                <button className='more'>{t('wishlist.product-info.more')}</button>
             </div>
         </div>
     )

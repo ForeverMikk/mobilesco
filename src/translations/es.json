@@ -116,6 +116,10 @@
         "wishlist-title": "Lista de deseos   ·  ·  ·  ",
         "data-title": "Datos de contacto   ·  ·  ·",
         "confirmation-title": "Confirmación   ·  ·  ·",
+        "product-info": {
+            "delete": "Eliminar",
+            "more": "Ver más"
+        },
         "resume": {
             "title": "Resumen del pedido",
             "quantity": "Cantidad: ",
@@ -151,6 +155,29 @@
         "category": "Categoría",
         "type": "Tipo de Mueble",
         "name": "Nombre del Mueble",
-        "search": "Buscar" 
+        "search": "Buscar",
+        "label": "Nombre"
+    },
+    "footer": {
+        "payment": "Métodos de pago",
+        "menu": {
+            "about-us": "Sobre Nosotros",
+            "catalog": "Catálogo",
+            "contact": "Contacto",
+            "contact2": "Trabaja con Nosotros"
+        },
+        "help": {
+            "title": "Ayuda",
+            "frequent-questions": "Preguntas frecuentes",
+            "call": "Llámanos",
+            "whatsapp": "Cotizaciones por Whatsapp"
+        },
+        "other": {
+            "title": "Otros",
+            "terms": "Términos y condiciones",
+            "politics": "Políticas de privacidad",
+            "licenses": "Licencias"
+        },
+        "social-media": "Síguenos"
     }
 }

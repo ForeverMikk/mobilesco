@@ -113,9 +113,13 @@
     },
     "wishlist": {
         "title": "Request for quote",
-        "wishlist-title": "Wish list   ·  ·  ·  ",
+        "wishlist-title": "Wishlist   ·  ·  ·  ",
         "data-title": "Contact info   ·  ·  ·",
         "confirmation-title": "Confirmation   ·  ·  ·",
+        "product-info": {
+            "delete": "Delete",
+            "more": "See more"
+        },
         "resume": {
             "quantity": "Quantity: ",
             "name": "Name: ",
@@ -150,6 +154,29 @@
         "category": "Category",
         "type": "Type of furniture",
         "name": "Furniture Name",
-        "search": "Search" 
+        "search": "Search",
+        "label": "Name"
+    },
+    "footer": {
+        "payment": "Payment methods",
+        "menu": {
+            "about-us": "About Us",
+            "catalog": "Catalog",
+            "contact": "Contact",
+            "contact2": "Work with us"
+        },
+        "help": {
+            "title": "Help",
+            "frequent-questions": "Frequently Asked Questions",
+            "call": "Contact us at",
+            "whatsapp": "Quotes via Whatsapp"
+        },
+        "other": {
+            "title": "Other",
+            "terms": "Terms and Conditions",
+            "politics": "Privacy Policy",
+            "licenses": "Licenses"
+        },
+        "social-media": "Follow us at"
     }
 }
