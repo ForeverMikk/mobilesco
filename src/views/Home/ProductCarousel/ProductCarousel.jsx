@@ -70,6 +70,7 @@ const ProductCarousel = () => {
                                 img={`https://mobilesco.mx/API/images/uploads/${data.CLAVE}/${images[0].NOMBRE}`}
                                 category={data.CATEGORIA}
                                 color={data.COLOR}
+                                type={data.TIPO}
                                 material={data.MATERIAL}
                                 className="product-catalog"
                             /> : <ProductItem 
@@ -79,6 +80,7 @@ const ProductCarousel = () => {
                                 images={images}
                                 descripcion={data.DESCRIPCION}
                                 img={silla}
+                                type={data.TIPO}
                                 category={data.CATEGORIA}
                                 color={data.COLOR}
                                 material={data.MATERIAL}

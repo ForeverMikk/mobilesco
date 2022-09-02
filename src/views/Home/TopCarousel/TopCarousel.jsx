@@ -42,6 +42,7 @@ const TopCarousel = () => {
                                 images={images}
                                 category={data.CATEGORIA}
                                 color={data.COLOR}
+                                type={data.TIPO}
                                 material={data.MATERIAL}
                                 className="home"
                             /> : <ProductItem 
@@ -53,6 +54,7 @@ const TopCarousel = () => {
                                 price={data.COSTO}
                                 category={data.CATEGORIA}
                                 color={data.COLOR}
+                                 type={data.TIPO}
                                 material={data.MATERIAL}
                                 className="home"
                             />

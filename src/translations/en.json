@@ -157,6 +157,15 @@
         "search": "Search",
         "label": "Name"
     },
+    "popup": {
+        "category": "Category: ",
+        "description": "Description: ",
+        "color": "Available colors: ",
+        "material": "Material: ",
+        "quote": "Quote Now",
+        "id": "Key:  ",
+        "type": "Type: "
+    },
     "footer": {
         "payment": "Payment methods",
         "menu": {

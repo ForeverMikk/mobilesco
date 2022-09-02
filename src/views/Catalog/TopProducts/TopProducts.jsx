@@ -66,6 +66,7 @@ const TopProducts = () => {
                             price={data.COSTO}
                             name={data.NOMBRE} 
                             color={data.COLOR}
+                            type={data.TIPO}
                             images={images}
                             material={data.MATERIAL}
                             descripcion={data.DESCRIPCION}
@@ -76,6 +77,7 @@ const TopProducts = () => {
                             price={data.COSTO}
                             name={data.NOMBRE} 
                             color={data.COLOR}
+                            type={data.TIPO}
                             images={images}
                             material={data.MATERIAL}
                             descripcion={data.DESCRIPCION}

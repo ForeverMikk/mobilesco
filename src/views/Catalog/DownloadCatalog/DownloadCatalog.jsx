@@ -33,6 +33,7 @@ const DownloadCatalog = () => {
                         price={parseInt(product.COSTO)}
                         category={product.CATEGORIA}
                         images={productImages}
+                        type={product.TIPO}
                         color={product.COLOR}
                         material={product.MATERIAL}
                         className='download'
@@ -48,6 +49,7 @@ const DownloadCatalog = () => {
                         id={product.CLAVE}
                         price={parseInt(product.COSTO)}
                         category={product.CATEGORIA}
+                        type={product.TIPO}
                         color={product.COLOR}
                         images={productImages}
                         material={product.MATERIAL}

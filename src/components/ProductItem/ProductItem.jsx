@@ -11,7 +11,7 @@ import { cartActions } from '../../store/cart-slice';
 import { productFavorite } from '../../services/productSercive';
 
 
-const ProductItem = ({id, name, descripcion, img, images, className, category, color, material }) => {
+const ProductItem = ({id, name, descripcion, img, images, className, category, color, material, type }) => {
     
     const dispatch = useDispatch();
     const productList = useSelector(state => state.cart.itemList);
@@ -77,6 +77,7 @@ const ProductItem = ({id, name, descripcion, img, images, className, category, c
                             close={close}
                             setIsFavorite={setIsFavorite}
                             isFavorite={isFavorite}
+                            type={type}
                         />
                     )}
                 </Popup>

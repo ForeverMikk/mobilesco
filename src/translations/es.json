@@ -158,6 +158,15 @@
         "search": "Buscar",
         "label": "Nombre"
     },
+    "popup": {
+        "category": "Categoría: ",
+        "description": "Descripción: ",
+        "color": "Colores Disponibles: ",
+        "material": "Material: ",
+        "quote": "Cotizar Ahora",
+        "id": "Clave: ",
+        "type": "Tipo: "
+    },
     "footer": {
         "payment": "Métodos de pago",
         "menu": {

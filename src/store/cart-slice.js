@@ -29,6 +29,7 @@ const cartSlice = createSlice({
                     descripcion: newItem.descripcion,
                     img: newItem.img,
                     material: newItem.material,
+                    type: newItem.type,
                     color: newItem.color,
                     images: newItem.images,
                     // productState: true

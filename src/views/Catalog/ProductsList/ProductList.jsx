@@ -19,6 +19,7 @@ const ProductList = ({products}) => {
                     price={data.COSTO}
                     category={data.CATEGORIA}
                     color={data.COLOR}
+                    type={data.TIPO}
                     material={data.MATERIAL}
                     className="catalog"
                 /> : <ProductItem 
@@ -30,6 +31,7 @@ const ProductList = ({products}) => {
                     price={data.COSTO}
                     category={data.CATEGORIA}
                     color={data.COLOR}
+                    type={data.TIPO}
                     material={data.MATERIAL}
                     className="catalog"
                 />

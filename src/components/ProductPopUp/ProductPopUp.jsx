@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faClose } from '@fortawesome/free-solid-svg-icons';
+import { useTranslation } from 'react-i18next';
 
 import './ProductPopUp.scss';
 import ImagesCarousel from './ImagesCarousel/ImagesCarousel';
@@ -11,8 +12,9 @@ import { cartActions } from '../../store/cart-slice';
 // import Loader from '../Loader/Loader';
 import { productClicked } from '../../services/productSercive';
 
-const ProductPopUp = ({ name, id, category, descripcion, color, material, img, images, close, isFavorite, setIsFavorite }) => {
+const ProductPopUp = ({ name, id, category, descripcion, color, material, type, img, images, close, isFavorite, setIsFavorite }) => {
 
+    const { t } = useTranslation();
     const dispatch = useDispatch();
     const [mainImage, setMainImage] = useState(img);
     
@@ -37,9 +39,6 @@ const ProductPopUp = ({ name, id, category, descripcion, color, material, img, i
     }
     
     useEffect(() => {
-        // console.log('watch more');
-        // setMainImage(img);
-        // console.log(mainImage);
         productClicked(id);
     }, [id])
     
@@ -59,13 +58,14 @@ const ProductPopUp = ({ name, id, category, descripcion, color, material, img, i
             </div>
             
             <div className="product-info">
-                <h3 className="category">Categoria {category}</h3>
+                <h3 className="category">{t('popup.category')}{category}</h3>
                 <h1>{name}</h1>
-                {/* <p className='description'>{descripcion}</p>
-                <p>Precio: {price}</p> */}
+                <h3>{t('popup.description')}</h3>
+                <p className='description'> {descripcion}</p>
+                {/* <p>Precio: {price}</p>  */}
                 
                 <div className="colors">
-                    <h3 className='colors-title'>Colores: </h3>
+                    <h3 className='colors-title'>{t('popup.color')}</h3>
                     <div className="buttons">
                         {images && images.map((item, index) => (
                             <button 
@@ -79,7 +79,7 @@ const ProductPopUp = ({ name, id, category, descripcion, color, material, img, i
                 </div>
 
                 <div className="sizes">
-                    <h3 className='sizes-title'>Material</h3>
+                    <h3 className='sizes-title'>{t('popup.material')}</h3>
                     <div className="buttons">
                         <button>{material}</button>
                         {/* <button>Preescolar</button>
@@ -90,7 +90,7 @@ const ProductPopUp = ({ name, id, category, descripcion, color, material, img, i
 
                 <div className="bottom-buttons">  
                     <Link to='/wishlist' className='quote'>
-                        Cotizar Ahora
+                        {t('popup.quote')}
                     </Link>
                     <button className={`heart ${isFavorite ? 'active' : ''}`} onClick={incrementHandler}>
                         <FontAwesomeIcon icon={faHeart} />
@@ -98,9 +98,9 @@ const ProductPopUp = ({ name, id, category, descripcion, color, material, img, i
                 </div>
 
                 <div className="card-footer">
-                    <p>Clave: {id}</p>
-                    <p>Categorias: {category}</p>
-                    <p>Tags: {category}</p>
+                    <p>{t('popup.id')} {id}</p>
+                    <p>{t('popup.category')} {category}</p>
+                    <p>{t('popup.type')} {type}</p>
                 </div>
 
             </div>
