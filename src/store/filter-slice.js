@@ -10,15 +10,16 @@ const filterSlice = createSlice({
     }, 
     reducers: {
         saveInput(state, action) {
-            const input = action.payload.input;
+            const productList = action.payload;
             
-            
-            state.data.input = input; 
+            state.data.input = productList;
+            // console.log(state.data.input);
         },
         saveFiltered(state, action) {
-            const productList = action.payload.filteredList;
+            const productList = action.payload;
             
             state.data.filteredList = productList;
+            // console.log(state.data.filteredList);
         }
 
     }

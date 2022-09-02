@@ -1,6 +1,7 @@
-import React, {useState, useEffect} from 'react'
-import { useDispatch, useSelector } from 'react-redux';
-// import { Link } from 'react-router-dom';
+import React, {useState, useEffect} from 'react';
+import { useDispatch } from 'react-redux';
+import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 import './SearchBox.scss';
 import { DropdownCategories, DropdownTypes } from './Dropdown/Dropdown';
@@ -8,14 +9,12 @@ import { getAllCategories } from '../../services/categoryService';
 import { getAllTypes } from '../../services/typeService';
 import { getAllProducts } from '../../services/productSercive';
 import { filterActions } from '../../store/filter-slice';
-import { useTranslation } from 'react-i18next';
-
 
 const SearchBox = () => {
 
+    const router = useNavigate();
     const { t } = useTranslation();
     const dispatch = useDispatch();
-    const searcherFromHome = useSelector(state => state.filter);
     // const dataFiltered = useSelector(state => state.filter.filteredList);
     // const dataInput = useSelector(state => state.filter.inputValue);
     
@@ -26,12 +25,10 @@ const SearchBox = () => {
     const [productList, setProductList] = useState([]);
     const [filteredList, setFilteredList] = useState(productList);
 
-
-
     const filterByCategory = (e) => {
         const categoryValue = e.target.value;
 
-        console.log("Select Category",categoryValue)
+        console.log("Select Category", categoryValue);
         const filtered = productList.filter(product => {
             const productCategory = product.data.CATEGORIA;
 
@@ -77,11 +74,14 @@ const SearchBox = () => {
     }
 
     const onSaveData = () => {
-        dispatch(filterActions.saveInput(input, filteredList));
+        // console.log(filteredList);
+        dispatch(filterActions.saveFiltered(filteredList));
+        dispatch(filterActions.saveInput(input));
+        router("../catalog", { replace: true });
         // dispatch(filterActions.saveFiltered(filteredList));
 
-        console.log('data save');
-        console.log('date saved', searcherFromHome);
+        // console.log('data save');
+        // console.log('date saved', searcherFromHome);
 
     }
  
@@ -109,11 +109,10 @@ const SearchBox = () => {
             <p>{t('search-box.name')}</p>
             <input type="text" placeholder={t('search-box.label')} onChange={filterByName}/>
             <button onClick={onSaveData}>
-            {t('search-box.search')}
+                {t('search-box.search')}
             </button>
         </div>
     )
 }
-
 
 export default SearchBox;

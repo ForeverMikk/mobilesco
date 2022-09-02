@@ -12,7 +12,6 @@ import bbva from '../../asstes/img/icons/bbva.svg';
 import paypal from '../../asstes/img/icons/paypal.svg';
 import santander from '../../asstes/img/icons/santander.svg';
 
-
 const Footer = () => {
     
     const { t } = useTranslation();
