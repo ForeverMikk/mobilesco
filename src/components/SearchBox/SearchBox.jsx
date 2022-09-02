@@ -12,16 +12,16 @@ import { filterActions } from '../../store/filter-slice';
 
 const SearchBox = () => {
 
-    const router = useNavigate();
     const { t } = useTranslation();
+    const router = useNavigate();
     const dispatch = useDispatch();
     // const dataFiltered = useSelector(state => state.filter.filteredList);
     // const dataInput = useSelector(state => state.filter.inputValue);
     
-    const [types, setTypes] = useState();
-    const [categories, setCategories] = useState();
+    const [types, setTypes] = useState([]);
+    const [categories, setCategories] = useState([]);
     
-    const [input, setInput] = useState();
+    const [input, setInput] = useState('');
     const [productList, setProductList] = useState([]);
     const [filteredList, setFilteredList] = useState(productList);
 
@@ -35,8 +35,6 @@ const SearchBox = () => {
             return productCategory.indexOf(categoryValue) >= 0;
         });
         setFilteredList(filtered)
-        // console.log('fil cat', filteredList);
-        // console.log("-----------------------------------");
     }
 
     const filterByType = (e) => {
@@ -49,8 +47,6 @@ const SearchBox = () => {
             return productType.indexOf(typeValue) >= 0;
         });
         setFilteredList(filtered)
-        // console.log('fil cat', filteredList);
-        // console.log("-----------------------------------");
     }
 
     const filterByName = (e) => {
@@ -64,8 +60,6 @@ const SearchBox = () => {
             })
             setInput(inputValue);
             setFilteredList(filtered);
-            console.log('fil name', filteredList);
-            console.log("-----------------------------------");
         } 
 
         if(inputValue.trim() === ''){
@@ -74,15 +68,11 @@ const SearchBox = () => {
     }
 
     const onSaveData = () => {
-        // console.log(filteredList);
+
         dispatch(filterActions.saveFiltered(filteredList));
         dispatch(filterActions.saveInput(input));
+
         router("../catalog", { replace: true });
-        // dispatch(filterActions.saveFiltered(filteredList));
-
-        // console.log('data save');
-        // console.log('date saved', searcherFromHome);
-
     }
  
     useEffect(() => {

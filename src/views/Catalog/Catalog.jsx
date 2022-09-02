@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-// import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import './Catalog.scss';
 import CategoriesPopular from './CategoriesPopular/CategoriesPopular';
@@ -8,9 +8,9 @@ import TopProducts from './TopProducts/TopProducts';
 import DownloadCatalog from './DownloadCatalog/DownloadCatalog';
 import ProductsList from './ProductsList/ProductList';
 import SearchBar from './SearchBar/SearchBar';
-import { getAllProducts } from '../../services/productSercive';
 import TypesPopular from './TypesPopular/TypesPupular';
 import NotFoundView from '../../components/NotFoundView/NotFoundView';
+import { getAllProducts } from '../../services/productSercive';
 
 const scrollTop = () => {
     const scrolledElement = document.getElementById('catalog');
@@ -19,13 +19,15 @@ const scrollTop = () => {
 }
 
 const Catalog = () => {
-
+    
     const { t } = useTranslation();
+    const filteredProducts = useSelector(state => state.filter.data.filteredList);
+    const inputProduct = useSelector(state => state.filter.data.input);
+    
     const [input, setInput] = useState('');
-    const [productList, setProductList] = useState();
-    const [productsFiltered, setProductsFiltered] = useState();
+    const [productList, setProductList] = useState([]);
+    const [productsFiltered, setProductsFiltered] = useState([]);
     const [isSearched, setIsSearched] = useState(true);
-    // const searcherFromHome = useSelector(state => state.filter);
 
     useEffect(() => {
         const getProducts = async() => {
@@ -33,26 +35,15 @@ const Catalog = () => {
 
             setProductList(products);
         }
+
+        if(filteredProducts.length > 0){
+            setProductsFiltered(filteredProducts);
+            setInput(inputProduct);
+        }
         getProducts();
-        // console.log(productList);
         scrollTop();
 
-        // console.log(searcherFromHome)
-
-    }, [])
-    
-    const onSearch = () => {
-        // console.log("Search")
-        setIsSearched(!isSearched);
-    }
-
-    // const searchByCategory = async(category) => {
-    //     const filtered = productsFiltered.filter(item => {
-    //         const category = item.data.CATEGORIA.toLowerCase();
-
-            
-    //     })
-    // }
+    }, [filteredProducts, inputProduct])
 
     const onChange = async(event) => {
         const productInput = event.target.value;
@@ -64,7 +55,7 @@ const Catalog = () => {
 
                 return fullName.indexOf(input) >= 0;
             })
-            onSearch();
+            setIsSearched(!isSearched);
             setProductsFiltered(filtered);
             // console.log(filtered)
         }
@@ -80,7 +71,7 @@ const Catalog = () => {
                 <h1 className="title">{t('catalog.title')}</h1>
                 <p className='description'>{t('catalog.description')}</p>
                 
-                <SearchBar productsFiltered={productsFiltered} onChange={onChange} />
+                <SearchBar productsFiltered={productsFiltered} input={input} onChange={onChange} />
                 <TypesPopular setProductsFiltered={setProductsFiltered} setIsSearched={setIsSearched} isSearched={isSearched}/>
             </div>
 

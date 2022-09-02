@@ -3,14 +3,17 @@ import { useTranslation } from 'react-i18next';
 
 import './SearchBar.scss';
 
-const SearchBar = ({productsFiltered, onChange}) => {
+const SearchBar = ({productsFiltered, onChange, input}) => {
     const { t } = useTranslation();
 
     return (
         <div className="search-bar">
            
             <div className='input-box'>
-                <input type="text" placeholder={t('catalog.search-bar.input')} onChange={onChange}/>
+                {input 
+                ? <input type="text" value={input} placeholder={t('catalog.search-bar.input')} onChange={onChange}/>
+                : <input type="text" value='' placeholder={t('catalog.search-bar.input')} onChange={onChange}/>
+            }
             
                 <button className='search-button'>{t('catalog.search-bar.submit')}</button>
             </div>
