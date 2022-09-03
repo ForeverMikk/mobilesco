@@ -2,6 +2,7 @@ import React, {useEffect} from 'react'
 import { Widget } from '@typeform/embed-react';
 
 import './Contact.scss';
+import GoogleCalendar from './GoogleCalendar/GoogleCalendar';
 
 const scrollTop = () => {
     const scrolledElement = document.getElementById('contact');
@@ -19,6 +20,7 @@ const Contact = () => {
 
     return (
         <section className="contact" id="contact">
+            <GoogleCalendar />
             <Widget 
                 id='pot9swBe' 
                 className='my-form' 

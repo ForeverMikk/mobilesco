@@ -1,0 +1,16 @@
+.calendar {
+    background: #EEE4DE;
+    padding: 5rem;
+}
+
+.calendar button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background: var(--first-color);
+    font-size: var(--normal-font-size);
+    border-radius: 2rem;
+}
+.calendar button:hover {
+    cursor: pointer;
+}
