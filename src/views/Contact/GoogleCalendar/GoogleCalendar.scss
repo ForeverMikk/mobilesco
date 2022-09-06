@@ -1,16 +1,32 @@
 .calendar {
     background: #EEE4DE;
     padding: 5rem;
+    text-align: center;
 }
-
+.calendar h1 {
+    font-family: var(--title-font);
+    font-size: var(--big-font-size);
+    color: var(--first-color);
+}
 .calendar button {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
+    margin: 2rem;
+    padding: 1rem 2rem;
     color: #fff;
     background: var(--first-color);
-    font-size: var(--normal-font-size);
+    font-size: var(--h3-font-size);
+    font-family: var(--text-font);
     border-radius: 2rem;
+    transition: all 0.4s ease-out;
 }
 .calendar button:hover {
     cursor: pointer;
+    background: var(--second-color);
+}
+
+.calendar p {
+    font-family: var(--text-font);
+    font-weight: var(--font-semibold);
+    font-size: var(--h3-font-size);
+    // margin: 2rem;
+    color: var(--second-color);
 }

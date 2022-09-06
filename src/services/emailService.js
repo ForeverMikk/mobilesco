@@ -9,18 +9,13 @@ const HEADERS = {
 
 
 export const sendEmailData = async(data) => {
-    // const newData = JSON.stringify(data);
-    // console.log("Data",data);
-    // console.log("JSON",JSON.parse(data));
-    // console.log("String",JSON.parse(newData));
     await axios.post(MOBILESCO_URL + 'mail', {data}, {headers: HEADERS})
     .then((res) => {
         toast.success("La cotización se envió exitosamente");
-        // console.log("Success",res);
     })
     .catch((err) => {
         toast.error("La cotización tuvo un problema, revisa los campos e intenta de nuevo");
-        // console.log(err)
+        
     })
 }
 
@@ -32,6 +27,6 @@ export const sendSuscriptionData = async(data) => {
     })
     .catch((err) => {
         toast.error("Hubo un error al registrarse, revisa los campos e intenta de nuevo");
-        console.log(err)
     })
 }
+
