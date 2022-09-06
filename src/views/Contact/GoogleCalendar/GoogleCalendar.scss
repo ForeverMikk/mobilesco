@@ -38,3 +38,13 @@
     font-size: var(--normal-font-size);
     color: var(--first-color);
 }
+
+
+@media screen and (max-width: 768px) {
+    .calendar h1 {
+        font-size: var(--h1-font-size);
+    }
+    .calendar button {
+        margin: 2rem 0;
+    }
+}
