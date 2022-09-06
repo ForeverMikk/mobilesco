@@ -23,10 +23,18 @@
     background: var(--second-color);
 }
 
-.calendar p {
+.calendar p, .calendar span {
     font-family: var(--text-font);
     font-weight: var(--font-semibold);
+}
+
+.calendar p {
     font-size: var(--h3-font-size);
     // margin: 2rem;
     color: var(--second-color);
+}
+
+.calendar span {
+    font-size: var(--normal-font-size);
+    color: var(--first-color);
 }
