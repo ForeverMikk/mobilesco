@@ -59,7 +59,7 @@ const Navbar = () => {
                     </Link>
                 </li>
                 
-                <li>
+                <li className='buttons'>
                     <button 
                         className={`language ${languageSelected ? 'active' : ''}`} 
                         onClick={() => {

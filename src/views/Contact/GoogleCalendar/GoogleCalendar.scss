@@ -41,6 +41,9 @@
 
 
 @media screen and (max-width: 768px) {
+    .calendar {
+        padding: 4rem 3rem;
+    }
     .calendar h1 {
         font-size: var(--h1-font-size);
     }

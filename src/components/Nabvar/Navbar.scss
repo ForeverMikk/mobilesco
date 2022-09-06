@@ -37,7 +37,6 @@
 }
 .nav-menu li .language {
     padding: 0.4rem;
-    margin-right: 0.5rem;
     border-radius: 0.5rem;
     font-family: var(--text-font);
     font-weight: var(--font-medium);
@@ -47,6 +46,10 @@
     transition: all 0.3s ease-out;
     z-index: 10;
 }
+.nav-menu li .language:nth-child(1) {
+    margin: 0.5rem;
+}
+
 .nav-menu li .language:hover {
     cursor: pointer;
 }
@@ -62,6 +65,12 @@
     color: var(--second-color);
     transform: translateY(-3px);
 }
+
+.nav-menu .buttons {
+    display: flex;
+    align-items: center;
+}
+
 .navbar svg {
     font-size: var(--h3-font-size);
 }
