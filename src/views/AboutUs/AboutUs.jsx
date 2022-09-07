@@ -14,17 +14,19 @@ import Gallery from './Gallery/Gallery';
 import FrequentQuestions from './FrequentQuestions/FrequentQuestions';
 import JoinUs from './JoinUs/JoinUs';
 
-const scrollTop = () => {
-    const scrolledElement = document.getElementById('about-us');
 
-    scrolledElement.scrollIntoView();
-}
 
 const AboutUs = () => {
 
     const { t } = useTranslation();
 
     useEffect(() => {
+        const scrollTop = () => {
+            const scrolledElement = document.getElementById('about-us');
+        
+            scrolledElement.scrollIntoView();
+        }
+        
         scrollTop()
     }, [])
     

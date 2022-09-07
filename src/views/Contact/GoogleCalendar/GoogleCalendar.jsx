@@ -7,7 +7,7 @@ const GoogleCalendar = () => {
 
     return(
         <div className='calendar'>
-          <h1>Agenda tu cita telefónica con nosotros</h1>  
+          <h1>Agenda tu cita con Nosotros</h1>  
 
           <PopupButton
             url='https://calendly.com/mobilescopachucacontact/'
@@ -16,7 +16,6 @@ const GoogleCalendar = () => {
           />
 
           <p>Horario de atención 9AM a 5PM</p>
-          <span>(Ingresa tu numero telefónico en la descripción)</span>
         </div>
     )
 }
