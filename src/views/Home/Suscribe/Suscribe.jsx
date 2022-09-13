@@ -25,7 +25,7 @@ const Suscribe = () => {
 
     const suscribeToNewsLetter = async(e) => {
         e.preventDefault();
-        
+        console.log(suscribeData);
         await sendSuscriptionData(suscribeData)
     }
 

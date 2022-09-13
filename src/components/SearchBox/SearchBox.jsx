@@ -13,7 +13,7 @@ import { filterActions } from '../../store/filter-slice';
 const SearchBox = () => {
 
     const { t } = useTranslation();
-    const router = useNavigate();
+    const navigate = useNavigate();
     const dispatch = useDispatch();
     // const dataFiltered = useSelector(state => state.filter.filteredList);
     // const dataInput = useSelector(state => state.filter.inputValue);
@@ -72,7 +72,7 @@ const SearchBox = () => {
         dispatch(filterActions.saveFiltered(filteredList));
         dispatch(filterActions.saveInput(input));
 
-        router("../catalog", { replace: true });
+        navigate("../catalog", { replace: true });
     }
  
     useEffect(() => {

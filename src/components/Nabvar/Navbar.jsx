@@ -11,7 +11,7 @@ import logo from './../../asstes/img/mobilesco-logo.png';
 const Navbar = () => {
 
     const { t, i18n } = useTranslation();
-    const [showMenu, setShowMenu] = useState();
+    const [showMenu, setShowMenu] = useState(false);
     const [languageSelected, setLanguageSelected] = useState(true);
     const productsQuantity = useSelector(state => state.cart.totalQuantity);
 
@@ -29,22 +29,11 @@ const Navbar = () => {
                 <img src={logo} alt="Logo de Mobilesco" />
             </Link>
 
-            <button className='menu-button' onClick={activeMenu}>
+            <button className='nav-button' onClick={activeMenu}>
                 <FontAwesomeIcon icon={ showMenu ? faTimes : faBars } size='2x' />
             </button>
 
             <ul className={ showMenu ? 'nav-menu active' : 'nav-menu'}>
-
-            {/* <div id="higslide-div-atrato-info"
-                data-plataform="other"  
-                data-type="info" 
-                data-price="PRECIO DEL PRODUCTO" 
-                data-version="2.0"
-                data-style="dark" 
-                data-linkcolor="black" 
-                data-urlhost="https://sandbox.atratopago.com">
-                    Atrato
-            </div> */}
 
                 <li><Link to="/about-us" onClick={activeMenu}>{t('navbar.about-us')}</Link></li>
 
