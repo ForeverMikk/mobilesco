@@ -20,6 +20,22 @@ const AboutUs = () => {
 
     const { t } = useTranslation();
 
+    const appendScript = (scriptToAppend) => {
+        const script = document.createElement("script");
+        script.src = scriptToAppend;
+        script.async = true;
+        document.body.appendChild(script);
+        console.log('script')
+    }
+    
+    const appendStyle = (styleToAppend) => {
+        const style = document.createElement("link");
+        style.src = styleToAppend;
+        style.async = true;
+        document.body.appendChild(style);
+        console.log('style')
+    }
+
     useEffect(() => {
         const scrollTop = () => {
             const scrolledElement = document.getElementById('about-us');
@@ -27,6 +43,15 @@ const AboutUs = () => {
             scrolledElement.scrollIntoView();
         }
         
+        appendScript("https://sandbox.atratopago.com/ecommerce_plugin/highslide-with-html.js");
+        appendScript("https://sandbox.atratopago.com/ecommerce_plugin/highslide-config.js");
+        appendStyle("https://sandbox.atratopago.com/ecommerce_plugin/highslide.css");
+
+        appendScript("http://app.atratopago.com/ecommerce_plugin/highslide-with-html.js");
+        appendScript("https://app.atratopago.com/ecommerce_plugin/highslide-config.js");
+        appendStyle("https://app.atratopago.com/ecommerce_plugin/highslide.css");
+
+
         scrollTop()
     }, [])
     
@@ -74,8 +99,27 @@ const AboutUs = () => {
                 />
             </div>
             
+            <div id="higslide-div-atrato-info" className="higslide-div-atrato-info"
+                data-plataform="other"  
+                data-type="info" 
+                data-price="PRECIO DEL PRODUCTO" 
+                data-version="2.0"
+                data-style="dark" 
+                data-linkcolor="black" 
+                data-urlhost="{{urlHost}}">
+                    atrato
+            </div>
+
+            {/* <div> */}
+                <iframe 
+                    src="https://mobilesco.mx/API/mailer/pago" 
+                    frameBorder='0' 
+                    title='atrato-popup'
+                    style={{width: '100%', height: '40rem'}}
+                ></iframe>
+            {/* </div> */}
             <FrequentQuestions />
-            <JoinUs />
+            {/* <JoinUs /> */}
             <Gallery />
 
         </section>
