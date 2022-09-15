@@ -118,8 +118,9 @@
         align-items: center;
     }
     .our-services button {
-        margin-left: 2rem;
+        margin-left: 0.5rem;
     }
+   
 }
 
 @media screen and (max-width: 640px) {
@@ -149,6 +150,6 @@
         width: 3rem;
     }
     .our-services button {
-        margin-left: 2.5rem;
+        margin-left: 1.5rem;
     }
 }

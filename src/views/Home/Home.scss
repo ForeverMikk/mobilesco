@@ -87,13 +87,18 @@ header .description {
 
 @media screen and (max-width: 640px) {
     header {
-        height: 100vh;
+        height: auto;
         padding: 2.5rem;
+    }
+
+    header .background {
+        border-bottom-left-radius: 1.5rem;
     }
 
     header .card-item, header .description{
         visibility: hidden;
     }
 }
+
 
 
