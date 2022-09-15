@@ -18,14 +18,18 @@ const SearchBar = ({productsFiltered, onChange, input}) => {
                 <button className='search-button'>{t('catalog.search-bar.submit')}</button>
             </div>
 
-            {productsFiltered && <div className="dropdown">
-                {productsFiltered.map((item, index) => (
-                    <div key={index} className="dropdown-row">
-                        <p className='item-name'>{item.data.NOMBRE}</p>
-                    </div>
-                ))}
-            </div>}
+            {input !== '' && productsFiltered && 
+                <div className="dropdown">
+                    {productsFiltered.map((item, index) => (
+                        <div key={index} className="dropdown-row">
+                            <p className='item-name'>{item.data.NOMBRE}</p>
+                        </div>
+                    ))}
+                </div>
+            }
+            
         </div>
+            
     )
 }
 

@@ -70,9 +70,12 @@
     }
 }
 
-@media screen and (min-height: 1500px) {
+@media screen and (max-width: 1500px) {
     .our-services {
         height: 60vh;
+    }
+    .our-services .img img {
+        height: 35rem;
     }
 }
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { Widget } from '@typeform/embed-react';
 
 import './JoinUs.scss';
-import Contact from '../../Contact/Contact';
 
 const JoinUs = () => {
     const { t } = useTranslation();
@@ -14,7 +14,13 @@ const JoinUs = () => {
                 <p>{t('about-us.join-us.description')}</p>
             </div>
 
-            <Contact />
+            <Widget 
+                id='pot9swBe' 
+                className='my-form' 
+                source='//embed.typeform.com/next/embed.js' 
+                style={{height: '100vh'}}  
+                data-tf-inline-on-mobile
+            />
 
         </section>
     )

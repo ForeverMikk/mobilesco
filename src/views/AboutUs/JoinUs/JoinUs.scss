@@ -1,4 +1,8 @@
-.info {
+.join-us {
+    margin-top: 5rem;
+    border-radius: 2rem;
+}
+.join-us .info {
     padding-top: 5rem;
     background: var(--third-color);
     display: flex;
@@ -6,16 +10,16 @@
     align-items: center;
 }
 
-.info h1, .info p {
+.join-us .info h1, .join-us .info p {
     color: var(--first-color);
 }
 
-.info h1 {
+.join-us .info h1 {
     font-family: var(--title-font);
     font-size: var(--big-font-size);
 }
 
-.info p {
+.join-us .info p {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,10 +31,10 @@
 }
 
 @media screen and (max-width: 768px) {
-    .info p {
+    .join-us .info p {
         width: 90%;
     }
-    .info h1 {
+    .join-us .info h1 {
        font-size: var(--h1-font-size);
     }
 }
