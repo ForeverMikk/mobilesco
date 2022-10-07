@@ -137,9 +137,9 @@ const Wishlist = () => {
 
                         <div className="shipping-info" onChange={onChangePickUp} required>
                             <h3>{t('wishlist.shipping.title')}</h3>
-                            <input type="radio" name="shipping" id="home-delivery" value="a domicilio"/>
+                            <input type="radio" name="shipping" value="a domicilio"/>
                             <label htmlFor="shipping">{t('wishlist.shipping.label1')}</label>
-                            <input type="radio" name="shipping" id="pick-up" value="recoger en sucursal" />
+                            <input type="radio" name="shipping" value="recoger en sucursal" />
                             <label htmlFor="shipping">{t('wishlist.shipping.label2')}</label>
                         </div>
 
@@ -151,22 +151,21 @@ const Wishlist = () => {
 
                         <div className="address-info" onChange={onChangeAddress}>
                             <h3>{t('wishlist.address-info.title')}</h3>
-                            <input type="text" name='calle' value={addressInfo.calle} id='calle' placeholder={t('wishlist.address-info.address')} required/>
-                            <input type="text" name='lugar' value={addressInfo.lugar} id='lugar' placeholder={t('wishlist.address-info.city')} required/>
+                            <input type="text" name='calle' placeholder={t('wishlist.address-info.address')} required/>
+                            <input type="text" name='lugar' placeholder={t('wishlist.address-info.city')} required/>
 
                             <div className="other">
-                                <input type="number" name='numero' value={addressInfo.numero} id='numero' placeholder={t('wishlist.address-info.number')} required/>
-                                <input type="number" name='cp' value={addressInfo.cp} id='cp' placeholder={t('wishlist.address-info.cp')} required/>
+                                <input type="number" name='numero' placeholder={t('wishlist.address-info.number')} required/>
+                                <input type="number" name='cp' placeholder={t('wishlist.address-info.cp')} required/>
                             </div>
 
-                            {/* <button>Cambiar</button> */}
                         </div>
 
                         <div className="user-info" onChange={onChangeUser}>
                             <h3>{t('wishlist.user-info.title')}</h3>
-                            <input type="text" name="name" value={userInfo.name} id="name" className="name" placeholder={t('wishlist.user-info.name')} required/>
-                            <input type="email" name="email" value={userInfo.email} id="email" className="email" placeholder={t('wishlist.user-info.email')} required/>
-                            <input type="tel" name="phone" value={userInfo.phone} id="phone" className="phone" placeholder={t('wishlist.user-info.phone')} required/>
+                            <input type="text" name="name" className="name" placeholder={t('wishlist.user-info.name')} required/>
+                            <input type="email" name="email" className="email" placeholder={t('wishlist.user-info.email')} required/>
+                            <input type="tel" name="phone" className="phone" placeholder={t('wishlist.user-info.phone')} required/>
                             <button type='submit'>{t('wishlist.user-info.submit')}</button>
                         </div>
                     </form>
